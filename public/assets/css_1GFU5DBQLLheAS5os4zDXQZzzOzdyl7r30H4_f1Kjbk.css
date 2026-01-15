@@ -6125,7 +6125,7 @@ span.field-label {
     display: block;
     block-size: 60px;
     inline-size: 85px;
-    background-image: url(/themes/custom/calibr8_easytheme/images/graphic-device/Crelan-two_shape_device-01-C-rgb-rotate.png);
+    background-image: url(/Crelan-two_shape_device-01-C-rgb-rotate.png);
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
@@ -6897,7 +6897,7 @@ h1.page-title,
     inset: 0;
     z-index: -1;
     background-color: transparent;
-    background-image: url(/themes/custom/calibr8_easytheme/images/graphic-device/Crelan-two_shape_device-01-C-rgb-rotate.png);
+    background-image: url(/Crelan-two_shape_device-01-C-rgb-rotate.png);
     background-repeat: no-repeat;
     background-position: calc(100% + 14.5rem) calc(100% + 3rem);
     background-size: 31rem;
