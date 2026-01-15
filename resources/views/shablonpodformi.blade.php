@@ -936,21 +936,7 @@
 
             <div class="nav-secondary-wrap">
               <div class="header-anchors">
-                <nav aria-label="CTA" id="block-cta-2" class="block block--menu block--menu--cta">
-                  <ul data-block="mobile_menu" class="menu menu--cta menu--parent">
-
-                    <li class="icon icon-user-single menu-item icon--replaced">
-                      <a href="https://mycrelan.crelan.be/" class="menu-link menu-link--cta menu-link--icon"
-                        data-once="nav-event-mobile">
-                        <span class="menu-link__icon icon-user-single" aria-hidden="true"></span>
-                        <span class="menu-link__text">Aanmelden</span>
-                      </a>
-
-                    </li>
-
-                  </ul>
-
-                </nav>
+              
 
                 <button id="search-menu-anchor" class="anchor-btn search-btn" aria-expanded="false"
                   data-once="search-menu-anchor">

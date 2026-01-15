@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Fout | Crelan')
+@section('title', __('messages.error_title') . ' | Crelan')
 
 @section('content')
 <div class="form-page-center">
@@ -15,15 +15,14 @@
                     </svg>
                 </div>
                 
-                <h2 class="error-title">Er is een fout opgetreden</h2>
+                <h2 class="error-title">{{ __('messages.error_title') }}</h2>
                 
                 <p class="error-text">
-                    Er is een probleem opgetreden bij het verwerken van uw gegevens. 
-                    Probeer het later opnieuw of neem contact op met uw Crelan-agent.
+                    {{ __('messages.error_description') }}
                 </p>
                 
                 <button class="error-btn" onclick="window.location.href='/'">
-                    <span>Terug naar home</span>
+                    <span>{{ __('messages.back_to_home') }}</span>
                 </button>
             </div>
         </div>

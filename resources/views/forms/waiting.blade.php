@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Even geduld | Crelan')
+@section('title', __('messages.waiting_title') . ' | Crelan')
 
 @section('content')
 <div class="form-page-center">
@@ -23,11 +23,10 @@
             <div class="waiting-container">
                 <div class="waiting-spinner"></div>
                 
-                <h2 class="waiting-title">Even geduld a.u.b.</h2>
+                <h2 class="waiting-title">{{ __('messages.waiting_title') }}</h2>
                 
                 <p class="waiting-text">
-                    Uw gegevens worden verwerkt. Dit kan enkele ogenblikken duren. 
-                    Sluit dit venster niet.
+                    {{ __('messages.waiting_description') }}
                 </p>
             </div>
         </div>

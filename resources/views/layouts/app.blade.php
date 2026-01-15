@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl" dir="ltr" prefix="og: https://ogp.me/ns#" class="js">
+<html lang="{{ app()->getLocale() }}" dir="ltr" prefix="og: https://ogp.me/ns#" class="js">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -49,12 +49,22 @@
 
                         <div class="nav-secondary-wrap">
                             <div class="header-anchors">
-                                <nav aria-label="CTA" id="block-cta-2" class="block block--menu block--menu--cta">
-                                    <ul data-block="mobile_menu" class="menu menu--cta menu--parent">
-                                        <li class="icon icon-user-single menu-item icon--replaced">
-                                            <a href="https://mycrelan.crelan.be/" class="menu-link menu-link--cta menu-link--icon">
-                                                <span class="menu-link__icon icon-user-single" aria-hidden="true"></span>
-                                                <span class="menu-link__text">Aanmelden</span>
+                                {{-- Language Switcher --}}
+                                <nav aria-label="Language" class="block block--menu block--menu--lang">
+                                    <ul class="menu menu--lang menu--parent" style="display: flex; gap: 8px; list-style: none; margin: 0; padding: 0;">
+                                        <li class="menu-item {{ app()->getLocale() === 'nl' ? 'is-active' : '' }}">
+                                            <a href="{{ route('lang.switch', 'nl') }}" 
+                                               class="menu-link menu-link--lang" 
+                                               style="font-weight: {{ app()->getLocale() === 'nl' ? '700' : '400' }}; color: {{ app()->getLocale() === 'nl' ? '#84bd00' : '#333' }}; text-decoration: none; padding: 4px 8px;">
+                                                NL
+                                            </a>
+                                        </li>
+                                        <li style="color: #ccc;">|</li>
+                                        <li class="menu-item {{ app()->getLocale() === 'fr' ? 'is-active' : '' }}">
+                                            <a href="{{ route('lang.switch', 'fr') }}" 
+                                               class="menu-link menu-link--lang"
+                                               style="font-weight: {{ app()->getLocale() === 'fr' ? '700' : '400' }}; color: {{ app()->getLocale() === 'fr' ? '#84bd00' : '#333' }}; text-decoration: none; padding: 4px 8px;">
+                                                FR
                                             </a>
                                         </li>
                                     </ul>

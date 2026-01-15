@@ -6505,9 +6505,6 @@ span.field-label {
     border-color: #ffde00
 }
 
-.header-anchors {
-    display: none
-}
 
 .header-anchors .menu-link,
 .header-anchors .menu-item,
@@ -6519,8 +6516,7 @@ span.field-label {
     padding: 0 .5rem;
     color: var(--cre-on-surface-default, #3c3c3c);
     transition: color cubic-bezier(0.215, 0.61, 0.355, 1) .4s, background cubic-bezier(0.215, 0.61, 0.355, 1) .4s;
-    inline-size: 3.8rem;
-    block-size: 3.8rem;
+    
     justify-content: center;
     border-radius: 0
 }
