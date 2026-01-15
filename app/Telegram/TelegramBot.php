@@ -1,0 +1,159 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Telegram;
+
+use App\Telegram\Handlers\ActionHandler;
+use App\Telegram\Handlers\AdminPanelHandler;
+use App\Telegram\Handlers\MessageHandler;
+use App\Telegram\Handlers\ProfileHandler;
+use App\Telegram\Handlers\SessionHandler;
+use App\Telegram\Handlers\StartHandler;
+use App\Telegram\Middleware\AdminAuthMiddleware;
+use Illuminate\Support\Facades\Log;
+use SergiX44\Nutgram\Nutgram;
+
+/**
+ * Telegram Bot для админ-панели
+ * 
+ * Регистрирует все handlers и middleware.
+ * Все команды и callback'и проходят через AdminAuthMiddleware.
+ */
+class TelegramBot
+{
+    public function __construct(
+        private readonly Nutgram $bot,
+    ) {
+        $this->registerMiddleware();
+        $this->registerCommands();
+        $this->registerCallbacks();
+        $this->registerMessages();
+        $this->registerErrorHandler();
+    }
+
+    /**
+     * Регистрация глобального middleware
+     */
+    private function registerMiddleware(): void
+    {
+        $this->bot->middleware(AdminAuthMiddleware::class);
+    }
+
+    /**
+     * Регистрация команд
+     */
+    private function registerCommands(): void
+    {
+        // /start — приветствие
+        $this->bot->onCommand('start', StartHandler::class);
+
+        // /profile — профиль админа
+        $this->bot->onCommand('profile', ProfileHandler::class);
+
+        // /sessions — панель сессий
+        $this->bot->onCommand('sessions', [AdminPanelHandler::class, 'sessions']);
+
+        // /addadmin {telegram_id} — добавить админа (только супер-админ)
+        $this->bot->onCommand('addadmin', [AdminPanelHandler::class, 'addAdmin']);
+
+        // /admins — список админов (только супер-админ)
+        $this->bot->onCommand('admins', [AdminPanelHandler::class, 'admins']);
+    }
+
+    /**
+     * Регистрация callback-обработчиков
+     */
+    private function registerCallbacks(): void
+    {
+        // === ГЛАВНОЕ МЕНЮ ===
+        $this->bot->onCallbackQueryData('menu:refresh', [StartHandler::class, 'refresh']);
+        $this->bot->onCallbackQueryData('menu:my_sessions', [SessionHandler::class, 'mySessions']);
+        $this->bot->onCallbackQueryData('menu:pending_sessions', [SessionHandler::class, 'pendingSessions']);
+        $this->bot->onCallbackQueryData('menu:profile', [ProfileHandler::class, 'showProfile']);
+        $this->bot->onCallbackQueryData('menu:admins', [AdminPanelHandler::class, 'admins']);
+        $this->bot->onCallbackQueryData('menu:add_admin', [AdminPanelHandler::class, 'startAddAdmin']);
+        $this->bot->onCallbackQueryData('menu:back', [StartHandler::class, 'refresh']);
+
+        // === ПРОФИЛЬ ===
+        $this->bot->onCallbackQueryData('profile:refresh', [ProfileHandler::class, 'refresh']);
+
+        // === СЕССИИ ===
+        $this->bot->onCallbackQueryData('assign:{sessionId}', [SessionHandler::class, 'assign']);
+        $this->bot->onCallbackQueryData('unassign:{sessionId}', [SessionHandler::class, 'unassign']);
+        $this->bot->onCallbackQueryData('complete:{sessionId}', [SessionHandler::class, 'complete']);
+        $this->bot->onCallbackQueryData('sessions:my', [SessionHandler::class, 'mySessions']);
+        $this->bot->onCallbackQueryData('sessions:filter:{status}', [AdminPanelHandler::class, 'filterSessions']);
+
+        // === ДЕЙСТВИЯ ===
+        $this->bot->onCallbackQueryData('action:{sessionId}:{actionType}', [ActionHandler::class, 'handle']);
+        
+        // === ОТМЕНА CONVERSATION ===
+        $this->bot->onCallbackQueryData('cancel_conversation', function ($bot) {
+            $bot->answerCallbackQuery(text: '❌ Отменено');
+        });
+    }
+
+    /**
+     * Регистрация обработчиков сообщений (для pending actions)
+     */
+    private function registerMessages(): void
+    {
+        // Текстовые сообщения (для кастомных действий)
+        $this->bot->onText('{text}', [MessageHandler::class, 'handle']);
+        
+        // Фото (для кастомной картинки)
+        $this->bot->onPhoto([MessageHandler::class, 'handle']);
+    }
+
+    /**
+     * Регистрация обработчика ошибок
+     */
+    private function registerErrorHandler(): void
+    {
+        $this->bot->onException(function (Nutgram $bot, \Throwable $exception) {
+            Log::error('Telegram bot error', [
+                'message' => $exception->getMessage(),
+                'trace' => $exception->getTraceAsString(),
+                'user_id' => $bot->userId(),
+            ]);
+
+            try {
+                $bot->sendMessage('❌ Произошла ошибка. Попробуйте позже.');
+            } catch (\Throwable) {
+                // Игнорируем ошибку отправки
+            }
+        });
+
+        $this->bot->onApiError(function (Nutgram $bot, \Throwable $exception) {
+            Log::error('Telegram API error', [
+                'message' => $exception->getMessage(),
+                'user_id' => $bot->userId(),
+            ]);
+        });
+    }
+
+    /**
+     * Запуск бота в режиме long polling
+     */
+    public function run(): void
+    {
+        $this->bot->run();
+    }
+
+    /**
+     * Обработка webhook запроса
+     */
+    public function handleWebhook(): void
+    {
+        $this->bot->run();
+    }
+
+    /**
+     * Получение экземпляра бота
+     */
+    public function getBot(): Nutgram
+    {
+        return $this->bot;
+    }
+}

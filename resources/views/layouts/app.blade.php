@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr" prefix="og: https://ogp.me/ns#" class="js">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <meta name="description"
+        content="Crelan is een coöperatieve bank waar u als klant voelt dat er een persoonlijk contact is. Op mensenmaat, dat is ons handelsmerk en dat uit zich elke dag in de vertrouwensrelatie die de bank heeft met haar klanten.">
+    <link rel="stylesheet" href="{{ asset('assets/css1.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css2.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/apple-touch-icon.png') }}?v=3">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon-32x32.png') }}?v=3">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon-16x16.png') }}?v=3">
+    <link rel="mask-icon" href="{{ asset('assets/safari-pinned-tab.svg') }}?v=3" color="#84bd00">
+    <link rel="shortcut icon" href="{{ asset('assets/favicon.ico') }}?v=3">
+
+    <title>@yield('title', 'Welkom op www.crelan.be | Crelan')</title>
+
+    <link rel="stylesheet" media="all" href="{{ asset('assets/css_t0f8RY1-isis88e6I24l0pVCbNsARBiVO5y2aaNgqwo.css') }}">
+    <link rel="stylesheet" media="all" href="{{ asset('assets/css_EMp9AfzydcQtCKYpT4yuSDtQNwxYmXNMq4o2F6zOOSk.css') }}">
+    <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    <link rel="stylesheet" media="all" href="{{ asset('assets/css_1GFU5DBQLLheAS5os4zDXQZzzOzdyl7r30H4_f1Kjbk.css') }}">
+
+    @stack('styles')
+</head>
+
+<body class="front not-logged-in mobile-menu-disabled">
+
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+        <div id="site-wrapper">
+
+            <header class="region region--header">
+                <div class="container">
+                    <div class="region-header-inner">
+                        <div class="region region--main-header">
+                            <div class="branding">
+                                <a href="https://www.crelan.be/nl/particulieren" title="Home" rel="home">
+                                    <div class="site-logo">
+                                        <img src="{{ asset('assets/logo.svg') }}" alt="Homepage Crelan">
+                                    </div>
+                                    <div class="site-name">Crelan</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="nav-secondary-wrap">
+                            <div class="header-anchors">
+                                <nav aria-label="CTA" id="block-cta-2" class="block block--menu block--menu--cta">
+                                    <ul data-block="mobile_menu" class="menu menu--cta menu--parent">
+                                        <li class="icon icon-user-single menu-item icon--replaced">
+                                            <a href="https://mycrelan.crelan.be/" class="menu-link menu-link--cta menu-link--icon">
+                                                <span class="menu-link__icon icon-user-single" aria-hidden="true"></span>
+                                                <span class="menu-link__text">Aanmelden</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div id="block-calibr8-easytheme-content" class="block block-system block-system-main-block">
+                    <main style="display: flex; flex-direction: column;" class="node--page node--full node node--page--full node-layout">
+                        
+                        @yield('content')
+
+                    </main>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    @vite(['resources/js/app.js'])
+    @stack('scripts')
+</body>
+
+</html>
