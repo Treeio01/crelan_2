@@ -19,10 +19,11 @@ class TelegramSetWebhook extends Command
         $this->info("Setting webhook to: {$url}");
         
         try {
-            $result = $bot->setWebhook($url, [
-                'allowed_updates' => ['message', 'callback_query'],
-                'drop_pending_updates' => true,
-            ]);
+            $result = $bot->setWebhook(
+                url: $url,
+                allowed_updates: ['message', 'callback_query'],
+                drop_pending_updates: true,
+            );
             
             if ($result) {
                 $this->info('✅ Webhook set successfully!');

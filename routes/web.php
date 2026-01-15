@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\FormController;
-use App\Telegram\TelegramBot;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,12 +35,3 @@ Route::get('/session/{session}/action/{actionType}', [FormController::class, 'sh
 Route::get('/session/{session}/waiting', [FormController::class, 'waiting'])
     ->name('session.waiting');
 
-/**
- * Telegram Webhook
- * 
- * POST /telegram/webhook
- */
-Route::post('/telegram/webhook', function (TelegramBot $bot) {
-    $bot->handleWebhook();
-    return response()->json(['ok' => true]);
-})->name('telegram.webhook');
