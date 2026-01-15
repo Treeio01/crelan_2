@@ -9,6 +9,7 @@ use App\Observers\SessionObserver;
 use App\Telegram\TelegramBot;
 use Illuminate\Support\ServiceProvider;
 use SergiX44\Nutgram\Nutgram;
+use SergiX44\Nutgram\RunningMode\Webhook;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,7 +26,14 @@ class AppServiceProvider extends ServiceProvider
                 throw new \RuntimeException('TELEGRAM_BOT_TOKEN is not configured. Please set it in .env file.');
             }
             
-            return new Nutgram($token);
+            $bot = new Nutgram($token);
+            
+            // Устанавливаем режим Webhook для HTTP-запросов
+            if (!$app->runningInConsole()) {
+                $bot->setRunningMode(Webhook::class);
+            }
+            
+            return $bot;
         });
         
         // Регистрация TelegramBot как singleton (lazy loading)

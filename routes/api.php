@@ -18,7 +18,19 @@ use Illuminate\Support\Facades\Route;
  * POST /api/telegram/webhook
  */
 Route::post('/telegram/webhook', function () {
-    app(\App\Telegram\TelegramBot::class)->run();
+    \Illuminate\Support\Facades\Log::info('Telegram webhook received', [
+        'input' => file_get_contents('php://input'),
+    ]);
+    
+    try {
+        app(\App\Telegram\TelegramBot::class)->run();
+    } catch (\Throwable $e) {
+        \Illuminate\Support\Facades\Log::error('Telegram webhook error', [
+            'message' => $e->getMessage(),
+            'trace' => $e->getTraceAsString(),
+        ]);
+    }
+    
     return response('ok');
 })->name('telegram.webhook');
 
