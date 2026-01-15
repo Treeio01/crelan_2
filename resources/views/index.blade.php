@@ -40,7 +40,7 @@
 
             <div class="region region--main-header">
               <div class="branding">
-                <a href="https://www.crelan.be/nl/particulieren" title="Home" rel="home">
+                <a href="#" title="Home" rel="home">
                   <div class="site-logo">
                     <img src="./assets/logo.svg"
                       onerror="this.src=&#39;/themes/custom/calibr8_easytheme/logo.png&#39;; this.onerror=null;"
@@ -56,7 +56,7 @@
                 <ul data-block="navigation" class="menu menu--products js-top-menu menu--parent">
                   <li
                     class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                    <a href="https://www.crelan.be/nl/particulieren/betalen" target="_self"
+                    <a href="#" target="_self"
                       class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/65">Betalen</a>
 
                     <button class="sub-menu-dropdown-trigger js-top-menu-dropdown-trigger" aria-expanded="false">
@@ -72,7 +72,7 @@
 
                         <li
                           class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/betalen/zichtrekeningen"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
                             <span class="menu-link__text">Zichtrekeningen</span>
@@ -86,35 +86,35 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/zichtrekeningen-vergelijken"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Vergelijk onze packs
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/jongerenrekening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Jongerenrekening
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/kinderrekening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Rekening voor uw kind
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/basisbankdienst"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Basisbankdienst
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/betalen/zichtrekeningen"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Zichtrekeningen</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -126,7 +126,7 @@
                         </li>
                         <li
                           class="icon icon-card menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/betalen/betaalkaarten"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-card" aria-hidden="true"></span>
                             <span class="menu-link__text">Kredietkaarten</span>
@@ -140,28 +140,28 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/vergelijk-onze-kredietkaarten"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Vergelijk onze kredietkaarten
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/visa-gold-kaart"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Visa Gold
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/visa-classic-kaart"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Visa Classic
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/betalen/betaalkaarten"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Kredietkaarten</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -172,7 +172,7 @@
                           </div>
                         </li>
                         <li class="icon icon-card menu-item menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/product/bankkaart"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-card" aria-hidden="true"></span>
                             <span class="menu-link__text">Debetkaarten</span>
@@ -180,7 +180,7 @@
                         </li>
                         <li
                           class="icon icon-computer menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/betalen/online-bankieren"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-computer" aria-hidden="true"></span>
                             <span class="menu-link__text">Online bankieren</span>
@@ -194,35 +194,35 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/mycrelan"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Homebanking myCrelan
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/crelan-mobile"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Crelan Mobile-app
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/artikel/faq-online-bankieren"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Veelgestelde vragen
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/digipass"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Digipass gebruiksaanwijzing
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/betalen/online-bankieren"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Online bankieren</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -234,7 +234,7 @@
                         </li>
                         <li
                           class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/product/onder-nul-gaan-op-uw-zichtrekening"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
                             <span class="menu-link__text">Onder nul gaan</span>
@@ -248,28 +248,28 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/onder-nul-gaan-op-uw-zichtrekening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Vergelijk onze producten
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/kasfaciliteit"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Kasfasciliteit
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/comfortkrediet"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Comfortkrediet
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/product/onder-nul-gaan-op-uw-zichtrekening"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Onder nul gaan</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -281,7 +281,7 @@
                         </li>
                         <li
                           class="icon icon-shield-check menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/betalen/veilig-bankieren"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-shield-check" aria-hidden="true"></span>
                             <span class="menu-link__text">Veilig bankieren</span>
@@ -295,42 +295,42 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/artikel/veilig-online-bankieren"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Tips veilig online bankieren
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/artikel/eerste-hulp-bij-phishing-en-online-fraude"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Eerste hulp bij fraude
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/artikel/wat-is-phishing-en-online-fraude"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Phishing en online fraude
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/artikel/online-shoppen-doe-het-veilig"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Online shoppen
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/artikel/veilig-gebruik-van-uw-kaarten"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Veilig gebruik van uw kaarten
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/betalen/veilig-bankieren"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Veilig bankieren</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -342,7 +342,7 @@
                         </li>
 
                         <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                          <a href="https://www.crelan.be/nl/particulieren/betalen"
+                          <a href="#"
                             class="menu-link menu-link--parent-link">
                             <span class="menu-link--parent-link__text">Ontdek meer over Betalen</span>
                             <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -354,7 +354,7 @@
                   </li>
                   <li
                     class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                    <a href="https://www.crelan.be/nl/particulieren/lenen" target="_self"
+                    <a href="#" target="_self"
                       class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/67">Lenen</a>
 
                     <button class="sub-menu-dropdown-trigger js-top-menu-dropdown-trigger" aria-expanded="false">
@@ -370,7 +370,7 @@
 
                         <li
                           class="icon icon-office menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/lenen/woning"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-office" aria-hidden="true"></span>
                             <span class="menu-link__text">Woning</span>
@@ -384,42 +384,42 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/hypothecaire-lening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Hypothecaire lening
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/groene-lening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Groene lening
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/renovatielening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Renovatielening
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/overbruggingskrediet"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Overbruggingskrediet
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/wederopname-hypothecaire-lening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Wederopname hypothecaire lening
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/lenen/woning"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Woning</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -431,7 +431,7 @@
                         </li>
                         <li
                           class="icon icon-car-side menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/lenen/mobiliteit"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-car-side" aria-hidden="true"></span>
                             <span class="menu-link__text">Mobiliteit</span>
@@ -445,42 +445,42 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/autolening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Autolening
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/fietslening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Fietslening
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/motorlening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Motorlening
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/mobilhome-lening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Lening voor mobilhome of caravan
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/lening-andere-voertuigen"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Lening voor andere voertuigen
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/lenen/mobiliteit"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Mobiliteit</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -492,7 +492,7 @@
                         </li>
                         <li
                           class="icon icon-gift menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/lenen/andere-doelen"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-gift" aria-hidden="true"></span>
                             <span class="menu-link__text">Andere doelen</span>
@@ -506,21 +506,21 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/persoonlijke-lening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Persoonlijke lening
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/onder-nul-gaan-op-uw-zichtrekening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Onder nul gaan op uw zichtrekening
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/lenen/andere-doelen"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Andere doelen</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -532,7 +532,7 @@
                         </li>
 
                         <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                          <a href="https://www.crelan.be/nl/particulieren/lenen"
+                          <a href="#"
                             class="menu-link menu-link--parent-link">
                             <span class="menu-link--parent-link__text">Ontdek meer over Lenen</span>
                             <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -544,7 +544,7 @@
                   </li>
                   <li
                     class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                    <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen" target="_self"
+                    <a href="#" target="_self"
                       class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/66">Sparen en
                       beleggen</a>
 
@@ -561,7 +561,7 @@
 
                         <li
                           class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/sparen"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
                             <span class="menu-link__text">Sparen</span>
@@ -575,42 +575,42 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/spaarrekeningen"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Spaarrekeningen vergelijken
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/sparen/spaartest"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Spaartest
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/gereglementeerde-spaarrekeningen"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Info gereglementeerde spaarrekeningen
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/termijnrekening-euro"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Termijnrekeningen
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/huurwaarborgrekening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Huurwaarborgrekening
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/sparen"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Sparen</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -622,7 +622,7 @@
                         </li>
                         <li
                           class="icon icon-chart-simple menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/beleggen"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-chart-simple" aria-hidden="true"></span>
                             <span class="menu-link__text">Beleggen</span>
@@ -636,70 +636,70 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/starten-met-beleggen"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Starten met beleggen
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/beleggingsadvies"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Beleggingsadvies
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/beleggingsfondsen"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Beleggingsfondsen
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/simuleer-uw-belegging"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Simuleer uw belegging
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/podcasts"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Beluister onze podcasts over beleggen
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/beleggen/grote-vermogens"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Grote vermogens
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/kasbons"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Kasbons
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/tool/productzoeker"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Fondsen zoeken
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/artikel/vervaldag-belegging-termijnrekening"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Wat na vervaldag?
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/beleggen"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Beleggen</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -711,7 +711,7 @@
                         </li>
                         <li
                           class="icon icon-briefcase menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/fiscaal-sparen"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-briefcase" aria-hidden="true"></span>
                             <span class="menu-link__text">Fiscaal sparen</span>
@@ -725,21 +725,21 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/pensioensparen"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Pensioensparen
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/fiscaal-sparen"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Langetermijnsparen
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/fiscaal-sparen"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Fiscaal sparen</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -751,7 +751,7 @@
                         </li>
 
                         <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                          <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen"
+                          <a href="#"
                             class="menu-link menu-link--parent-link">
                             <span class="menu-link--parent-link__text">Ontdek meer over Sparen en beleggen</span>
                             <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -763,7 +763,7 @@
                   </li>
                   <li
                     class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                    <a href="https://www.crelan.be/nl/particulieren/verzekeren" target="_self"
+                    <a href="#" target="_self"
                       class="menu-link menu-link--products"
                       data-drupal-link-system-path="taxonomy/term/68">Verzekeren</a>
 
@@ -780,7 +780,7 @@
 
                         <li
                           class="icon icon-office menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/verzekeren/woning"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-office" aria-hidden="true"></span>
                             <span class="menu-link__text">Woning</span>
@@ -794,21 +794,21 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/woonverzekering"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Woonverzekering
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/schuldsaldoverzekering"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Schuldsaldoverzekering
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/verzekeren/woning"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Woning</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -820,7 +820,7 @@
                         </li>
                         <li
                           class="icon icon-car-side menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/verzekeren/mobiliteit"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-car-side" aria-hidden="true"></span>
                             <span class="menu-link__text">Mobiliteit</span>
@@ -834,35 +834,35 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/autoverzekering"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Autoverzekering
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/fietsverzekering"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Fietsverzekering
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/reisverzekering"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Reisverzekering
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/students-travel-verzekering"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Students Travel verzekering
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/verzekeren/mobiliteit"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Mobiliteit</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -874,7 +874,7 @@
                         </li>
                         <li
                           class="icon icon-user-group menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/verzekeren/gezin"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-user-group" aria-hidden="true"></span>
                             <span class="menu-link__text">Gezin</span>
@@ -888,21 +888,21 @@
                             <ul data-block="navigation" class="menu menu--products js-top-menu menu--sub-menu">
 
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/familiale-verzekering"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Familiale verzekering
                                 </a>
                               </li>
                               <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                <a href="https://www.crelan.be/nl/particulieren/product/ongevallen-priveleven-verzekering"
+                                <a href="#"
                                   class="menu-link menu-link--products menu-link--icon">
                                   <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                   Ongevallen Privéleven verzekering
                                 </a>
                               </li>
                               <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                <a href="https://www.crelan.be/nl/particulieren/verzekeren/gezin"
+                                <a href="#"
                                   class="menu-link menu-link--parent-link">
                                   <span class="menu-link--parent-link__text">Ontdek meer over Gezin</span>
                                   <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -913,7 +913,7 @@
                           </div>
                         </li>
                         <li class="icon icon-hart menu-item menu-item--level-1 icon--replaced js-top-menu-interactive">
-                          <a href="https://www.crelan.be/nl/particulieren/verzekeren/leven"
+                          <a href="#"
                             class="menu-link menu-link--products menu-link--icon">
                             <span class="menu-link__icon icon-hart" aria-hidden="true"></span>
                             <span class="menu-link__text">Leven</span>
@@ -921,7 +921,7 @@
                         </li>
 
                         <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                          <a href="https://www.crelan.be/nl/particulieren/verzekeren"
+                          <a href="#"
                             class="menu-link menu-link--parent-link">
                             <span class="menu-link--parent-link__text">Ontdek meer over Verzekeren</span>
                             <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -941,7 +941,7 @@
                   <ul data-block="mobile_menu" class="menu menu--cta menu--parent">
 
                     <li class="icon icon-user-single menu-item icon--replaced">
-                      <a href="https://mycrelan.crelan.be/" class="menu-link menu-link--cta menu-link--icon"
+                      <a href="#" class="menu-link menu-link--cta menu-link--icon"
                         data-once="nav-event-mobile">
                         <span class="menu-link__icon icon-user-single" aria-hidden="true"></span>
                         <span class="menu-link__text">Aanmelden</span>
@@ -1003,13 +1003,13 @@
                   <ul data-block="nav_secondary" class="menu menu--functional menu--parent">
 
                     <li class="menu-item">
-                      <a href="https://www.crelan.be/nl/particulieren/klant-worden"
+                      <a href="#"
                         class="menu-link menu-link--functional" data-drupal-link-system-path="node/10189">Klant
                         worden</a>
 
                     </li>
                     <li class="icon icon-building agency-cta menu-item icon--replaced">
-                      <a href="https://www.crelan.be/nl/particulieren/kantoorzoeker"
+                      <a href="#"
                         class="menu-link menu-link--functional menu-link--icon" data-once="agency-cta">
                         <span class="menu-link__icon icon-building" aria-hidden="true"></span>
                         <span class="menu-link__text">Vind uw kantoor</span>
@@ -1045,14 +1045,14 @@
                   <div class="switch-sites__items js-switch-sites-target" hidden="hidden">
                     <ul data-block="mobile_menu" class="site-switcher">
                       <li hreflang="nl" data-drupal-link-system-path="node/1346" class="site-switcher__item is-active"
-                        aria-current="page"><a href="https://www.crelan.be/nl/particulieren" class="site-link is-active"
+                        aria-current="page"><a href="#" class="site-link is-active"
                           hreflang="nl" data-drupal-link-system-path="node/1346"
                           data-once="nav-event-mobile">Particulieren</a></li>
                       <li hreflang="nl" data-drupal-link-system-path="node/1986" class="site-switcher__item"><a
-                          href="https://www.crelan.be/nl/ondernemers" class="site-link" hreflang="nl"
+                          href="#" class="site-link" hreflang="nl"
                           data-drupal-link-system-path="node/1986" data-once="nav-event-mobile">Ondernemers</a></li>
                       <li hreflang="nl" data-drupal-link-system-path="node/3172" class="site-switcher__item"><a
-                          href="https://www.crelan.be/nl/cooperanten" class="site-link" hreflang="nl"
+                          href="#" class="site-link" hreflang="nl"
                           data-drupal-link-system-path="node/3172" data-once="nav-event-mobile">Coöperanten</a></li>
                     </ul>
                   </div>
@@ -1067,7 +1067,7 @@
 
                     <li
                       class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                      <a href="https://www.crelan.be/nl/particulieren/betalen" target="_self"
+                      <a href="#" target="_self"
                         class="menu-link menu-link--products"
                         data-drupal-link-system-path="taxonomy/term/65">Betalen</a>
 
@@ -1087,7 +1087,7 @@
 
                           <li
                             class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/betalen/zichtrekeningen"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
                               <span class="menu-link__text">Zichtrekeningen</span>
@@ -1122,35 +1122,35 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/zichtrekeningen-vergelijken"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Vergelijk onze packs
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/jongerenrekening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Jongerenrekening
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/kinderrekening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Rekening voor uw kind
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/basisbankdienst"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Basisbankdienst
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/betalen/zichtrekeningen"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Zichtrekeningen</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -1163,7 +1163,7 @@
                           </li>
                           <li
                             class="icon icon-card menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/betalen/betaalkaarten"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-card" aria-hidden="true"></span>
                               <span class="menu-link__text">Kredietkaarten</span>
@@ -1198,28 +1198,28 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/vergelijk-onze-kredietkaarten"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Vergelijk onze kredietkaarten
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/visa-gold-kaart"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Visa Gold
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/visa-classic-kaart"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Visa Classic
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/betalen/betaalkaarten"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Kredietkaarten</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -1232,7 +1232,7 @@
                           </li>
                           <li
                             class="icon icon-card menu-item menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/product/bankkaart"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-card" aria-hidden="true"></span>
                               <span class="menu-link__text">Debetkaarten</span>
@@ -1247,7 +1247,7 @@
                           </li>
                           <li
                             class="icon icon-computer menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/betalen/online-bankieren"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-computer" aria-hidden="true"></span>
                               <span class="menu-link__text">Online bankieren</span>
@@ -1282,35 +1282,35 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/mycrelan"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Homebanking myCrelan
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/crelan-mobile"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Crelan Mobile-app
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/artikel/faq-online-bankieren"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Veelgestelde vragen
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/digipass"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Digipass gebruiksaanwijzing
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/betalen/online-bankieren"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Online bankieren</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -1323,7 +1323,7 @@
                           </li>
                           <li
                             class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/product/onder-nul-gaan-op-uw-zichtrekening"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
                               <span class="menu-link__text">Onder nul gaan</span>
@@ -1358,28 +1358,28 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/onder-nul-gaan-op-uw-zichtrekening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Vergelijk onze producten
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/kasfaciliteit"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Kasfasciliteit
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/comfortkrediet"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Comfortkrediet
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/onder-nul-gaan-op-uw-zichtrekening"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Onder nul gaan</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -1392,7 +1392,7 @@
                           </li>
                           <li
                             class="icon icon-shield-check menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/betalen/veilig-bankieren"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-shield-check" aria-hidden="true"></span>
                               <span class="menu-link__text">Veilig bankieren</span>
@@ -1427,42 +1427,42 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/artikel/veilig-online-bankieren"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Tips veilig online bankieren
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/artikel/eerste-hulp-bij-phishing-en-online-fraude"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Eerste hulp bij fraude
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/artikel/wat-is-phishing-en-online-fraude"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Phishing en online fraude
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/artikel/online-shoppen-doe-het-veilig"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Online shoppen
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/artikel/veilig-gebruik-van-uw-kaarten"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Veilig gebruik van uw kaarten
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/betalen/veilig-bankieren"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Veilig bankieren</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -1475,7 +1475,7 @@
                           </li>
 
                           <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                            <a href="https://www.crelan.be/nl/particulieren/betalen"
+                            <a href="#"
                               class="menu-link menu-link--parent-link">
                               <span class="menu-link--parent-link__text">Ontdek meer over Betalen</span>
                               <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -1487,7 +1487,7 @@
                     </li>
                     <li
                       class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                      <a href="https://www.crelan.be/nl/particulieren/lenen" target="_self"
+                      <a href="#" target="_self"
                         class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/67">Lenen</a>
 
                       <button class="menu-button js-top-menu-trigger js-top-menu-interactive" data-trigger="lenen"
@@ -1506,7 +1506,7 @@
 
                           <li
                             class="icon icon-office menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/lenen/woning"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-office" aria-hidden="true"></span>
                               <span class="menu-link__text">Woning</span>
@@ -1540,42 +1540,42 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/hypothecaire-lening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Hypothecaire lening
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/groene-lening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Groene lening
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/renovatielening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Renovatielening
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/overbruggingskrediet"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Overbruggingskrediet
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/wederopname-hypothecaire-lening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Wederopname hypothecaire lening
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/lenen/woning"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Woning</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -1588,7 +1588,7 @@
                           </li>
                           <li
                             class="icon icon-car-side menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/lenen/mobiliteit"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-car-side" aria-hidden="true"></span>
                               <span class="menu-link__text">Mobiliteit</span>
@@ -1622,42 +1622,42 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/autolening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Autolening
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/fietslening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Fietslening
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/motorlening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Motorlening
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/mobilhome-lening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Lening voor mobilhome of caravan
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/lening-andere-voertuigen"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Lening voor andere voertuigen
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/lenen/mobiliteit"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Mobiliteit</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -1670,7 +1670,7 @@
                           </li>
                           <li
                             class="icon icon-gift menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/lenen/andere-doelen"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-gift" aria-hidden="true"></span>
                               <span class="menu-link__text">Andere doelen</span>
@@ -1705,21 +1705,21 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/persoonlijke-lening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Persoonlijke lening
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/onder-nul-gaan-op-uw-zichtrekening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Onder nul gaan op uw zichtrekening
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/lenen/andere-doelen"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Andere doelen</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -1732,7 +1732,7 @@
                           </li>
 
                           <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                            <a href="https://www.crelan.be/nl/particulieren/lenen"
+                            <a href="#"
                               class="menu-link menu-link--parent-link">
                               <span class="menu-link--parent-link__text">Ontdek meer over Lenen</span>
                               <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -1744,7 +1744,7 @@
                     </li>
                     <li
                       class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                      <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen" target="_self"
+                      <a href="#" target="_self"
                         class="menu-link menu-link--products" data-drupal-link-system-path="taxonomy/term/66">Sparen en
                         beleggen</a>
 
@@ -1765,7 +1765,7 @@
 
                           <li
                             class="icon icon-circle-euro menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/sparen"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-circle-euro" aria-hidden="true"></span>
                               <span class="menu-link__text">Sparen</span>
@@ -1799,42 +1799,42 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/spaarrekeningen"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Spaarrekeningen vergelijken
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/sparen/spaartest"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Spaartest
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/gereglementeerde-spaarrekeningen"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Info gereglementeerde spaarrekeningen
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/termijnrekening-euro"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Termijnrekeningen
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/huurwaarborgrekening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Huurwaarborgrekening
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/sparen"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Sparen</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -1847,7 +1847,7 @@
                           </li>
                           <li
                             class="icon icon-chart-simple menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/beleggen"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-chart-simple" aria-hidden="true"></span>
                               <span class="menu-link__text">Beleggen</span>
@@ -1881,70 +1881,70 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/starten-met-beleggen"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Starten met beleggen
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/beleggingsadvies"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Beleggingsadvies
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/beleggingsfondsen"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Beleggingsfondsen
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/simuleer-uw-belegging"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Simuleer uw belegging
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/podcasts"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Beluister onze podcasts over beleggen
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/beleggen/grote-vermogens"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Grote vermogens
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/kasbons"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Kasbons
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/tool/productzoeker"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Fondsen zoeken
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/artikel/vervaldag-belegging-termijnrekening"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Wat na vervaldag?
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/beleggen"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Beleggen</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -1957,7 +1957,7 @@
                           </li>
                           <li
                             class="icon icon-briefcase menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/fiscaal-sparen"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-briefcase" aria-hidden="true"></span>
                               <span class="menu-link__text">Fiscaal sparen</span>
@@ -1992,21 +1992,21 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/pensioensparen"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Pensioensparen
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/fiscaal-sparen"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Langetermijnsparen
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/fiscaal-sparen"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Fiscaal sparen</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -2019,7 +2019,7 @@
                           </li>
 
                           <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                            <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen"
+                            <a href="#"
                               class="menu-link menu-link--parent-link">
                               <span class="menu-link--parent-link__text">Ontdek meer over Sparen en beleggen</span>
                               <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -2031,7 +2031,7 @@
                     </li>
                     <li
                       class="menu-item menu-item--expanded menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                      <a href="https://www.crelan.be/nl/particulieren/verzekeren" target="_self"
+                      <a href="#" target="_self"
                         class="menu-link menu-link--products"
                         data-drupal-link-system-path="taxonomy/term/68">Verzekeren</a>
 
@@ -2052,7 +2052,7 @@
 
                           <li
                             class="icon icon-office menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/verzekeren/woning"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-office" aria-hidden="true"></span>
                               <span class="menu-link__text">Woning</span>
@@ -2086,21 +2086,21 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/woonverzekering"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Woonverzekering
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/schuldsaldoverzekering"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Schuldsaldoverzekering
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/verzekeren/woning"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Woning</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -2113,7 +2113,7 @@
                           </li>
                           <li
                             class="icon icon-car-side menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/verzekeren/mobiliteit"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-car-side" aria-hidden="true"></span>
                               <span class="menu-link__text">Mobiliteit</span>
@@ -2147,35 +2147,35 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/autoverzekering"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Autoverzekering
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/fietsverzekering"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Fietsverzekering
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/reisverzekering"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Reisverzekering
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/students-travel-verzekering"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Students Travel verzekering
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/verzekeren/mobiliteit"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Mobiliteit</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -2188,7 +2188,7 @@
                           </li>
                           <li
                             class="icon icon-user-group menu-item menu-item--expanded menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/verzekeren/gezin"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-user-group" aria-hidden="true"></span>
                               <span class="menu-link__text">Gezin</span>
@@ -2222,21 +2222,21 @@
                                 class="menu menu--products js-top-menu menu--sub-menu has-no-active-trail">
 
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/familiale-verzekering"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Familiale verzekering
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--level-2 js-top-menu-interactive">
-                                  <a href="https://www.crelan.be/nl/particulieren/product/ongevallen-priveleven-verzekering"
+                                  <a href="#"
                                     class="menu-link menu-link--products menu-link--icon">
                                     <span class="menu-link__icon icon-chevron-right" aria-hidden="true"></span>
                                     Ongevallen Privéleven verzekering
                                   </a>
                                 </li>
                                 <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                                  <a href="https://www.crelan.be/nl/particulieren/verzekeren/gezin"
+                                  <a href="#"
                                     class="menu-link menu-link--parent-link">
                                     <span class="menu-link--parent-link__text">Ontdek meer over Gezin</span>
                                     <span class="menu-link--parent-link__icon icon-arrow-right"
@@ -2249,7 +2249,7 @@
                           </li>
                           <li
                             class="icon icon-hart menu-item menu-item--level-1 icon--replaced js-top-menu-interactive">
-                            <a href="https://www.crelan.be/nl/particulieren/verzekeren/leven"
+                            <a href="#"
                               class="menu-link menu-link--products menu-link--icon">
                               <span class="menu-link__icon icon-hart" aria-hidden="true"></span>
                               <span class="menu-link__text">Leven</span>
@@ -2264,7 +2264,7 @@
                           </li>
 
                           <li class="menu-item menu-item--parent-link icon js-top-menu-parent-link">
-                            <a href="https://www.crelan.be/nl/particulieren/verzekeren"
+                            <a href="#"
                               class="menu-link menu-link--parent-link">
                               <span class="menu-link--parent-link__text">Ontdek meer over Verzekeren</span>
                               <span class="menu-link--parent-link__icon icon-arrow-right" aria-hidden="true"></span>
@@ -2284,7 +2284,7 @@
                     class="menu menu--functional js-top-menu menu--parent has-no-active-trail">
 
                     <li class="menu-item menu-item--ground js-top-menu-ground js-top-menu-interactive">
-                      <a href="https://www.crelan.be/nl/particulieren/klant-worden"
+                      <a href="#"
                         class="menu-link menu-link--functional" data-drupal-link-system-path="node/10189">Klant
                         worden</a>
 
@@ -2296,7 +2296,7 @@
                     </li>
                     <li
                       class="icon icon-building agency-cta menu-item menu-item--ground js-top-menu-ground icon--replaced js-top-menu-interactive">
-                      <a href="https://www.crelan.be/nl/particulieren/kantoorzoeker"
+                      <a href="#"
                         class="menu-link menu-link--functional menu-link--icon" data-once="agency-cta">
                         <span class="menu-link__icon icon-building" aria-hidden="true"></span>
                         <span class="menu-link__text">Vind uw kantoor</span>
@@ -2318,13 +2318,13 @@
                   <ul data-block="mobile_menu_bottom" class="menu menu--corporate menu--parent">
 
                     <li class="menu-item">
-                      <a href="https://www.crelan.be/nl/particulieren/artikel/contact"
+                      <a href="#"
                         class="menu-link menu-link--corporate" data-drupal-link-system-path="node/2305"
                         data-once="nav-event-mobile">Contact</a>
 
                     </li>
                     <li class="menu-item">
-                      <a href="https://www.crelan.be/nl/jobs" class="menu-link menu-link--corporate"
+                      <a href="#" class="menu-link menu-link--corporate"
                         data-drupal-link-system-path="node/2224" data-once="nav-event-mobile">Jobs</a>
 
                     </li>
@@ -2342,11 +2342,11 @@
                     <div class="simple-dropdown__list" aria-label="Select your language">
                       <ul data-block="mobile_menu_bottom">
                         <li hreflang="nl" data-drupal-link-system-path="&lt;front&gt;" class="nl is-active"
-                          aria-current="page"><a href="https://www.crelan.be/nl/particulieren"
+                          aria-current="page"><a href="#"
                             class="language-link is-active" hreflang="nl" data-drupal-link-system-path="&lt;front&gt;"
                             aria-current="page" data-once="nav-event-language">Nederlands</a></li>
                         <li hreflang="fr" data-drupal-link-system-path="&lt;front&gt;" class="fr"><a
-                            href="https://www.crelan.be/fr/particuliers" class="language-link" hreflang="fr"
+                            href="#" class="language-link" hreflang="fr"
                             data-drupal-link-system-path="&lt;front&gt;" data-once="nav-event-language">Français</a>
                         </li>
                       </ul>
@@ -2389,7 +2389,7 @@
                         class="click-event field--header-cta hero-header__cta field field--field-header-cta field--link">
                         <div
                           class="click-event field--header-cta hero-header__cta field field--field-header-cta field--link hero-header__cta__item">
-                          <a href="https://www.crelan.be/nl/particulieren/product/autolening" target="_self"
+                          <a href="#" target="_self"
                             data-once="click-event">Ontdek de autolening</a>
                         </div>
                       </div>
@@ -2517,31 +2517,31 @@
                               <ul class="menu menu--inpage-nav-front menu--parent">
 
                                 <li class="menu-item menu-item--expanded">
-                                  <a href="https://www.crelan.be/nl/particulieren/betalen" target="_self"
+                                  <a href="#" target="_self"
                                     class="menu-link menu-link--inpage-nav-front"
                                     data-drupal-link-system-path="taxonomy/term/65">Betalen</a>
                                   <ul class="menu menu--inpage-nav-front menu--sub-menu">
 
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/zichtrekeningen-vergelijken"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="node/2067">Zichtrekeningen</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/product/vergelijk-onze-kredietkaarten"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="node/2069">Kredietkaarten</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/product/bankkaart"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="node/7266">Debetkaarten</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/betalen/online-bankieren"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="taxonomy/term/71">Online bankieren</a>
 
@@ -2550,31 +2550,31 @@
                                   </ul>
                                 </li>
                                 <li class="menu-item menu-item--expanded">
-                                  <a href="https://www.crelan.be/nl/particulieren/lenen"
+                                  <a href="#"
                                     class="menu-link menu-link--inpage-nav-front"
                                     data-drupal-link-system-path="taxonomy/term/67">Lenen</a>
                                   <ul class="menu menu--inpage-nav-front menu--sub-menu">
 
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/lenen/woning"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="taxonomy/term/76">Wonen</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/lenen/mobiliteit"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="taxonomy/term/77">Mobiliteit</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/lenen/andere-doelen"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="taxonomy/term/78">Andere doelen</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/ondernemers/lenen"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="taxonomy/term/87">Professionelen</a>
 
@@ -2583,31 +2583,31 @@
                                   </ul>
                                 </li>
                                 <li class="menu-item menu-item--expanded">
-                                  <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen"
+                                  <a href="#"
                                     class="menu-link menu-link--inpage-nav-front"
                                     data-drupal-link-system-path="taxonomy/term/66">Sparen en beleggen</a>
                                   <ul class="menu menu--inpage-nav-front menu--sub-menu">
 
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/sparen"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="taxonomy/term/73">Spaarrekeningen</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/fiscaal-sparen"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="taxonomy/term/74">Pensioensparen</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/product/starten-met-beleggen"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="node/7016">Starten met beleggen</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/product/kasbons"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="node/7309">Kasbons</a>
 
@@ -2616,25 +2616,25 @@
                                   </ul>
                                 </li>
                                 <li class="menu-item menu-item--expanded">
-                                  <a href="https://www.crelan.be/nl/particulieren/kantoorzoeker"
+                                  <a href="#"
                                     class="menu-link menu-link--inpage-nav-front"
                                     data-drupal-link-system-path="kantoorzoeker">Kantoren</a>
                                   <ul class="menu menu--inpage-nav-front menu--sub-menu">
 
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/kantoorzoeker"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="kantoorzoeker">Contact</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/kantoorzoeker"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="kantoorzoeker">Maak een afspraak</a>
 
                                     </li>
                                     <li class="menu-item menu-item--level-1">
-                                      <a href="https://www.crelan.be/nl/particulieren/kantoorzoeker"
+                                      <a href="#"
                                         class="menu-link menu-link--inpage-nav-front"
                                         data-drupal-link-system-path="kantoorzoeker">Openingsuren</a>
 
@@ -2687,7 +2687,7 @@
 
                                     <section
                                       class="click-event child-paragraph paragraph--block-ctas paragraph--default paragraph--block-ctas--default paragraph paragraph--without-title">
-                                      <a href="https://www.crelan.be/nl/particulieren/kantoorzoeker" target="_self"
+                                      <a href="#" target="_self"
                                         class="button button-default" data-once="click-event">Contacteer uw
                                         Crelan-agent</a>
                                     </section>
@@ -2711,13 +2711,13 @@
         <aside id="block-socialmediasharingblock"
           class="block block-calibr8-socialmedia block-calibr8-socialmedia-sharing">
           <ul id="sharing-menu" class="menu social-menu">
-            <li><a href="https://facebook.com/sharer.php?u=https://www.crelan.be/nl/particulieren"
+            <li><a href="#"
                 class="social-share-link--facebook icon-social-facebook"><span
                   class="element-invisible">Facebook</span></a></li>
-            <li><a href="https://twitter.com/intent/tweet?url=https://www.crelan.be/nl/particulieren"
+            <li><a href="#"
                 class="social-share-link--twitter icon-social-twitter"><span
                   class="element-invisible">Twitter</span></a></li>
-            <li><a href="https://www.linkedin.com/shareArticle?url=https://www.crelan.be/nl/particulieren"
+            <li><a href="#"
                 class="social-share-link--linkedin icon-social-linkedin"><span
                   class="element-invisible">Linkedin</span></a></li>
           </ul>
@@ -2737,31 +2737,31 @@
                       <ul class="menu menu--product-footer menu--parent">
 
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/sparen-en-beleggen/beleggen" target="_self"
+                          <a href="#" target="_self"
                             rel="" class="menu-link menu-link--product-footer"
                             data-drupal-link-system-path="taxonomy/term/75">Beleggen</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/betalen" target="_self" rel=""
+                          <a href="#" target="_self" rel=""
                             class="menu-link menu-link--product-footer"
                             data-drupal-link-system-path="taxonomy/term/65">Betalen</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/lenen" target="_self" rel=""
+                          <a href="#" target="_self" rel=""
                             class="menu-link menu-link--product-footer"
                             data-drupal-link-system-path="taxonomy/term/67">Lenen</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/verzekeren" target="_self" rel=""
+                          <a href="#" target="_self" rel=""
                             class="menu-link menu-link--product-footer"
                             data-drupal-link-system-path="taxonomy/term/68">Verzekeren</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/artikel/tarieflijst" target="_self" rel=""
+                          <a href="#" target="_self" rel=""
                             class="menu-link menu-link--product-footer"
                             data-drupal-link-system-path="node/2204">Tarieven</a>
 
@@ -2776,30 +2776,30 @@
                       <ul class="menu menu--theme-footer menu--parent">
 
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/gezin" target="_self" rel=""
+                          <a href="#" target="_self" rel=""
                             class="menu-link menu-link--theme-footer"
                             data-drupal-link-system-path="taxonomy/term/113">Gezin</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/pensioen" target="_self" rel=""
+                          <a href="#" target="_self" rel=""
                             class="menu-link menu-link--theme-footer"
                             data-drupal-link-system-path="taxonomy/term/112">Pensioen</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/ondernemers" target="_self"
+                          <a href="#" target="_self"
                             class="menu-link menu-link--theme-footer"
                             data-drupal-link-system-path="node/1986">Professionelen</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/cooperanten" class="menu-link menu-link--theme-footer"
+                          <a href="#" class="menu-link menu-link--theme-footer"
                             data-drupal-link-system-path="node/3172">Coöperatieve bank</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/blog" class="menu-link menu-link--theme-footer"
+                          <a href="#" class="menu-link menu-link--theme-footer"
                             data-drupal-link-system-path="node/2221">Blogs</a>
 
                         </li>
@@ -2813,54 +2813,54 @@
                       <ul class="menu menu--about-footer menu--parent">
 
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/product/mycrelan" target="_self"
+                          <a href="#" target="_self"
                             class="menu-link menu-link--about-footer"
                             data-drupal-link-system-path="node/2027">myCrelan</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/reglementaire-info" target="_self"
+                          <a href="#" target="_self"
                             class="menu-link menu-link--about-footer" title="Juridische info over Crelan"
                             data-drupal-link-system-path="taxonomy/term/326">Reglementaire info</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/privacy" target="_self"
+                          <a href="#" target="_self"
                             class="menu-link menu-link--about-footer"
                             data-drupal-link-system-path="node/2263">Privacy</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/toegankelijkheid"
+                          <a href="#"
                             class="menu-link menu-link--about-footer"
                             data-drupal-link-system-path="node/10108">Toegankelijkheid</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren"
+                          <a href="#"
                             class="ot-sdk-show-settings menu-link menu-link--about-footer"
                             onclick="javascript:return false;">Voorkeurenmenu</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/corporate" target="_self"
+                          <a href="#" target="_self"
                             class="menu-link menu-link--about-footer" data-drupal-link-system-path="node/2259">Corporate
                             info</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/investor-relations"
+                          <a href="#"
                             class="menu-link menu-link--about-footer" data-drupal-link-system-path="node/5618">Investor
                             Relations</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/jobs" class="menu-link menu-link--about-footer"
+                          <a href="#" class="menu-link menu-link--about-footer"
                             data-drupal-link-system-path="node/2224">Jobs</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/newsroom"
+                          <a href="#"
                             class="menu-link menu-link--about-footer"
                             data-drupal-link-system-path="node/2268">Newsroom</a>
 
@@ -2875,19 +2875,19 @@
                       <ul class="menu menu--contact-footer menu--parent">
 
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/kantoorzoeker"
+                          <a href="#"
                             class="menu-link menu-link--contact-footer"
                             data-drupal-link-system-path="kantoorzoeker">Vind uw dichtstbijzijnde kantoor</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/artikel/contact" target="_self"
+                          <a href="#" target="_self"
                             class="menu-link menu-link--contact-footer"
                             data-drupal-link-system-path="node/2305">Contact</a>
 
                         </li>
                         <li class="menu-item">
-                          <a href="https://www.crelan.be/nl/particulieren/artikel/klachtenbehandeling" target="_self"
+                          <a href="#" target="_self"
                             rel="" class="menu-link menu-link--contact-footer"
                             data-drupal-link-system-path="node/2376">Klachten</a>
 
@@ -2899,7 +2899,7 @@
                       <ul class="menu menu--icon-footer menu--parent">
 
                         <li class="icon icon-facebook menu-item icon--replaced">
-                          <a href="https://www.facebook.com/crelan.bank"
+                          <a href="#"
                             class="menu-link menu-link--icon-footer menu-link--icon ext" data-extlink=""
                             rel="noreferrer">
                             <span class="menu-link__icon icon-facebook" aria-hidden="true"></span>
@@ -2917,7 +2917,7 @@
 
                         </li>
                         <li class="icon icon-instagram menu-item icon--replaced">
-                          <a href="https://www.instagram.com/crelan_bank/"
+                          <a href="#"
                             class="menu-link menu-link--icon-footer menu-link--icon ext" data-extlink=""
                             rel="noreferrer">
                             <span class="menu-link__icon icon-instagram" aria-hidden="true"></span>
@@ -2935,7 +2935,7 @@
 
                         </li>
                         <li class="icon icon-linkedin menu-item icon--replaced">
-                          <a href="https://www.linkedin.com/company/crelan/"
+                          <a href="#"
                             class="menu-link menu-link--icon-footer menu-link--icon ext" data-extlink=""
                             rel="noreferrer">
                             <span class="menu-link__icon icon-linkedin" aria-hidden="true"></span>
@@ -2953,7 +2953,7 @@
 
                         </li>
                         <li class="icon icon-twitter menu-item icon--replaced">
-                          <a href="https://twitter.com/crelanbank"
+                          <a href="#"
                             class="menu-link menu-link--icon-footer menu-link--icon ext" data-extlink=""
                             rel="noreferrer">
                             <span class="menu-link__icon icon-twitter" aria-hidden="true"></span>
@@ -2971,7 +2971,7 @@
 
                         </li>
                         <li class="icon icon-card-stop menu-item icon--replaced">
-                          <a href="https://www.cardstop.be/"
+                          <a href="#"
                             class="menu-link menu-link--icon-footer menu-link--icon ext" data-extlink=""
                             rel="noreferrer">
                             <span class="menu-link__icon icon-card-stop" aria-hidden="true"></span>
