@@ -176,7 +176,7 @@
         flex-direction: row;
     }
     .region--navigation{
-        display: none;
+        display: none !important;
     }
 }
 
