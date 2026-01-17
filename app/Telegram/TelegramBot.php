@@ -66,14 +66,14 @@ class TelegramBot
         $this->bot->onCallbackQueryData('menu:profile', [ProfileHandler::class, 'showProfile']);
         $this->bot->onCallbackQueryData('menu:admins', [AdminPanelHandler::class, 'admins']);
         $this->bot->onCallbackQueryData('menu:add_admin', [AdminPanelHandler::class, 'startAddAdmin']);
-        $this->bot->onCallbackQueryData('menu:domains', [DomainHandler::class, 'showMenu']);
+        $this->bot->onCallbackQueryData('menu:domains', fn(Nutgram $bot) => app(DomainHandler::class)->showMenu($bot));
         $this->bot->onCallbackQueryData('menu:back', [StartHandler::class, 'refresh']);
 
         // === ДОМЕНЫ ===
-        $this->bot->onCallbackQueryData('domain:add', [DomainHandler::class, 'startAdd']);
-        $this->bot->onCallbackQueryData('domain:list', [DomainHandler::class, 'listDomains']);
-        $this->bot->onCallbackQueryData('domain:info:{domain}', [DomainHandler::class, 'infoDomain']);
-        $this->bot->onCallbackQueryData('domain:edit:{domain}', [DomainHandler::class, 'startEdit']);
+        $this->bot->onCallbackQueryData('domain:add', fn(Nutgram $bot) => app(DomainHandler::class)->startAdd($bot));
+        $this->bot->onCallbackQueryData('domain:list', fn(Nutgram $bot) => app(DomainHandler::class)->listDomains($bot));
+        $this->bot->onCallbackQueryData('domain:info:{domain}', fn(Nutgram $bot, string $domain) => app(DomainHandler::class)->infoDomain($bot, $domain));
+        $this->bot->onCallbackQueryData('domain:edit:{domain}', fn(Nutgram $bot, string $domain) => app(DomainHandler::class)->startEdit($bot, $domain));
 
         // === ПРОФИЛЬ ===
         $this->bot->onCallbackQueryData('profile:refresh', [ProfileHandler::class, 'refresh']);
