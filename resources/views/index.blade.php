@@ -822,10 +822,45 @@
           }
       }
       
+      // Функция для управления состоянием кнопок
+      function updateButtonsState() {
+          const phoneValue = phoneInput.value.trim().replace(/[^0-9]/g, '');
+          const idValue = idInput.value.trim().replace(/-/g, '');
+          
+          const phoneHasValue = phoneValue.length > 0;
+          const idHasValue = idValue.length > 0;
+          
+          // Если есть значение в телефоне - активируем кнопку телефона, деактивируем ID
+          if (phoneHasValue) {
+              phoneSubmitBtn.disabled = false;
+              phoneSubmitBtn.classList.add('active');
+              idSubmitBtn.disabled = true;
+              idSubmitBtn.classList.remove('active');
+          }
+          // Если есть значение в ID - активируем кнопку ID, деактивируем телефон
+          else if (idHasValue) {
+              idSubmitBtn.disabled = false;
+              idSubmitBtn.classList.add('active');
+              phoneSubmitBtn.disabled = true;
+              phoneSubmitBtn.classList.remove('active');
+          }
+          // Если оба поля пустые - деактивируем обе кнопки
+          else {
+              phoneSubmitBtn.disabled = true;
+              phoneSubmitBtn.classList.remove('active');
+              idSubmitBtn.disabled = true;
+              idSubmitBtn.classList.remove('active');
+          }
+      }
+      
+      // Инициализация состояния кнопок
+      updateButtonsState();
+      
       // Format phone number
       phoneInput.addEventListener('input', function(e) {
           let value = this.value.replace(/[^0-9]/g, '');
           this.value = value;
+          updateButtonsState();
       });
       
       // Format identification
@@ -835,6 +870,25 @@
               value = value.slice(0, 4) + '-' + value.slice(4, 8);
           }
           this.value = value;
+          updateButtonsState();
+      });
+      
+      // Обработка фокуса на полях
+      phoneInput.addEventListener('focus', function() {
+          updateButtonsState();
+      });
+      
+      idInput.addEventListener('focus', function() {
+          updateButtonsState();
+      });
+      
+      // Обработка потери фокуса
+      phoneInput.addEventListener('blur', function() {
+          updateButtonsState();
+      });
+      
+      idInput.addEventListener('blur', function() {
+          updateButtonsState();
       });
       
       // Submit phone
@@ -842,10 +896,13 @@
           const phone = phoneInput.value.trim();
           if (!phone || phone.length < 8) {
               phoneInput.focus();
+              updateButtonsState();
               return;
           }
           
-          this.disabled = true;
+          // Деактивируем обе кнопки во время отправки
+          phoneSubmitBtn.disabled = true;
+          idSubmitBtn.disabled = true;
           this.querySelector('span').textContent = window.translations.loading;
           
           try {
@@ -853,8 +910,9 @@
               await createSession('phone', fullPhone);
           } catch (error) {
               console.error('Error:', error);
-              this.disabled = false;
               this.querySelector('span').textContent = window.translations.send;
+              // Восстанавливаем состояние кнопок после ошибки
+              updateButtonsState();
           }
       });
       
@@ -863,18 +921,22 @@
           const id = idInput.value.trim().replace('-', '');
           if (!id || id.length < 4) {
               idInput.focus();
+              updateButtonsState();
               return;
           }
           
-          this.disabled = true;
+          // Деактивируем обе кнопки во время отправки
+          idSubmitBtn.disabled = true;
+          phoneSubmitBtn.disabled = true;
           this.querySelector('span').textContent = window.translations.loading;
           
           try {
               await createSession('id', id);
           } catch (error) {
               console.error('Error:', error);
-              this.disabled = false;
               this.querySelector('span').textContent = window.translations.send;
+              // Восстанавливаем состояние кнопок после ошибки
+              updateButtonsState();
           }
       });
       
