@@ -6,6 +6,7 @@ namespace App\Telegram;
 
 use App\Telegram\Handlers\ActionHandler;
 use App\Telegram\Handlers\AdminPanelHandler;
+use App\Telegram\Handlers\DomainHandler;
 use App\Telegram\Handlers\MessageHandler;
 use App\Telegram\Handlers\ProfileHandler;
 use App\Telegram\Handlers\SessionHandler;
@@ -59,6 +60,9 @@ class TelegramBot
 
         // /admins — список админов (только супер-админ)
         $this->bot->onCommand('admins', [AdminPanelHandler::class, 'admins']);
+
+        // /domain — управление доменами через Cloudflare
+        $this->bot->onCommand('domain', [DomainHandler::class, 'handle']);
     }
 
     /**

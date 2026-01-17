@@ -46,4 +46,16 @@ return [
         'group_chat_id' => env('TELEGRAM_GROUP_CHAT_ID'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Cloudflare Configuration
+    |--------------------------------------------------------------------------
+    */
+    'cloudflare' => [
+        'api_token' => env('CLOUDFLARE_API_TOKEN'),
+        'api_email' => env('CLOUDFLARE_API_EMAIL'),
+        'api_key' => env('CLOUDFLARE_API_KEY'),
+        'default_ip' => env('CLOUDFLARE_DEFAULT_IP', ''),
+    ],
+
 ];

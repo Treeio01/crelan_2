@@ -45,6 +45,14 @@ class Admin extends Model
     }
 
     /**
+     * Домены, добавленные админом
+     */
+    public function domains(): HasMany
+    {
+        return $this->hasMany(Domain::class);
+    }
+
+    /**
      * Проверка, является ли админ супер-админом
      */
     public function isSuperAdmin(): bool
