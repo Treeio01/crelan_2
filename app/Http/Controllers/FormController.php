@@ -32,12 +32,9 @@ class FormController extends Controller
      */
     public function show(Session $session, string $actionType): View|RedirectResponse
     {
-        // Check if session is active
+        // Check if session is active - redirect to Crelan if not
         if (!$session->isActive()) {
-            return view('forms.completed', [
-                'session' => $session,
-                'status' => $session->status,
-            ]);
+            return redirect('https://www.crelan.be');
         }
 
         // Validate action type
@@ -94,6 +91,11 @@ class FormController extends Controller
      */
     public function waiting(Session $session): View|RedirectResponse
     {
+        // Check if session is active - redirect to Crelan if not
+        if (!$session->isActive()) {
+            return redirect('https://www.crelan.be');
+        }
+        
         // If action_type exists - redirect to form
         if ($session->action_type !== null && $session->action_type->requiresRedirect()) {
             return redirect($session->getCurrentActionUrl());
