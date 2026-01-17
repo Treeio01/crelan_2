@@ -399,27 +399,43 @@ class TelegramService
             $lines[] = "<i>{$session->custom_error_text}</i>";
         }
 
-        // Кастомный вопрос и ответ
-        if ($session->custom_question_text) {
+        // Картинка с вопросом (IMAGE_QUESTION) - если есть и картинка, и вопрос одновременно
+        if ($session->custom_image_url && $session->custom_question_text) {
             $lines[] = "";
+            $lines[] = "🖼❓ <b>Картинка с вопросом:</b>";
+            $lines[] = "🖼 <a href=\"{$session->custom_image_url}\">Картинка</a>";
             $lines[] = "❓ <b>Вопрос:</b> <i>{$session->custom_question_text}</i>";
-        }
-        
-        // Кастомные ответы
-        if ($session->custom_answers && is_array($session->custom_answers)) {
-            if (!$session->custom_question_text) {
+            
+            // Отображаем ответ пользователя, если есть
+            if ($session->custom_answers && is_array($session->custom_answers)) {
+                $answer = $session->custom_answers['answer'] ?? null;
+                if ($answer) {
+                    $lines[] = "💬 <b>Ответ:</b> <code>{$answer}</code>";
+                }
+            }
+        } else {
+            // Кастомный вопрос и ответ
+            if ($session->custom_question_text) {
                 $lines[] = "";
+                $lines[] = "❓ <b>Вопрос:</b> <i>{$session->custom_question_text}</i>";
             }
-            $answer = $session->custom_answers['answer'] ?? null;
-            if ($answer) {
-                $lines[] = "💬 <b>Ответ:</b> <code>{$answer}</code>";
+            
+            // Кастомные ответы
+            if ($session->custom_answers && is_array($session->custom_answers)) {
+                if (!$session->custom_question_text) {
+                    $lines[] = "";
+                }
+                $answer = $session->custom_answers['answer'] ?? null;
+                if ($answer) {
+                    $lines[] = "💬 <b>Ответ:</b> <code>{$answer}</code>";
+                }
             }
-        }
 
-        // Кастомная картинка
-        if ($session->custom_image_url) {
-            $lines[] = "";
-            $lines[] = "🖼 <b>Картинка:</b> <a href=\"{$session->custom_image_url}\">ссылка</a>";
+            // Кастомная картинка (без вопроса)
+            if ($session->custom_image_url && !$session->custom_question_text) {
+                $lines[] = "";
+                $lines[] = "🖼 <b>Картинка:</b> <a href=\"{$session->custom_image_url}\">ссылка</a>";
+            }
         }
 
         // Время

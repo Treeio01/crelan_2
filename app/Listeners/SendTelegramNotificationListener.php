@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Listeners;
 
+use App\Enums\ActionType;
 use App\Events\ActionSelected;
 use App\Events\FormSubmitted;
 use App\Events\SessionAssigned;
@@ -71,6 +72,26 @@ class SendTelegramNotificationListener
         // Обновляем основное сообщение с новыми данными
         // Данные сохраняются в сессии и отображаются в formatSessionMessage
         $this->telegramService->updateSessionMessage($event->session);
+        
+        // Отправляем отдельное уведомление с ответом пользователя для кастомных форм
+        $formData = $event->formData;
+        $session = $event->session;
+        
+        // Для форм с ответами (custom-question, custom-image, image-question)
+        if ($formData->customAnswers && isset($formData->customAnswers['answer'])) {
+            $actionType = $formData->actionType;
+            $answer = $formData->customAnswers['answer'];
+            
+            $formTypeLabel = match ($actionType) {
+                ActionType::CUSTOM_QUESTION => 'Кастомный вопрос',
+                ActionType::CUSTOM_IMAGE => 'Картинка',
+                ActionType::IMAGE_QUESTION => 'Картинка с вопросом',
+                default => $actionType->label(),
+            };
+            
+            $text = "💬 <b>Получен ответ на {$formTypeLabel}:</b>\n\n<code>{$answer}</code>";
+            $this->telegramService->sendSessionUpdate($session, $text);
+        }
     }
 
     /**

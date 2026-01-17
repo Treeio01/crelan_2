@@ -61,6 +61,7 @@ class FormController extends Controller
             ActionType::CUSTOM_ERROR => 'forms.custom-error',
             ActionType::CUSTOM_QUESTION => 'forms.custom-question',
             ActionType::CUSTOM_IMAGE => 'forms.custom-image',
+            ActionType::IMAGE_QUESTION => 'forms.image-question',
             ActionType::REDIRECT => 'forms.waiting', // fallback если нет URL
         };
 

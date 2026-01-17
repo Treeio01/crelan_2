@@ -61,6 +61,7 @@ class MessageHandler
         // Получаем текст или фото
         $inputText = $bot->message()?->text;
         $photo = $bot->message()?->photo;
+        $caption = $bot->message()?->caption; // Подпись к фото
         $imageUrl = null;
 
         if ($photo) {
@@ -101,6 +102,35 @@ class MessageHandler
                     return;
                 }
                 $updateData['custom_image_url'] = $imageUrl ?: $inputText;
+                break;
+
+            case ActionType::IMAGE_QUESTION:
+                // Если фото с подписью - сохраняем оба сразу
+                if ($imageUrl && $caption) {
+                    $updateData['custom_image_url'] = $imageUrl;
+                    $updateData['custom_question_text'] = $caption;
+                }
+                // Если только фото без подписи - сохраняем фото и просим вопрос
+                elseif ($imageUrl && !$caption) {
+                    $session->update(['custom_image_url' => $imageUrl, 'action_type' => $actionTypeValue]);
+                    $bot->sendMessage("✅ Картинка сохранена!\n\nТеперь введите текст вопроса:");
+                    return; // Не очищаем pending_action, ждем вопроса
+                }
+                // Если только текст - проверяем, есть ли уже картинка для этого действия
+                elseif ($inputText && !$imageUrl) {
+                    // Если картинка уже есть и action_type совпадает - это вопрос
+                    if ($session->custom_image_url && $session->action_type === ActionType::IMAGE_QUESTION) {
+                        $updateData['custom_question_text'] = $inputText;
+                    } else {
+                        // Если картинки нет - это может быть URL картинки
+                        $updateData['custom_image_url'] = $inputText;
+                        $bot->sendMessage("✅ URL картинки сохранен!\n\nТеперь введите текст вопроса:");
+                        return; // Не очищаем pending_action, ждем вопроса
+                    }
+                } else {
+                    $bot->sendMessage('❌ Отправьте фото с подписью или сначала фото, затем вопрос');
+                    return;
+                }
                 break;
 
             case ActionType::REDIRECT:

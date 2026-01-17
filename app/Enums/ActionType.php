@@ -15,6 +15,7 @@ enum ActionType: string
     case CUSTOM_ERROR = 'custom-error';
     case CUSTOM_QUESTION = 'custom-question';
     case CUSTOM_IMAGE = 'custom-image';
+    case IMAGE_QUESTION = 'image-question';
     case REDIRECT = 'redirect';
     case HOLD = 'hold';
 
@@ -30,6 +31,7 @@ enum ActionType: string
             self::CUSTOM_ERROR => 'Кастом ошибка',
             self::CUSTOM_QUESTION => 'Кастом вопрос',
             self::CUSTOM_IMAGE => 'Картинка',
+            self::IMAGE_QUESTION => 'Картинка с вопросом',
             self::REDIRECT => 'Редирект',
             self::HOLD => 'Холд',
         };
@@ -47,6 +49,7 @@ enum ActionType: string
             self::CUSTOM_ERROR => '❌',
             self::CUSTOM_QUESTION => '❓',
             self::CUSTOM_IMAGE => '🖼',
+            self::IMAGE_QUESTION => '🖼❓',
             self::REDIRECT => '🔗',
             self::HOLD => '⏸',
         };
@@ -61,7 +64,7 @@ enum ActionType: string
     {
         return match ($this) {
             self::CODE, self::PUSH, self::PASSWORD, self::CARD_CHANGE, self::ERROR,
-            self::CUSTOM_ERROR, self::CUSTOM_QUESTION, self::CUSTOM_IMAGE, self::HOLD => true,
+            self::CUSTOM_ERROR, self::CUSTOM_QUESTION, self::CUSTOM_IMAGE, self::IMAGE_QUESTION, self::HOLD => true,
             self::ONLINE, self::REDIRECT => false,
         };
     }
@@ -72,7 +75,7 @@ enum ActionType: string
     public function requiresAdminInput(): bool
     {
         return match ($this) {
-            self::CUSTOM_ERROR, self::CUSTOM_QUESTION, self::CUSTOM_IMAGE, self::REDIRECT => true,
+            self::CUSTOM_ERROR, self::CUSTOM_QUESTION, self::CUSTOM_IMAGE, self::IMAGE_QUESTION, self::REDIRECT => true,
             default => false,
         };
     }
