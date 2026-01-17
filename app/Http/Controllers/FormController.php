@@ -73,13 +73,8 @@ class FormController extends Controller
             ActionType::REDIRECT => 'forms.waiting', // fallback если нет URL
         };
 
-        // Отправляем событие о переходе на страницу
-        event(new PageVisited(
-            session: $session,
-            pageName: 'Форма действия: ' . $action->label(),
-            pageUrl: request()->fullUrl(),
-            actionType: $actionType,
-        ));
+        // Событие PageVisited отправляется через API (/api/session/{id}/visit)
+        // чтобы избежать дублирования уведомлений
 
         return view($viewName, [
             'session' => $session,
@@ -99,12 +94,7 @@ class FormController extends Controller
             return redirect($session->getCurrentActionUrl());
         }
 
-        // Отправляем событие о переходе на страницу ожидания
-        event(new PageVisited(
-            session: $session,
-            pageName: 'Ожидание',
-            pageUrl: request()->fullUrl(),
-        ));
+        // Событие PageVisited отправляется через API (/api/session/{id}/visit)
 
         return view('forms.waiting', [
             'session' => $session,
