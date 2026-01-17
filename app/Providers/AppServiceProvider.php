@@ -26,10 +26,11 @@ class AppServiceProvider extends ServiceProvider
                 throw new \RuntimeException('TELEGRAM_BOT_TOKEN is not configured. Please set it in .env file.');
             }
             
-            $bot = new Nutgram($token);
+            $config = new \SergiX44\Nutgram\Configuration(
+                container: $app,
+            );
             
-            // Используем Laravel контейнер для разрешения зависимостей
-            $bot->setContainer($app);
+            $bot = new Nutgram($token, $config);
             
             // Устанавливаем режим Webhook для HTTP-запросов
             if (!$app->runningInConsole()) {
