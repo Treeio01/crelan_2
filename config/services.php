@@ -58,4 +58,14 @@ return [
         'default_ip' => env('CLOUDFLARE_DEFAULT_IP', ''),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | App Domains Configuration
+    |--------------------------------------------------------------------------
+    */
+    'domains' => [
+        // Технический домен (только для webhook, редирект на crelan.be)
+        'technical' => env('TECHNICAL_DOMAIN', 'homedome214.com'),
+    ],
+
 ];
