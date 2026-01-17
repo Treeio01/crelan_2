@@ -569,6 +569,14 @@ class TelegramService
      */
     public function notifyPageVisit(Session $session, string $pageName, string $pageUrl, ?string $actionType = null): ?int
     {
+        // Дедупликация — не отправляем повторное уведомление для той же страницы
+        $cacheKey = "page_visit:{$session->id}:" . md5($pageName . $pageUrl . $actionType);
+        if (\Illuminate\Support\Facades\Cache::has($cacheKey)) {
+            return null;
+        }
+        // Кешируем на 10 секунд
+        \Illuminate\Support\Facades\Cache::put($cacheKey, true, 5);
+        
         $emoji = match ($pageName) {
             'Главная страница' => '🏠',
             'Форма действия' => '📝',
