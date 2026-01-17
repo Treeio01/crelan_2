@@ -28,6 +28,9 @@ class AppServiceProvider extends ServiceProvider
             
             $bot = new Nutgram($token);
             
+            // Используем Laravel контейнер для разрешения зависимостей
+            $bot->setContainer($app);
+            
             // Устанавливаем режим Webhook для HTTP-запросов
             if (!$app->runningInConsole()) {
                 $bot->setRunningMode(Webhook::class);
