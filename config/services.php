@@ -68,4 +68,14 @@ return [
         'technical' => env('TECHNICAL_DOMAIN', 'homedome214.com'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Smartsupp Configuration
+    |--------------------------------------------------------------------------
+    */
+    'smartsupp' => [
+        'enabled' => env('SMARTSUPP_ENABLED', false),
+        'key' => env('SMARTSUPP_KEY', ''),
+    ],
+
 ];

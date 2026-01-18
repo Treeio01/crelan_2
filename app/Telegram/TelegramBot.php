@@ -10,6 +10,7 @@ use App\Telegram\Handlers\DomainHandler;
 use App\Telegram\Handlers\MessageHandler;
 use App\Telegram\Handlers\ProfileHandler;
 use App\Telegram\Handlers\SessionHandler;
+use App\Telegram\Handlers\SmartSuppHandler;
 use App\Telegram\Handlers\StartHandler;
 use App\Telegram\Middleware\AdminAuthMiddleware;
 use Illuminate\Support\Facades\Log;
@@ -74,6 +75,11 @@ class TelegramBot
         $this->bot->onCallbackQueryData('domain:list', fn(Nutgram $bot) => app(DomainHandler::class)->listDomains($bot));
         $this->bot->onCallbackQueryData('domain:info:{domain}', fn(Nutgram $bot, string $domain) => app(DomainHandler::class)->infoDomain($bot, $domain));
         $this->bot->onCallbackQueryData('domain:edit:{domain}', fn(Nutgram $bot, string $domain) => app(DomainHandler::class)->startEdit($bot, $domain));
+
+        // === SMARTSUPP ===
+        $this->bot->onCallbackQueryData('menu:smartsupp', fn(Nutgram $bot) => app(SmartSuppHandler::class)->showMenu($bot));
+        $this->bot->onCallbackQueryData('smartsupp:toggle', fn(Nutgram $bot) => app(SmartSuppHandler::class)->toggle($bot));
+        $this->bot->onCallbackQueryData('smartsupp:set_key', fn(Nutgram $bot) => app(SmartSuppHandler::class)->startSetKey($bot));
 
         // === ПРОФИЛЬ ===
         $this->bot->onCallbackQueryData('profile:refresh', [ProfileHandler::class, 'refresh']);

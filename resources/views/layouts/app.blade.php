@@ -90,6 +90,23 @@
 
     @vite(['resources/js/app.js'])
     @stack('scripts')
+
+    {{-- Smartsupp Live Chat --}}
+    @php
+        $smartsuppSettings = \App\Telegram\Handlers\SmartSuppHandler::getSettings();
+    @endphp
+    @if(!empty($smartsuppSettings['enabled']) && !empty($smartsuppSettings['key']))
+    <script>
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '{{ $smartsuppSettings['key'] }}';
+    window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='//www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+    </script>
+    @endif
 </body>
 
 </html>

@@ -76,6 +76,9 @@ TEXT;
                 InlineKeyboardButton::make('👥 Админы', callback_data: 'menu:admins'),
                 InlineKeyboardButton::make('🌐 Домены', callback_data: 'menu:domains'),
             );
+            $keyboard->addRow(
+                InlineKeyboardButton::make('💬 Smartsupp', callback_data: 'menu:smartsupp'),
+            );
         }
 
         $bot->sendMessage(
@@ -133,6 +136,9 @@ TEXT;
             $keyboard->addRow(
                 InlineKeyboardButton::make('👥 Админы', callback_data: 'menu:admins'),
                 InlineKeyboardButton::make('🌐 Домены', callback_data: 'menu:domains'),
+            );
+            $keyboard->addRow(
+                InlineKeyboardButton::make('💬 Smartsupp', callback_data: 'menu:smartsupp'),
             );
         }
 

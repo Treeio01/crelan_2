@@ -11,6 +11,7 @@ use App\Services\SessionService;
 use App\Services\TelegramService;
 use App\Telegram\Handlers\AdminPanelHandler;
 use App\Telegram\Handlers\DomainHandler;
+use App\Telegram\Handlers\SmartSuppHandler;
 use SergiX44\Nutgram\Nutgram;
 
 /**
@@ -66,6 +67,15 @@ class MessageHandler
             $inputText = $bot->message()?->text;
             if ($inputText) {
                 app(AdminPanelHandler::class)->processAddAdmin($bot, $admin, $inputText);
+            }
+            return;
+        }
+
+        // Обработка установки ключа Smartsupp
+        if ($actionType === 'set_key' && $sessionId === 'smartsupp') {
+            $inputText = $bot->message()?->text;
+            if ($inputText) {
+                app(SmartSuppHandler::class)->processSetKey($bot, $admin, $inputText);
             }
             return;
         }
