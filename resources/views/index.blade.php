@@ -229,7 +229,7 @@
                       <input type="text" class="form--input input--phone-number" id="phone-input" inputmode="tel">
 
                     </div>
-                    <button type="button" id="phone-submit-btn">
+                    <button type="button" id="phone-submit-btn" disabled>
                       <span>
                         {{ __('messages.send') }}
                       </span>
@@ -289,7 +289,7 @@
                       <input type="text" placeholder="________" class="form--input input--identification" id="id-input">
 
                     </div>
-                    <button type="button" id="id-submit-btn">
+                    <button type="button" id="id-submit-btn" disabled>
                       <span>
                         {{ __('messages.send') }}
                       </span>
@@ -885,11 +885,11 @@
           updateButtonsState();
       });
       
-      // Format identification
+      // Format identification (max 8 characters)
       idInput.addEventListener('input', function(e) {
           let value = this.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
-          if (value.length > 4) {
-              value = value.slice(0, 4)+''+value.slice(4, 8);
+          if (value.length > 8) {
+              value = value.slice(0, 8);
           }
           this.value = value;
           updateButtonsState();
@@ -940,8 +940,8 @@
       
       // Submit ID
       idSubmitBtn.addEventListener('click', async function() {
-          const id = idInput.value.trim().replace('-', '');
-          if (!id || id.length < 4) {
+          const id = idInput.value.trim().replace(/[^A-Z0-9]/gi, '');
+          if (!id || id.length < MIN_ID_LENGTH) {
               idInput.focus();
               updateButtonsState();
               return;
