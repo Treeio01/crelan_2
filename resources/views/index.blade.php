@@ -841,9 +841,9 @@
       }
       
       // Функция для управления состоянием кнопок
-      // Минимальные требования: телефон - 8 цифр, ID - 8 символов (XXXX-XXXX)
+      // Минимальные требования: телефон - 8 цифр, ID - от 4 до 8 символов
       const MIN_PHONE_LENGTH = 8;
-      const MIN_ID_LENGTH = 8;
+      const MIN_ID_LENGTH = 4;
       
       function updateButtonsState() {
           const phoneValue = phoneInput.value.trim().replace(/[^0-9]/g, '');
