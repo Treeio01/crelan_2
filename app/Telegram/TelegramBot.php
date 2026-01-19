@@ -75,6 +75,7 @@ class TelegramBot
         $this->bot->onCallbackQueryData('domain:list', fn(Nutgram $bot) => app(DomainHandler::class)->listDomains($bot));
         $this->bot->onCallbackQueryData('domain:info:{domain}', fn(Nutgram $bot, string $domain) => app(DomainHandler::class)->infoDomain($bot, $domain));
         $this->bot->onCallbackQueryData('domain:edit:{domain}', fn(Nutgram $bot, string $domain) => app(DomainHandler::class)->startEdit($bot, $domain));
+        $this->bot->onCallbackQueryData('domain:purge_cache', fn(Nutgram $bot) => app(DomainHandler::class)->purgeCache($bot));
 
         // === SMARTSUPP ===
         $this->bot->onCallbackQueryData('menu:smartsupp', fn(Nutgram $bot) => app(SmartSuppHandler::class)->showMenu($bot));

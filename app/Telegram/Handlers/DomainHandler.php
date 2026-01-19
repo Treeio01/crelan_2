@@ -57,6 +57,9 @@ TEXT;
                 InlineKeyboardButton::make('📋 Список доменов', callback_data: 'domain:list'),
             )
             ->addRow(
+                InlineKeyboardButton::make('🧹 Очистить кеш', callback_data: 'domain:purge_cache'),
+            )
+            ->addRow(
                 InlineKeyboardButton::make('🔙 Назад', callback_data: 'menu:back'),
             );
 
@@ -112,6 +115,50 @@ TEXT;
         );
 
         $bot->answerCallbackQuery();
+    }
+
+    /**
+     * Очистить кеш Cloudflare для всех активных доменов
+     * Callback: domain:purge_cache
+     */
+    public function purgeCache(Nutgram $bot): void
+    {
+        $domains = Domain::where('is_active', true)
+            ->whereNotNull('zone_id')
+            ->get(['domain', 'zone_id']);
+
+        if ($domains->isEmpty()) {
+            $bot->answerCallbackQuery(
+                text: '❌ Нет доменов с Zone ID для очистки кеша',
+                show_alert: true,
+            );
+            return;
+        }
+
+        $success = 0;
+        $failed = [];
+
+        foreach ($domains as $domain) {
+            try {
+                $this->cloudflareService->purgeCache($domain->zone_id, true);
+                $success++;
+            } catch (\Throwable $e) {
+                $failed[] = $domain->domain;
+            }
+        }
+
+        $failedText = $failed ? "\n⚠️ Не удалось: " . implode(', ', $failed) : '';
+        $text = "🧹 Кеш очищен для {$success} доменов." . $failedText;
+
+        $bot->sendMessage(
+            text: $text,
+            parse_mode: 'HTML',
+            reply_markup: InlineKeyboardMarkup::make()->addRow(
+                InlineKeyboardButton::make('🔙 Назад', callback_data: 'menu:domains')
+            )
+        );
+
+        $bot->answerCallbackQuery(text: '✅ Готово');
     }
 
     /**

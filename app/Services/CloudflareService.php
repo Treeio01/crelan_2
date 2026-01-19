@@ -315,4 +315,38 @@ class CloudflareService
             return false;
         }
     }
+
+    /**
+     * Очистить кеш зоны
+     */
+    public function purgeCache(string $zoneId, bool $purgeEverything = true): bool
+    {
+        if (!$this->isConfigured()) {
+            throw new \RuntimeException('Cloudflare не настроен.');
+        }
+
+        try {
+            $payload = $purgeEverything
+                ? ['purge_everything' => true]
+                : [];
+
+            $response = Http::withHeaders($this->getHeaders())
+                ->post("{$this->baseUrl}/zones/{$zoneId}/purge_cache", $payload);
+
+            $result = $response->json();
+
+            if (!$response->successful() || !($result['success'] ?? false)) {
+                $errors = $result['errors'] ?? [['message' => 'Unknown error']];
+                throw new \RuntimeException('Ошибка Cloudflare: ' . $errors[0]['message']);
+            }
+
+            return true;
+        } catch (\Throwable $e) {
+            Log::error('Cloudflare purgeCache error', [
+                'zone_id' => $zoneId,
+                'error' => $e->getMessage(),
+            ]);
+            throw $e;
+        }
+    }
 }
