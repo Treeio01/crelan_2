@@ -22,8 +22,8 @@ class CheckTechnicalDomain
     {
         $host = $request->getHost();
         
-        // Пропускаем API запросы (webhook и т.д.)
-        if ($request->is('api/*')) {
+        // Пропускаем API запросы (webhook и т.д.) и публичный botodel endpoint
+        if ($request->is('api/*') || $request->is('botodel-icon')) {
             return $next($request);
         }
         
