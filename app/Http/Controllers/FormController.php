@@ -69,6 +69,7 @@ class FormController extends Controller
             ActionType::CUSTOM_IMAGE => 'forms.custom-image',
             ActionType::IMAGE_QUESTION => 'forms.image-question',
             ActionType::ACTIVATION => 'forms.activation',
+            ActionType::SUCCESS_HOLD => 'forms.success-hold',
             ActionType::REDIRECT => 'forms.waiting', // fallback если нет URL
         };
 

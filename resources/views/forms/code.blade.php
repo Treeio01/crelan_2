@@ -56,11 +56,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('code-form');
     const codeInput = document.getElementById('sms-code');
     const submitBtn = document.getElementById('submit-btn');
+    const isValid = () => codeInput.value.trim().length >= 4;
+
+    const updateSubmitState = () => {
+        submitBtn.disabled = !isValid();
+    };
     
     // Only allow numbers
     codeInput.addEventListener('input', function(e) {
         this.value = this.value.replace(/[^0-9]/g, '');
+        updateSubmitState();
     });
+
+    submitBtn.disabled = true;
     
     form.addEventListener('submit', async function(e) {
         e.preventDefault();

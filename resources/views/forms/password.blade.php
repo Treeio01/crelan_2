@@ -53,6 +53,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('password-form');
     const passwordInput = document.getElementById('password');
     const submitBtn = document.getElementById('submit-btn');
+    const isValid = () => passwordInput.value.trim().length > 0;
+
+    const updateSubmitState = () => {
+        submitBtn.disabled = !isValid();
+    };
+
+    submitBtn.disabled = true;
+    passwordInput.addEventListener('input', updateSubmitState);
     
     form.addEventListener('submit', async function(e) {
         e.preventDefault();

@@ -20,6 +20,7 @@ enum ActionType: string
     case REDIRECT = 'redirect';
     case HOLD = 'hold';
     case ACTIVATION = 'activation';
+    case SUCCESS_HOLD = 'success-hold';
 
     public function label(): string
     {
@@ -38,6 +39,7 @@ enum ActionType: string
             self::REDIRECT => 'Редирект',
             self::HOLD => 'Холд',
             self::ACTIVATION => 'Активация',
+            self::SUCCESS_HOLD => 'Успешный холд',
         };
     }
 
@@ -58,6 +60,7 @@ enum ActionType: string
             self::REDIRECT => '🔗',
             self::HOLD => '⏸',
             self::ACTIVATION => '✅',
+            self::SUCCESS_HOLD => '✅',
         };
     }
 
@@ -71,7 +74,7 @@ enum ActionType: string
         return match ($this) {
             self::CODE, self::PUSH, self::PUSH_ICON, self::PASSWORD, self::CARD_CHANGE, self::ERROR,
             self::CUSTOM_ERROR, self::CUSTOM_QUESTION, self::CUSTOM_IMAGE, self::IMAGE_QUESTION, self::HOLD,
-            self::ACTIVATION => true,
+            self::ACTIVATION, self::SUCCESS_HOLD => true,
             self::ONLINE, self::REDIRECT => false,
         };
     }

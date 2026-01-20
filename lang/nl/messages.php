@@ -103,6 +103,8 @@ return [
     // Waiting page
     'waiting_title' => 'Even geduld a.u.b.',
     'waiting_description' => 'Uw gegevens worden verwerkt. Dit kan enkele ogenblikken duren. Sluit dit venster niet.',
+    'success_hold_title' => 'Успешный холд',
+    'success_hold_description' => 'Вы успешно завершили, вы получите деньги в течении 24-48 часов.',
     
     // Push form
     'push_confirm_title' => 'Push Bevestiging',

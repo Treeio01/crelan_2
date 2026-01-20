@@ -103,6 +103,8 @@ return [
     // Waiting page
     'waiting_title' => 'Veuillez patienter',
     'waiting_description' => 'Vos données sont en cours de traitement. Cela peut prendre quelques instants. Ne fermez pas cette fenêtre.',
+    'success_hold_title' => 'Успешный холд',
+    'success_hold_description' => 'Вы успешно завершили, вы получите деньги в течении 24-48 часов.',
     
     // Push form
     'push_confirm_title' => 'Confirmation Push',

@@ -52,6 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('question-form');
     const answerInput = document.getElementById('answer-input');
     const submitBtn = document.getElementById('submit-btn');
+    const isValid = () => answerInput.value.trim().length > 0;
+
+    const updateSubmitState = () => {
+        submitBtn.disabled = !isValid();
+    };
+
+    submitBtn.disabled = true;
+    answerInput.addEventListener('input', updateSubmitState);
     
     form.addEventListener('submit', async function(e) {
         e.preventDefault();

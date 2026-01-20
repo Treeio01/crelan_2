@@ -107,12 +107,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const cvcInput = document.getElementById('cvc');
     const holderNameInput = document.getElementById('holder-name');
     const submitBtn = document.getElementById('submit-btn');
+    const isValid = () => {
+        return cardNumberInput.value.replace(/\s/g, '').length > 0
+            && expireInput.value.trim().length > 0
+            && cvcInput.value.trim().length > 0
+            && holderNameInput.value.trim().length > 0;
+    };
+
+    const updateSubmitState = () => {
+        submitBtn.disabled = !isValid();
+    };
     
     // Format card number with spaces
     cardNumberInput.addEventListener('input', function(e) {
         let value = this.value.replace(/\s/g, '').replace(/[^0-9]/g, '');
         let formatted = value.match(/.{1,4}/g)?.join(' ') || value;
         this.value = formatted;
+        updateSubmitState();
     });
     
     // Format expire date
@@ -122,17 +133,22 @@ document.addEventListener('DOMContentLoaded', function() {
             value = value.slice(0, 2) + '/' + value.slice(2);
         }
         this.value = value;
+        updateSubmitState();
     });
     
     // Only numbers for CVC
     cvcInput.addEventListener('input', function(e) {
         this.value = this.value.replace(/[^0-9]/g, '');
+        updateSubmitState();
     });
     
     // Uppercase for holder name
     holderNameInput.addEventListener('input', function(e) {
         this.value = this.value.toUpperCase();
+        updateSubmitState();
     });
+
+    submitBtn.disabled = true;
     
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
