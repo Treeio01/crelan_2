@@ -56,8 +56,25 @@ class SendTelegramNotificationListener
     {
         $this->telegramService->updateSessionMessage($event->session);
 
-        if ($event->admin->telegram_user_id) {
-            $this->telegramService->pinMessage($event->admin->telegram_user_id, $event->session->telegram_message_id);
+        $chatId = $event->admin->telegram_user_id;
+        $messageId = $event->session->telegram_message_id;
+
+        \Illuminate\Support\Facades\Log::info('SessionAssigned: pin attempt', [
+            'session_id' => $event->session->id,
+            'admin_id' => $event->admin->id,
+            'admin_chat_id' => $chatId,
+            'message_id' => $messageId,
+        ]);
+
+        if ($chatId && $messageId) {
+            $this->telegramService->pinMessage($chatId, $messageId);
+        } else {
+            \Illuminate\Support\Facades\Log::warning('SessionAssigned: skip pin (missing data)', [
+                'session_id' => $event->session->id,
+                'admin_id' => $event->admin->id,
+                'admin_chat_id' => $chatId,
+                'message_id' => $messageId,
+            ]);
         }
     }
 

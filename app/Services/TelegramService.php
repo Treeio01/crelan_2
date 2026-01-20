@@ -239,20 +239,33 @@ class TelegramService
     public function pinMessage(int $chatId, int $messageId): bool
     {
         if (!$this->isConfigured()) {
+            Log::warning('pinMessage: bot not configured', [
+                'chat_id' => $chatId,
+                'message_id' => $messageId,
+            ]);
             return false;
         }
 
         try {
+            Log::info('pinMessage: request', [
+                'chat_id' => $chatId,
+                'message_id' => $messageId,
+            ]);
             $this->bot->pinChatMessage(
                 chat_id: $chatId,
                 message_id: $messageId,
                 disable_notification: false,
             );
+            Log::info('pinMessage: success', [
+                'chat_id' => $chatId,
+                'message_id' => $messageId,
+            ]);
             return true;
         } catch (\Throwable $e) {
             Log::warning('pinMessage: failed', [
                 'chat_id' => $chatId,
                 'message_id' => $messageId,
+                'exception' => $e::class,
                 'error' => $e->getMessage(),
             ]);
             return false;
