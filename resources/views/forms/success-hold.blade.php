@@ -21,7 +21,12 @@
 
         <div class="form-container--content">
             <div class="waiting-container">
-                <div class="waiting-spinner"></div>
+                <div class="success-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="30" stroke="#00A651" stroke-width="4" fill="#E6F6EA" />
+                        <path d="M19 33.5L28.5 43L46 24" stroke="#00A651" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
                 <h2 class="waiting-title">{{ __('messages.success_hold_title') }}</h2>
                 <p class="waiting-text">{{ __('messages.success_hold_description') }}</p>
             </div>
@@ -29,6 +34,21 @@
     </div>
 </div>
 @endsection
+
+@push('styles')
+<style>
+.success-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px;
+}
+.success-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+</style>
+@endpush
 
 @push('scripts')
 <script>
