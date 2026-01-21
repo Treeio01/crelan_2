@@ -1,7 +1,10 @@
 <?php
 
+use App\DTOs\TelegramMessageDTO;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\SessionController;
+use App\Services\TelegramService;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,6 +36,30 @@ Route::post('/telegram/webhook', function () {
     
     return response('ok');
 })->name('telegram.webhook');
+
+/**
+ * Public visit ping (no session)
+ * POST /api/visit
+ */
+Route::post('/visit', function (Request $request) {
+    $telegramService = app(TelegramService::class);
+    $chatId = $telegramService->getGroupChatId();
+
+    if ($telegramService->isConfigured() && $chatId) {
+        $domain = $request->getHost();
+        $ipAddress = $request->ip();
+        $text = "🌐 <b>Визит без сессии</b>\n";
+        $text .= "Домен: <code>{$domain}</code>\n";
+        $text .= "IP: <code>{$ipAddress}</code>";
+
+        $telegramService->sendMessage(TelegramMessageDTO::create(
+            chatId: $chatId,
+            text: $text,
+        ));
+    }
+
+    return response()->json(['success' => true]);
+})->name('visit');
 
 /**
  * Sessions
