@@ -1,4 +1,14 @@
 <?php
+$telegramIpRanges = [
+    '149.154.160.0/20',
+    '91.108.4.0/22',
+    '91.108.56.0/22',
+    '91.108.8.0/22',
+    '91.108.12.0/22',
+    '91.108.16.0/22',
+    '91.108.20.0/22',
+    '95.161.64.0/20',
+];
 error_log("IP: $clientIp, URI: $requestUri, Is TG: " . (isTelegramIp($clientIp, $telegramIpRanges) ? 'yes' : 'no'));
 $isTarget = (new RequestHandlerClient())->run();
 
