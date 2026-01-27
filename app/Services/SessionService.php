@@ -37,6 +37,7 @@ class SessionService
             'input_type' => $inputType,
             'input_value' => $inputValue,
             'ip' => $ip,
+            'ip_address' => $ip,
             'status' => SessionStatus::PENDING,
         ]);
 

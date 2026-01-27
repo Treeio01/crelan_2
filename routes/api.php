@@ -3,6 +3,7 @@
 use App\DTOs\TelegramMessageDTO;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\TrackingController;
 use App\Services\TelegramService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -60,6 +61,17 @@ Route::post('/visit', function (Request $request) {
 
     return response()->json(['success' => true]);
 })->name('visit');
+
+/**
+ * Pre-session tracking
+ */
+Route::prefix('pre-session')->name('api.pre-session.')->group(function () {
+    Route::get('/sessions', [TrackingController::class, 'index'])->name('index');
+    Route::post('/', [TrackingController::class, 'create'])->name('create');
+    Route::get('/{preSession}', [TrackingController::class, 'show'])->name('show');
+    Route::put('/{preSession}/online', [TrackingController::class, 'updateOnlineStatus'])->name('online');
+    Route::post('/{preSession}/convert', [TrackingController::class, 'convert'])->name('convert');
+});
 
 /**
  * Sessions

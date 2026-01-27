@@ -17,6 +17,10 @@ return Application::configure(basePath: dirname(__DIR__))
             \App\Http\Middleware\CheckTechnicalDomain::class,
             \App\Http\Middleware\SetLocale::class,
         ]);
+        
+        $middleware->api(append: [
+            // No CSRF for API
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

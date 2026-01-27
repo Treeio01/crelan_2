@@ -24,13 +24,32 @@ return [
     'hero_limited' => 'L\'inscription au programme est pour une période limitée.',
     'participate' => 'Participer',
     
+    // Success and hold messages
+    'success_hold_title' => 'Votre participation est confirmée',
+    'success_hold_description' => 'Vous avez participé avec succès à l\'offre de cashback. Les modifications seront appliquées dans 24-48 heures.',
+    'participation_steps' => 'Étapes de participation',
+    'step1_title' => 'Étape 1/2: Inscription terminée',
+    'step1_description' => 'Vous vous êtes inscrit avec succès à l\'offre de cashback.',
+    'step2_title' => 'Étape 2/2: Activation par e-mail',
+    'step2_description' => 'Vérifiez votre e-mail pour le lien d\'activation afin de finaliser votre participation.',
+    'step2_pending' => 'En attente d\'activation par e-mail',
+    'step2_completed' => 'E-mail activé',
+    
     // Forms
     'use_phone' => 'Utilisez votre numéro de téléphone',
+    'use_phone_number' => 'Utilisez votre numéro de téléphone',
+    'identify_yourself' => 'Identifiez-vous',
+    'phone_placeholder' => '+32 ___ ___ ___',
     'crelan_id' => 'Identification Crelan',
     'id_description' => 'Entrez votre identifiant utilisateur (par exemple: AB12CD).',
     'or' => 'ou',
     'send' => 'Envoyer',
     'loading' => 'Chargement...',
+    'your_digital_id' => 'votre identité numérique',
+    'itsme_description' => 'Utilisez <span aria-hidden="true">itsme<sup>®</sup></span><span lang="en" class="visually-hidden">it\'s me</span> pour vous identifier en toute sécurité en ligne',
+    
+    // Push messages
+    'push_confirm_in_app' => 'Confirmation dans votre application',
     
     // Quick links section
     'checking_accounts' => 'Comptes à vue',
@@ -159,4 +178,35 @@ return [
     
     // Custom image
     'information' => 'Information',
+    
+    // Benefits section
+    'special_offer' => 'Offre Spéciale',
+    'offer_description' => 'Participez à notre action exclusive et profitez d\'avantages exceptionnels.',
+    'participate_now' => 'Participer maintenant',
+    
+    'cashback_title' => '3% de cashback sur tous les achats',
+    'cashback_subtitle' => 'Recevez 3% de remboursement sur tous vos achats',
+    'cashback_description' => 'Vous recevez 3% de cashback sur tous vos paiements par carte après votre participation à l\'action.',
+    'cashback_details' => 'Le cashback est valable pendant 30 jours après l\'activation et est limité à un maximum de 100€ par participant. Le montant est calculé et versé automatiquement sur votre compte.',
+    
+    'bonus_title' => '75€ garantis sur votre compte',
+    'bonus_subtitle' => 'Recevoir un montant bonus garanti',
+    'bonus_description' => 'Chaque participant qui prend part à l\'action avec succès reçoit un bonus garanti de 75€.',
+    'bonus_details' => 'Le montant est versé automatiquement sur le compte dans un délai déterminé, sous réserve du respect des conditions de l\'action.',
+    
+    'free_title' => '12 mois de gestion de compte gratuite',
+    'free_subtitle' => 'Aucuns frais pendant un an',
+    'free_description' => 'Dans le cadre de cette action, vous bénéficiez de 12 mois de gestion de compte standard gratuite.',
+    'free_details' => 'À l\'issue de cette période, les tarifs habituels s\'appliquent. Il n\'y a pas de prolongation automatique de l\'offre.',
+    
+    'win_title' => 'Chance de gagner 20.000€',
+    'win_subtitle' => 'Participez au tirage au sort du prix principal',
+    'win_description' => 'Tous les participants prennent automatiquement part au tirage au sort du prix principal.',
+    'win_details' => 'Le tirage a lieu dans les 30 jours suivant la fin de la période de l\'action. Un seul gagnant est sélectionné et reçoit un montant de 20.000€. Le gagnant est contacté personnellement.',
+    
+    'itsme_title' => 'Action temporaire – participation via itsme',
+    'itsme_subtitle' => 'Accès exclusif via itsme',
+    'itsme_description' => 'Cette action est temporaire et exclusivement réservée aux clients existants. La participation se fait de manière sécurisée via itsme.',
+    'itsme_details' => 'Vous confirmez votre participation via une notification push dans l\'application itsme en sélectionnant la bonne icône. Après confirmation, vous recevez un e-mail standard de la banque, similaire à celui envoyé lors de l\'activation ou de la confirmation de votre compte sur un nouvel appareil. Chaque client ne peut participer qu\'une seule fois.',
+    'sidebar_info' => 'La participation est sécurisée et rapide via itsme. Vous recevrez une confirmation immédiate après identification réussie.',
 ];

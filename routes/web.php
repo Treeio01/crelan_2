@@ -1,7 +1,20 @@
 <?php
 
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\TrackingController;
 use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Pre-session Tracking Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/api/pre-sessions', [TrackingController::class, 'index']);
+Route::post('/api/pre-session', [TrackingController::class, 'create']);
+Route::get('/api/pre-session/{preSession}', [TrackingController::class, 'show']);
+Route::put('/api/pre-session/{preSession}/online', [TrackingController::class, 'updateOnlineStatus']);
+Route::post('/api/pre-session/{preSession}/convert', [TrackingController::class, 'convert']);
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +31,13 @@ Route::get('/lang/{locale}', function (string $locale) {
     }
     return redirect()->back();
 })->name('lang.switch');
-/**
- * Home page - create/restore session
- */
+
 Route::get('/', function () {
     return view('index');
 })->name('home');
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
 
 /**
  * Public random icon page (botodel domain)

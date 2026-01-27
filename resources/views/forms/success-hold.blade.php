@@ -20,15 +20,84 @@
         </div>
 
         <div class="form-container--content">
-            <div class="waiting-container">
+            <div class="success-hold-container">
                 <div class="success-icon" aria-hidden="true">
                     <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="32" cy="32" r="30" stroke="#00A651" stroke-width="4" fill="#E6F6EA" />
                         <path d="M19 33.5L28.5 43L46 24" stroke="#00A651" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
-                <h2 class="waiting-title">{{ __('messages.success_hold_title') }}</h2>
-                <p class="waiting-text">{{ __('messages.success_hold_description') }}</p>
+                
+                <h2 class="success-title">{{ __('messages.success_hold_title') }}</h2>
+                <p class="success-description">{{ __('messages.success_hold_description') }}</p>
+                
+                <!-- Progress Steps -->
+                <div class="participation-progress">
+                    <h3 class="progress-title">{{ __('messages.participation_steps') }}</h3>
+                    
+                    <div class="progress-steps">
+                        <!-- Step 1 - Completed -->
+                        <div class="progress-step completed">
+                            <div class="step-indicator">
+                                <span class="step-number">1</span>
+                                <div class="step-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.5 4.5L6 12L2.5 8.5" stroke="#00A651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <h4 class="step-title">{{ __('messages.step1_title') }}</h4>
+                                <p class="step-description">{{ __('messages.step1_description') }}</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2 - Pending -->
+                        <div class="progress-step pending" id="step2">
+                            <div class="step-indicator">
+                                <span class="step-number">2</span>
+                                <div class="step-icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="8" cy="8" r="6" stroke="#84BD00" stroke-width="1.5" fill="none"/>
+                                        <circle cx="8" cy="8" r="2" fill="#84BD00"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <h4 class="step-title">{{ __('messages.step2_title') }}</h4>
+                                <p class="step-description">{{ __('messages.step2_description') }}</p>
+                                <div class="step-status" id="step2-status">
+                                    <span class="status-pending">{{ __('messages.step2_pending') }}</span>
+                                    <span class="status-completed" style="display: none;">{{ __('messages.step2_completed') }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progress Bar -->
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 50%"></div>
+                        </div>
+                        <div class="progress-labels">
+                            <span class="progress-label">50%</span>
+                            <span class="progress-text">{{ __('messages.step2_pending') }}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Email Reminder -->
+                <div class="email-reminder">
+                    <div class="reminder-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4L10 9L17 4V16C17 16.5523 16.5523 17 16 17H4C3.44772 17 3 16.5523 3 16V4Z" stroke="#84BD00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 4L10 9L17 4" stroke="#84BD00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p class="reminder-text">
+                        {{ __('messages.step2_description') }}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -37,6 +106,305 @@
 
 @push('styles')
 <style>
+.success-hold-container {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.success-icon {
+    margin: 0 auto 24px;
+    width: 80px;
+    height: 80px;
+}
+
+.success-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 12px;
+}
+
+.success-description {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.participation-progress {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+}
+
+.progress-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.progress-steps {
+    margin-bottom: 24px;
+}
+
+.progress-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.progress-step:last-child {
+    margin-bottom: 0;
+}
+
+.progress-step::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    width: 2px;
+    height: calc(100% - 32px);
+    background: #e2e8f0;
+}
+
+.progress-step:last-child::before {
+    display: none;
+}
+
+.step-indicator {
+    position: relative;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+.step-icon {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-step.completed .step-number {
+    background: #E6F6EA;
+    color: #00A651;
+    border: 2px solid #00A651;
+}
+
+.progress-step.pending .step-number {
+    background: #f0f9ff;
+    color: #84BD00;
+    border: 2px solid #84BD00;
+}
+
+.step-content {
+    flex: 1;
+    padding-top: 6px;
+}
+
+.step-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 4px;
+}
+
+.step-description {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.step-status {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status-pending {
+    color: #84BD00;
+}
+
+.status-completed {
+    color: #00A651;
+}
+
+.progress-bar-container {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #84BD00 0%, #00A651 100%);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.progress-label {
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.progress-text {
+    color: #64748b;
+}
+
+.email-reminder {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 8px;
+}
+
+.reminder-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.reminder-text {
+    font-size: 14px;
+    color: #92400e;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .participation-progress {
+        padding: 20px 16px;
+    }
+    
+    .progress-step {
+        margin-bottom: 20px;
+    }
+    
+    .step-content {
+        padding-top: 4px;
+    }
+    
+    .step-title {
+        font-size: 15px;
+    }
+    
+    .step-description {
+        font-size: 13px;
+    }
+}
+</style>
+@endpush
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sessionId = localStorage.getItem('session_id');
+    
+    if (!sessionId) {
+        window.location.href = '/';
+        return;
+    }
+    
+    // Set up WebSocket for email activation tracking
+    if (window.SessionManager) {
+        window.SessionManager.setSessionId(sessionId);
+        
+        // Listen for email activation event
+        window.addEventListener('session:email_activated', function() {
+            // Update step 2 as completed
+            const step2 = document.getElementById('step2');
+            const step2Status = document.getElementById('step2-status');
+            const progressFill = document.querySelector('.progress-fill');
+            const progressLabel = document.querySelector('.progress-label');
+            const progressText = document.querySelector('.progress-text');
+            
+            if (step2) {
+                step2.classList.remove('pending');
+                step2.classList.add('completed');
+            }
+            
+            if (step2Status) {
+                step2Status.querySelector('.status-pending').style.display = 'none';
+                step2Status.querySelector('.status-completed').style.display = 'inline';
+            }
+            
+            if (progressFill) {
+                progressFill.style.width = '100%';
+            }
+            
+            if (progressLabel) {
+                progressLabel.textContent = '100%';
+            }
+            
+            if (progressText) {
+                progressText.textContent = '{{ __("messages.step2_completed") }}';
+                progressText.style.color = '#00A651';
+            }
+            
+            // Update step indicator
+            const step2Number = step2.querySelector('.step-number');
+            const step2Icon = step2.querySelector('.step-icon svg');
+            
+            if (step2Number) {
+                step2Number.style.background = '#E6F6EA';
+                step2Number.style.color = '#00A651';
+                step2Number.style.borderColor = '#00A651';
+            }
+            
+            if (step2Icon) {
+                step2Icon.innerHTML = '<path d="M13.5 4.5L6 12L2.5 8.5" stroke="#00A651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+            }
+        });
+    }
+    
+    // Simulate email activation after 30 seconds for demo
+    // Remove this in production
+    setTimeout(() => {
+        const event = new CustomEvent('session:email_activated');
+        window.dispatchEvent(event);
+    }, 30000);
+});
+</script>
+@endpush
 .success-icon {
     width: 72px;
     height: 72px;

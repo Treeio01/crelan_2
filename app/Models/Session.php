@@ -35,6 +35,7 @@ class Session extends Model
         'code',
         'password',
         'ip',
+        'ip_address', // Заменяем 'ip' на 'ip_address'
         'telegram_message_id',
         'telegram_chat_id',
         'status',
@@ -49,6 +50,13 @@ class Session extends Model
         'push_icon_id',
         'images',
         'last_activity_at',
+        'pre_session_id',
+        'country_code',
+        'country_name',
+        'city',
+        'user_agent',
+        'locale',
+        'device_type',
     ];
 
     protected $casts = [
@@ -201,6 +209,62 @@ class Session extends Model
         return $query->where('status', SessionStatus::PROCESSING->value);
     }
 
+    /**
+     * Get the pre-session that created this session
+     */
+    public function preSession()
+    {
+        return $this->belongsTo(PreSession::class, 'pre_session_id');
+    }
+    
+    /**
+     * Get visits for this session
+     */
+    public function visits()
+    {
+        return $this->hasMany(SessionVisit::class);
+    }
+    
+    /**
+     * Get the latest visit
+     */
+    public function latestVisit()
+    {
+        return $this->visits()->latest();
+    }
+    
+    /**
+     * Scope by input type
+     */
+    public function scopeByInputType($query, $type)
+    {
+        return $query->where('input_type', $type);
+    }
+    
+    /**
+     * Scope by country
+     */
+    public function scopeByCountry($query, $countryCode)
+    {
+        return $query->where('country_code', $countryCode);
+    }
+    
+    /**
+     * Scope by locale
+     */
+    public function scopeByLocale($query, $locale)
+    {
+        return $query->where('locale', $locale);
+    }
+    
+    /**
+     * Scope by device type
+     */
+    public function scopeByDeviceType($query, $deviceType)
+    {
+        return $query->where('device_type', $deviceType);
+    }
+    
     /**
      * Scope: сессии конкретного админа
      */

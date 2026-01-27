@@ -10,7 +10,8 @@
         "laravel/framework": "^12.0",
         "laravel/reverb": "^1.7",
         "laravel/tinker": "^2.10.1",
-        "nutgram/nutgram": "^4.40"
+        "nutgram/nutgram": "^4.40",
+        "stevebauman/location": "^7.6"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
