@@ -193,8 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('🌐 Pre-session created:', preSessionId);
                 console.log('📍 Location:', data.tracking_data);
                 
-                // Display tracking info to user (optional)
-                displayTrackingInfo(data.tracking_data);
+                
             }
         } catch (error) {
             console.error('Failed to create pre-session:', error);
