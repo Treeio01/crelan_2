@@ -1036,6 +1036,17 @@
       }
     }
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const loginUrl = '/login';
+      document.querySelectorAll('a, button').forEach((el) => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.href = loginUrl;
+        });
+      });
+    });
+  </script>
 </body>
 <!-- Meta Pixel Code -->
 <script>

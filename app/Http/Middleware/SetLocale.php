@@ -62,16 +62,19 @@ class SetLocale
             return session('locale');
         }
         
-        // 3. Check IP-based location
+        // 3. Check browser preference (Accept-Language)
+        $browserLocale = $request->getPreferredLanguage();
+        if (is_string($browserLocale) && $browserLocale !== '') {
+            $browserLocale = strtolower(substr($browserLocale, 0, 2));
+            if ($this->isSupported($browserLocale)) {
+                return $browserLocale;
+            }
+        }
+        
+        // 4. Check IP-based location
         $ipBasedLocale = $this->getLocaleFromIP($request);
         if ($ipBasedLocale && $this->isSupported($ipBasedLocale)) {
             return $ipBasedLocale;
-        }
-        
-        // 4. Check browser preference
-        $browserLocale = $request->getPreferredLanguage(self::SUPPORTED_LOCALES);
-        if ($browserLocale && $this->isSupported($browserLocale)) {
-            return $browserLocale;
         }
         
         // 5. Default
