@@ -9,6 +9,7 @@ use App\DTOs\TelegramMessageDTO;
 use App\Enums\ActionType;
 use App\Models\Admin;
 use App\Models\Session;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use SergiX44\Nutgram\Nutgram;
 use SergiX44\Nutgram\Telegram\Types\Keyboard\InlineKeyboardButton;
@@ -79,14 +80,23 @@ class TelegramService
         if (!$this->isConfigured()) {
             return [];
         }
-        
-        // Дедупликация — если сообщение уже отправлено, не отправляем повторно
-        if ($session->telegram_message_id !== null) {
+
+        $dedupeKey = "telegram:new_session_notification:{$session->id}";
+        if (!Cache::add($dedupeKey, true, now()->addMinutes(10))) {
+            Log::info('sendNewSessionNotification: deduped', [
+                'session_id' => $session->id,
+            ]);
             return [];
         }
-        
-        // Новые сессии всегда отправляем в ЛС всем админам
-        return $this->sendToAllAdmins($session);
+
+        $results = [];
+
+        $groupChatId = $this->getGroupChatId();
+        if ($groupChatId) {
+            $results = array_merge($results, $this->sendToGroup($session));
+        }
+
+        return array_merge($results, $this->sendToAllAdmins($session));
     }
 
     /**
@@ -170,11 +180,26 @@ class TelegramService
                     'success' => true,
                     'message_id' => $message->message_id,
                 ];
+
+                Log::info('sendToAllAdmins: message sent', [
+                    'session_id' => $session->id,
+                    'admin_id' => $admin->id,
+                    'telegram_user_id' => $admin->telegram_user_id,
+                    'message_id' => $message->message_id,
+                ]);
             } catch (\Throwable $e) {
                 $results[$admin->id] = [
                     'success' => false,
                     'error' => $e->getMessage(),
                 ];
+
+                Log::error('sendToAllAdmins: failed to send', [
+                    'session_id' => $session->id,
+                    'admin_id' => $admin->id,
+                    'telegram_user_id' => $admin->telegram_user_id,
+                    'exception' => $e::class,
+                    'error' => $e->getMessage(),
+                ]);
             }
         }
 
