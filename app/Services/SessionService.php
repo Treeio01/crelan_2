@@ -19,6 +19,7 @@ use App\Models\Admin;
 use App\Models\Session;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Log;
 
 /**
  * Сервис для работы с сессиями
@@ -33,6 +34,12 @@ class SessionService
      */
     public function create(InputType $inputType, string $inputValue, string $ip): Session
     {
+        Log::info('SessionService: create start', [
+            'input_type' => $inputType->value,
+            'input_value' => $inputValue,
+            'ip' => $ip,
+        ]);
+
         $session = Session::create([
             'input_type' => $inputType,
             'input_value' => $inputValue,
@@ -41,7 +48,14 @@ class SessionService
             'status' => SessionStatus::PENDING,
         ]);
 
+        Log::info('SessionService: create session created', [
+            'session_id' => $session->id,
+        ]);
+
         // Диспатч события
+        Log::info('SessionService: dispatch SessionCreated', [
+            'session_id' => $session->id,
+        ]);
         event(new SessionCreated($session));
 
         return $session;

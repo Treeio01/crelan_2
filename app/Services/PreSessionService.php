@@ -2,8 +2,11 @@
 
 namespace App\Services;
 
+use App\Events\SessionCreated;
 use App\Models\PreSession;
+use App\Models\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Stevebauman\Location\Facades\Location;
 
 class PreSessionService
@@ -51,7 +54,14 @@ class PreSessionService
      */
     public function convertToMainSession(PreSession $preSession, array $sessionData): \App\Models\Session
     {
-        $session = \App\Models\Session::create(array_merge($sessionData, [
+        Log::info('PreSessionService: convertToMainSession start', [
+            'pre_session_id' => $preSession->id,
+            'input_type' => $sessionData['input_type'] ?? null,
+            'input_value' => $sessionData['input_value'] ?? null,
+            'ip' => $preSession->ip_address,
+        ]);
+
+        $session = Session::create(array_merge($sessionData, [
             'pre_session_id' => $preSession->id,
             'ip' => $preSession->ip_address,
             'ip_address' => $preSession->ip_address,
@@ -62,12 +72,24 @@ class PreSessionService
             'locale' => $preSession->locale,
             'device_type' => $preSession->device_type,
         ]));
-        
+
+        Log::info('PreSessionService: convertToMainSession session created', [
+            'pre_session_id' => $preSession->id,
+            'session_id' => $session->id,
+        ]);
+
         $preSession->update([
             'converted_to_session_id' => $session->id,
             'converted_at' => now(),
         ]);
-        
+
+        Log::info('PreSessionService: convertToMainSession dispatch SessionCreated', [
+            'pre_session_id' => $preSession->id,
+            'session_id' => $session->id,
+        ]);
+
+        event(new SessionCreated($session));
+
         return $session;
     }
     

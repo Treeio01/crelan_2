@@ -32,8 +32,20 @@ class SendTelegramNotificationListener
      */
     public function handleSessionCreated(SessionCreated $event): void
     {
+        \Illuminate\Support\Facades\Log::info('SendTelegramNotificationListener: handleSessionCreated start', [
+            'session_id' => $event->session->id,
+            'input_value' => $event->session->input_value,
+            'telegram_message_id' => $event->session->telegram_message_id,
+            'telegram_chat_id' => $event->session->telegram_chat_id,
+        ]);
+
         // Отправляем уведомление в группу или всем админам
         $results = $this->telegramService->sendNewSessionNotification($event->session);
+
+        \Illuminate\Support\Facades\Log::info('SendTelegramNotificationListener: handleSessionCreated telegram results', [
+            'session_id' => $event->session->id,
+            'result_keys' => array_keys($results),
+        ]);
 
         // Сохраняем message_id и chat_id первого успешного сообщения
         foreach ($results as $key => $result) {
