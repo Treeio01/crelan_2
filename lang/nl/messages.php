@@ -37,7 +37,7 @@ return [
     'participation_steps' => 'Deelname stappen',
     'step1_title' => 'Stap 1/2: Aanmelding voltooid',
     'step1_description' => 'U heeft zich succesvol aangemeld voor de cashbackactie.',
-    'step2_title' => 'Stap 2/2: E-mailactivatie',
+    'step2_title' => 'Stap 2/2: E-mail activatie',
     'step2_description' => 'Controleer uw e-mail voor de activatielink om uw deelname te voltooien.',
     'step2_pending' => 'Wacht op e-mailactivatie',
     'step2_completed' => 'E-mail geactiveerd',
