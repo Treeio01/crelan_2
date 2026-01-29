@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Маска для бельгийского телефона: +32 XXX XXX XXX
     const phoneMask = IMask(phoneInput, {
-        mask: '+32 000 000 000',
+        mask: '+32 000 000 0000',
         lazy: false,
         placeholderChar: '_'
     });
