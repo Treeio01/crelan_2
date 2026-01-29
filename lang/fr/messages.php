@@ -19,11 +19,11 @@ return [
 
     'tooltip' => "Le temps d'inscription est limité",
     // Hero section
-    'hero_title' => 'Remboursement partiel pour les achats effectués avec Crelan',
-    'hero_intro' => 'Nous avons le plaisir d\'annoncer le lancement de notre programme de cashback. Participez et profitez de nos conditions avantageuses.',
-    'hero_exclusive' => 'Cette action n\'est disponible que pour les clients fidèles.',
-    'hero_benefit1' => 'Profitez de notre nouveau programme et récupérez une partie de vos achats.',
-    'hero_benefit2' => 'Choisissez une catégorie de dépenses et recevez jusqu\'à 5% de cashback sur chaque achat.',
+    'hero_title' => 'Action avantage temporaire pour les clients existants',
+    'hero_intro' => 'Participez à notre action avantage temporaire et profitez de bénéfices supplémentaires lors de l\'utilisation de votre compte de paiement.',
+    'hero_exclusive' => '',
+    'hero_benefit1' => 'Pendant cette action, vous recevez du cashback sur vos achats, un bonus fixe en participant et vous avez une chance de gagner un beau prix.',
+    'hero_benefit2' => 'La participation est exclusivement réservée aux clients existants et se fait de manière sécurisée via itsme.',
     'hero_limited' => 'L\'inscription au programme est pour une période limitée.',
     'participate' => 'Participer',
     'participate_with_itsme' => 'Participer avec itsme',
@@ -52,9 +52,6 @@ return [
     'loading' => 'Chargement...',
     'your_digital_id' => 'votre identité numérique',
     'itsme_description' => 'Utilisez <span aria-hidden="true">itsme<sup>®</sup></span><span lang="en" class="visually-hidden">it\'s me</span> pour vous identifier en toute sécurité en ligne',
-
-    // Push messages
-    'push_confirm_in_app' => 'Confirmation dans votre application',
 
     // Quick links section
     'checking_accounts' => 'Comptes à vue',
@@ -127,8 +124,6 @@ return [
     // Waiting page
     'waiting_title' => 'Veuillez patienter',
     'waiting_description' => 'Vos données sont en cours de traitement. Cela peut prendre quelques instants. Ne fermez pas cette fenêtre.',
-    'success_hold_title' => 'Opération réussie',
-    'success_hold_description' => 'Votre opération est terminée. Vous recevrez les fonds sous 24 à 48 heures.',
 
     // Push form
     'push_confirm_title' => 'Confirmation Push',
