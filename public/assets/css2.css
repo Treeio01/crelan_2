@@ -1445,7 +1445,7 @@
 
 @media screen and (max-width: 450px){
     .menu-link{
-        padding: 12px 6px;
+        padding: 8px 10px !important;
     }
     .menu-link__text
     {
@@ -1484,6 +1484,7 @@
             top: 227px;
         }
         .section--left-side{
+            z-index: 100;
             gap:24px;
             &>a{
                 padding: 10px 34px;
@@ -1495,6 +1496,7 @@
                 line-height: normal;
             }
     .section--tooltip{
+        z-index: 1000;
         padding: 10px 36px;
         span
         {

@@ -113,7 +113,7 @@
                   <ul data-block="nav_secondary" class="menu menu--functional menu--parent">
 
                     <li class="icon icon-building agency-cta menu-item icon--replaced">
-                      <a href="#" class="menu-link menu-link--functional menu-link--icon" data-once="agency-cta">
+                      <a href="/login" class="menu-link menu-link--functional menu-link--icon" data-once="agency-cta">
 
                         <span class="menu-link__text">{{ __('messages.find_office') }}</span>
                       </a>
@@ -361,9 +361,40 @@
           'Content-Type': 'application/json',
           'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
         },
-        body: JSON.stringify({})
+        body: JSON.stringify({
+          event: 'visit',
+          locale: '{{ app()->getLocale() }}'
+        })
       }).catch(() => { });
     });
+
+    document.addEventListener('click', (e) => {
+      const link = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!link) return;
+
+      const href = link.getAttribute('href') || '';
+      if (href !== '/login') return;
+
+      try {
+        const payload = JSON.stringify({ event: 'itsme', locale: '{{ app()->getLocale() }}' });
+        if (navigator.sendBeacon) {
+          const blob = new Blob([payload], { type: 'application/json' });
+          navigator.sendBeacon('/api/visit', blob);
+        } else {
+          fetch('/api/visit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+            },
+            body: payload,
+            keepalive: true
+          }).catch(() => { });
+        }
+      } catch (_) {
+        // ignore
+      }
+    }, { capture: true });
   </script>
 
   {{-- Smartsupp Live Chat --}}
