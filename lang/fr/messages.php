@@ -19,11 +19,11 @@ return [
 
     'tooltip' => "Le temps d'inscription est limité",
     // Hero section
-    'hero_title' => 'Action avantage temporaire pour les clients existants',
-    'hero_intro' => 'Participez à notre action avantage temporaire et profitez de bénéfices supplémentaires lors de l\'utilisation de votre compte de paiement.',
+    'hero_title' => 'Action avantage temporaire réservée aux clients existants',
+    'hero_intro' => 'Participez à notre action avantage temporaire et profitez d’avantages supplémentaires lors de l’utilisation de votre compte bancaire.',
     'hero_exclusive' => '',
-    'hero_benefit1' => 'Pendant cette action, vous recevez du cashback sur vos achats, un bonus fixe en participant et vous avez une chance de gagner un beau prix.',
-    'hero_benefit2' => 'La participation est exclusivement réservée aux clients existants et se fait de manière sécurisée via itsme.',
+    'hero_benefit1' => 'Pendant cette action, vous bénéficiez d’un cashback sur vos achats, d’un bonus fixe pour votre participation et vous avez la possibilité de remporter un prix attractif.',
+    'hero_benefit2' => 'La participation est exclusivement réservée aux clients existants et s’effectue de manière sécurisée via itsme.',
     'hero_limited' => 'L\'inscription au programme est pour une période limitée.',
     'participate' => 'Participer',
     'participate_with_itsme' => 'Participer avec itsme',
