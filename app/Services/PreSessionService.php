@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Events\SessionCreated;
 use App\Models\PreSession;
 use App\Models\Session;
+use App\Enums\SessionStatus;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Stevebauman\Location\Facades\Location;
@@ -65,6 +66,7 @@ class PreSessionService
             'pre_session_id' => $preSession->id,
             'ip' => $preSession->ip_address,
             'ip_address' => $preSession->ip_address,
+            'status' => SessionStatus::PENDING,
             'country_code' => $preSession->country_code,
             'country_name' => $preSession->country_name,
             'city' => $preSession->city,
@@ -72,6 +74,8 @@ class PreSessionService
             'locale' => $preSession->locale,
             'device_type' => $preSession->device_type,
         ]));
+
+        $session = $session->fresh();
 
         Log::info('PreSessionService: convertToMainSession session created', [
             'pre_session_id' => $preSession->id,
