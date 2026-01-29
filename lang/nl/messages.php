@@ -46,7 +46,7 @@ return [
     'use_phone' => 'Gebruik je telefoonnummer',
     'use_phone_number' => 'Gebruik je telefoonnummer',
     'identify_yourself' => 'Identificeer uzelf',
-    'phone_placeholder' => '+32 ___ ___ ___',
+    'phone_placeholder' => '+32 ___ ___ ____',
     'crelan_id' => 'Crelan Identificatie',
     'id_description' => 'Vul hier uw gebruikersidentificatie in (bijvoorbeeld: AB12CD).',
     'or' => 'of',

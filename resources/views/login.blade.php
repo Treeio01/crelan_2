@@ -340,9 +340,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Валидация телефона
     function validatePhone() {
         const value = phoneInput.value.replace(/\s/g, '');
-        const isValid = /^\+32\d{9}$/.test(value);
+        const isValid = /^\+32\d{10}$/.test(value);
         
-        if (phoneInput.value === '+32 ___ ___ ___' || phoneInput.value === '') {
+        if (phoneInput.value === '+32 ___ ___ ____' || phoneInput.value === '') {
             submitBtn.disabled = true;
             submitBtn.classList.remove('active');
             phoneInput.classList.remove('valid', 'invalid');

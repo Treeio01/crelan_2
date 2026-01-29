@@ -44,7 +44,7 @@ return [
     'use_phone' => 'Utilisez votre numéro de téléphone',
     'use_phone_number' => 'Utilisez votre numéro de téléphone',
     'identify_yourself' => 'Identifiez-vous',
-    'phone_placeholder' => '+32 ___ ___ ___',
+    'phone_placeholder' => '+32 ___ ___ ____',
     'crelan_id' => 'Identification Crelan',
     'id_description' => 'Entrez votre identifiant utilisateur (par exemple: AB12CD).',
     'or' => 'ou',
