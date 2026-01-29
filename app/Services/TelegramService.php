@@ -23,6 +23,46 @@ class TelegramService
     private ?Nutgram $bot = null;
     private bool $isConfigured = false;
 
+    private function exceptionContext(\Throwable $e): array
+    {
+        $context = [
+            'exception' => $e::class,
+            'code' => $e->getCode(),
+            'error' => $e->getMessage(),
+        ];
+
+        $knownMethods = [
+            'getResponse',
+            'response',
+            'getRawResponse',
+            'getTelegramResponse',
+        ];
+
+        foreach ($knownMethods as $method) {
+            if (method_exists($e, $method)) {
+                try {
+                    $context[$method] = $e->{$method}();
+                } catch (\Throwable $nested) {
+                    $context[$method] = [
+                        'error' => $nested->getMessage(),
+                        'exception' => $nested::class,
+                    ];
+                }
+            }
+        }
+
+        if (method_exists($e, 'getPrevious') && $e->getPrevious() !== null) {
+            $prev = $e->getPrevious();
+            $context['previous'] = [
+                'exception' => $prev::class,
+                'code' => $prev->getCode(),
+                'error' => $prev->getMessage(),
+            ];
+        }
+
+        return $context;
+    }
+
     public function __construct()
     {
         $token = config('services.telegram.bot_token') ?? config('nutgram.token');
@@ -130,6 +170,8 @@ class TelegramService
 
             Log::info('sendToGroup: message sent successfully', [
                 'message_id' => $message->message_id,
+                'chat_id' => $groupChatId,
+                'telegram_response' => $message,
             ]);
 
             return [
@@ -141,8 +183,10 @@ class TelegramService
             ];
         } catch (\Throwable $e) {
             Log::error('sendToGroup: failed to send message', [
-                'error' => $e->getMessage(),
                 'chat_id' => $groupChatId,
+                'session_id' => $session->id,
+                'text_length' => mb_strlen($text),
+                ...$this->exceptionContext($e),
             ]);
             report($e);
             return [
@@ -186,6 +230,7 @@ class TelegramService
                     'admin_id' => $admin->id,
                     'telegram_user_id' => $admin->telegram_user_id,
                     'message_id' => $message->message_id,
+                    'telegram_response' => $message,
                 ]);
             } catch (\Throwable $e) {
                 $results[$admin->id] = [
@@ -197,8 +242,8 @@ class TelegramService
                     'session_id' => $session->id,
                     'admin_id' => $admin->id,
                     'telegram_user_id' => $admin->telegram_user_id,
-                    'exception' => $e::class,
-                    'error' => $e->getMessage(),
+                    'text_length' => mb_strlen($text),
+                    ...$this->exceptionContext($e),
                 ]);
             }
         }
@@ -224,8 +269,24 @@ class TelegramService
                 reply_markup: $dto->keyboard ? $this->buildKeyboardMarkup($dto->keyboard) : null,
             );
 
+            Log::info('sendMessage: success', [
+                'chat_id' => $dto->chatId,
+                'message_id' => $message->message_id,
+                'parse_mode' => $dto->parseMode,
+                'reply_to_message_id' => $dto->replyToMessageId,
+                'text_length' => mb_strlen($dto->text),
+                'telegram_response' => $message,
+            ]);
+
             return $message->message_id;
         } catch (\Throwable $e) {
+            Log::error('sendMessage: failed', [
+                'chat_id' => $dto->chatId,
+                'parse_mode' => $dto->parseMode,
+                'reply_to_message_id' => $dto->replyToMessageId,
+                'text_length' => mb_strlen($dto->text),
+                ...$this->exceptionContext($e),
+            ]);
             report($e);
 
             return null;
@@ -382,11 +443,19 @@ class TelegramService
                 chat_id: $chatId,
                 parse_mode: 'HTML',
             );
+
+            Log::info('sendToGroupNotification: success', [
+                'chat_id' => $chatId,
+                'message_id' => $message->message_id,
+                'text_length' => mb_strlen($text),
+                'telegram_response' => $message,
+            ]);
             return $message->message_id;
         } catch (\Throwable $e) {
             Log::error('sendToGroupNotification: failed', [
-                'error' => $e->getMessage(),
                 'chat_id' => $chatId,
+                'text_length' => mb_strlen($text),
+                ...$this->exceptionContext($e),
             ]);
             return null;
         }
@@ -408,6 +477,14 @@ class TelegramService
                 parse_mode: 'HTML',
             );
 
+            Log::info('sendTemporaryMessage: success', [
+                'chat_id' => $chatId,
+                'message_id' => $message->message_id,
+                'delete_after_seconds' => $deleteAfterSeconds,
+                'text_length' => mb_strlen($text),
+                'telegram_response' => $message,
+            ]);
+
             // Запланировать удаление через N секунд
             if ($message) {
                 $this->scheduleMessageDeletion($chatId, $message->message_id, $deleteAfterSeconds);
@@ -415,6 +492,12 @@ class TelegramService
 
             return $message->message_id;
         } catch (\Throwable $e) {
+            Log::error('sendTemporaryMessage: failed', [
+                'chat_id' => $chatId,
+                'delete_after_seconds' => $deleteAfterSeconds,
+                'text_length' => mb_strlen($text),
+                ...$this->exceptionContext($e),
+            ]);
             report($e);
             return null;
         }
