@@ -118,8 +118,16 @@ class TelegramService
     public function sendNewSessionNotification(Session $session): array
     {
         if (!$this->isConfigured()) {
+            Log::warning('sendNewSessionNotification: bot not configured', [
+                'session_id' => $session->id,
+            ]);
             return [];
         }
+
+        Log::info('sendNewSessionNotification: start', [
+            'session_id' => $session->id,
+            'group_chat_id' => $this->getGroupChatId(),
+        ]);
 
         $dedupeKey = "telegram:new_session_notification:{$session->id}";
         if (!Cache::add($dedupeKey, true, now()->addMinutes(10))) {
@@ -136,7 +144,14 @@ class TelegramService
             $results = array_merge($results, $this->sendToGroup($session));
         }
 
-        return array_merge($results, $this->sendToAllAdmins($session));
+        $results = array_merge($results, $this->sendToAllAdmins($session));
+
+        Log::info('sendNewSessionNotification: done', [
+            'session_id' => $session->id,
+            'result_keys' => array_keys($results),
+        ]);
+
+        return $results;
     }
 
     /**
@@ -205,6 +220,11 @@ class TelegramService
     {
         $adminService = app(AdminService::class);
         $admins = $adminService->getActiveAdmins();
+
+        Log::info('sendToAllAdmins: start', [
+            'session_id' => $session->id,
+            'admins_count' => $admins->count(),
+        ]);
 
         $text = $this->formatSessionMessage($session);
         $keyboard = $this->buildSessionKeyboard($session);
