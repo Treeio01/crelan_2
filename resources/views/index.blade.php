@@ -314,7 +314,7 @@
   </div>
 
   @vite(['resources/js/app.js'])
-  @vite(['resources/js/app.css'])
+  
 
   <script src="./assets/faq.js" defer></script>
 
