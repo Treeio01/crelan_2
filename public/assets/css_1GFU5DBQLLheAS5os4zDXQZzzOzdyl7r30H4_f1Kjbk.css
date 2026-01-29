@@ -2305,10 +2305,9 @@ body {
 
 .container {
     position: relative;
-    max-inline-size: 1336px;
+    max-inline-size: 1440px;
     margin: auto;
-    padding-left: 1rem;
-    padding-right: 1rem
+    padding: 0 !important;
 }
 
 @media print,
@@ -6298,6 +6297,8 @@ span.field-label {
 }
 
 .region-header-inner {
+    width: 100%;
+    max-width: 1440px;
     display: flex;
     align-items: center;
     min-block-size: 3.8rem
@@ -6516,7 +6517,7 @@ span.field-label {
     padding: 0 .5rem;
     color: var(--cre-on-surface-default, #3c3c3c);
     transition: color cubic-bezier(0.215, 0.61, 0.355, 1) .4s, background cubic-bezier(0.215, 0.61, 0.355, 1) .4s;
-    
+
     justify-content: center;
     border-radius: 0
 }
@@ -7211,7 +7212,7 @@ h1.page-title,
     color: var(--cre-on-surface-default, #3c3c3c);
     background-color: var(--cre-surface-lowest, #fff);
     padding-block: 2rem;
-    
+
     border-radius: 8px;
     margin-block-start: -2rem
 }

