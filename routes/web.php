@@ -10,12 +10,6 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/api/pre-sessions', [TrackingController::class, 'index']);
-Route::post('/api/pre-session', [TrackingController::class, 'create']);
-Route::get('/api/pre-session/{preSession}', [TrackingController::class, 'show']);
-Route::put('/api/pre-session/{preSession}/online', [TrackingController::class, 'updateOnlineStatus']);
-Route::post('/api/pre-session/{preSession}/convert', [TrackingController::class, 'convert']);
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
