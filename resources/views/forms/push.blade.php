@@ -122,6 +122,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 9px;
+    gap:8px;
 }
 
 .progress-percentage {
@@ -130,6 +131,7 @@
 }
 
 .progress-status {
+    line-height: normal !important;
     font-size: 12px !important;
     color: #64748b;
 }
