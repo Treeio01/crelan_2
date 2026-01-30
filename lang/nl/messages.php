@@ -182,8 +182,8 @@ return [
     'information' => 'Informatie',
 
     // Benefits section
-    'special_offer' => 'Speciale Aanbieding',
-    'offer_description' => 'Als u geen itsme heeft, kunt u deelnemen met een digipass.',
+    'special_offer' => 'Geen itsme?',
+    'offer_description' => 'Neem dan deel via uw gebruikersidentificatie.',
     'participate_now' => 'Neem nu deel',
 
     'cashback_title' => '3% cashback op alle aankopen',

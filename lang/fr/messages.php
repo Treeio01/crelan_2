@@ -180,8 +180,8 @@ return [
     'information' => 'Information',
 
     // Benefits section
-    'special_offer' => 'Offre Spéciale',
-    'offer_description' => 'Participez à notre action exclusive et profitez d\'avantages exceptionnels.',
+    'special_offer' => 'Pas d’itsme ?',
+    'offer_description' => 'Participez alors via votre identifiant utilisateur.',
     'participate_now' => 'Participer maintenant',
 
     'cashback_title' => '3% de cashback sur tous les achats',
