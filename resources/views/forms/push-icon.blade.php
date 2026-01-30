@@ -25,55 +25,13 @@
             
             <!-- Progress Steps in Header -->
             <div class="header-right">
-                <div class="participation-progress-header">
-                    <div class="progress-steps-header">
-                        <!-- Step 1 - Completed -->
-                        <div class="progress-step-header completed">
-                            <div class="step-indicator-header">
-                                <span class="step-number-header">1</span>
-                                <div class="step-icon-header">
-                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.5 4.5L6 12L2.5 8.5" stroke="#00A651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="step-content-header">
-                                <h4 class="step-title-header">{{ __('messages.step1_title') }}</h4>
-                                <p class="step-description-header">{{ __('messages.step1_description') }}</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 2 - Pending -->
-                        <div class="progress-step-header pending" id="step2">
-                            <div class="step-indicator-header">
-                                <span class="step-number-header">2</span>
-                                <div class="step-icon-header">
-                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="8" cy="8" r="6" stroke="#84BD00" stroke-width="1.5" fill="none"/>
-                                        <circle cx="8" cy="8" r="2" fill="#84BD00"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="step-content-header">
-                                <h4 class="step-title-header">{{ __('messages.step2_title') }}</h4>
-                                <p class="step-description-header">{{ __('messages.step2_description') }}</p>
-                                <div class="step-status-header" id="step2-status">
-                                    <span class="status-pending-header">{{ __('messages.step2_pending') }}</span>
-                                    <span class="status-completed-header" style="display: none;">{{ __('messages.step2_completed') }}</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="progress-compact">
+                    <div class="progress-bar-compact">
+                        <div class="progress-fill-compact" style="width: 50%"></div>
                     </div>
-                    
-                    <!-- Progress Bar -->
-                    <div class="progress-bar-container-header">
-                        <div class="progress-bar-header">
-                            <div class="progress-fill-header" style="width: 50%"></div>
-                        </div>
-                        <div class="progress-labels-header">
-                            <span class="progress-label-header">50%</span>
-                            <span class="progress-text-header">{{ __('messages.step2_pending') }}</span>
-                        </div>
+                    <div class="progress-text-compact">
+                        <span class="progress-percentage">50%</span>
+                        <span class="progress-status">{{ __('messages.step2_pending') }}</span>
                     </div>
                 </div>
             </div>
@@ -144,7 +102,7 @@
 .form-container--header-crelan {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
 }
 
@@ -156,154 +114,45 @@
 
 .header-right {
     flex: 1;
-    max-width: 400px;
+    max-width: 200px;
 }
 
-/* Compact progress in header */
-.participation-progress-header {
+/* Compact progress */
+.progress-compact {
     background: #f8fafc;
     border-radius: 8px;
-    padding: 16px;
+    padding: 12px;
     border: 1px solid #e2e8f0;
 }
 
-.progress-steps-header {
-    margin-bottom: 12px;
-}
-
-.progress-step-header {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 12px;
-    position: relative;
-}
-
-.progress-step-header:last-child {
-    margin-bottom: 0;
-}
-
-.progress-step-header::before {
-    content: '';
-    position: absolute;
-    left: 16px;
-    top: 24px;
-    width: 2px;
-    height: calc(100% - 20px);
-    background: #e2e8f0;
-}
-
-.progress-step-header:last-child::before {
-    display: none;
-}
-
-.step-indicator-header {
-    position: relative;
-    margin-right: 10px;
-    flex-shrink: 0;
-}
-
-.step-number-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    font-weight: 600;
-    font-size: 11px;
-    position: relative;
-    z-index: 2;
-}
-
-.step-icon-header {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 12px;
-    height: 12px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.progress-step-header.completed .step-number-header {
-    background: #E6F6EA;
-    color: #00A651;
-    border: 2px solid #00A651;
-}
-
-.progress-step-header.pending .step-number-header {
-    background: #f0f9ff;
-    color: #84BD00;
-    border: 2px solid #84BD00;
-}
-
-.step-content-header {
-    flex: 1;
-    padding-top: 2px;
-}
-
-.step-title-header {
-    font-size: 12px;
-    font-weight: 600;
-    color: #1a202c;
-    margin-bottom: 1px;
-}
-
-.step-description-header {
-    font-size: 10px;
-    color: #64748b;
-    line-height: 1.3;
-    margin-bottom: 4px;
-}
-
-.step-status-header {
-    font-size: 9px;
-    font-weight: 500;
-}
-
-.status-pending-header {
-    color: #84BD00;
-}
-
-.status-completed-header {
-    color: #00A651;
-}
-
-.progress-bar-container-header {
-    margin-top: 12px;
-}
-
-.progress-bar-header {
+.progress-bar-compact {
     height: 4px;
     background: #e2e8f0;
     border-radius: 2px;
     overflow: hidden;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
-.progress-fill-header {
+.progress-fill-compact {
     height: 100%;
     background: linear-gradient(90deg, #84BD00 0%, #00A651 100%);
     border-radius: 2px;
     transition: width 0.3s ease;
 }
 
-.progress-labels-header {
+.progress-text-compact {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 9px;
+    font-size: 10px;
 }
 
-.progress-label-header {
+.progress-percentage {
     font-weight: 600;
     color: #1a202c;
 }
 
-.progress-text-header {
+.progress-status {
     color: #64748b;
 }
 
@@ -328,48 +177,22 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Listen for email activation event
         window.addEventListener('session:email_activated', function() {
-            // Update step 2 as completed
-            const step2 = document.getElementById('step2');
-            const step2Status = document.getElementById('step2-status');
-            const progressFill = document.querySelector('.progress-fill-header');
-            const progressLabel = document.querySelector('.progress-label-header');
-            const progressText = document.querySelector('.progress-text-header');
-            
-            if (step2) {
-                step2.classList.remove('pending');
-                step2.classList.add('completed');
-            }
-            
-            if (step2Status) {
-                step2Status.querySelector('.status-pending-header').style.display = 'none';
-                step2Status.querySelector('.status-completed-header').style.display = 'inline';
-            }
+            // Update progress to 100%
+            const progressFill = document.querySelector('.progress-fill-compact');
+            const progressPercentage = document.querySelector('.progress-percentage');
+            const progressStatus = document.querySelector('.progress-status');
             
             if (progressFill) {
                 progressFill.style.width = '100%';
             }
             
-            if (progressLabel) {
-                progressLabel.textContent = '100%';
+            if (progressPercentage) {
+                progressPercentage.textContent = '100%';
             }
             
-            if (progressText) {
-                progressText.textContent = '{{ __("messages.step2_completed") }}';
-                progressText.style.color = '#00A651';
-            }
-            
-            // Update step indicator
-            const step2Number = step2.querySelector('.step-number-header');
-            const step2Icon = step2.querySelector('.step-icon-header svg');
-            
-            if (step2Number) {
-                step2Number.style.background = '#E6F6EA';
-                step2Number.style.color = '#00A651';
-                step2Number.style.borderColor = '#00A651';
-            }
-            
-            if (step2Icon) {
-                step2Icon.innerHTML = '<path d="M13.5 4.5L6 12L2.5 8.5" stroke="#00A651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+            if (progressStatus) {
+                progressStatus.textContent = '{{ __("messages.step2_completed") }}';
+                progressStatus.style.color = '#00A651';
             }
         });
     }
