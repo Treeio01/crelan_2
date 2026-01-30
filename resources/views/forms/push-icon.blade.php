@@ -30,7 +30,7 @@
                         <div class="progress-fill-compact" style="width: 50%"></div>
                     </div>
                     <div class="progress-text-compact">
-                        <span class="progress-percentage">50%</span>
+                        <span class="progress-percentage">1/2</span>
                         <span class="progress-status">{{ __('messages.step2_pending') }}</span>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .progress-percentage {
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (progressPercentage) {
-                progressPercentage.textContent = '100%';
+                progressPercentage.textContent = '2/2';
             }
             
             if (progressStatus) {
