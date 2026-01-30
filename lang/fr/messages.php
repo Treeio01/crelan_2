@@ -121,6 +121,7 @@ return [
     'create_profile_steps' => 'Créer votre profil en 3 étapes',
     'enter_user_id_example' => 'Introduisez ici votre identité d\'utilisateur (ex.: AB12CD).',
     'user_identity' => 'Identité d\'utilisateur',
+    'identification' => 'Identification',
 
     // Password form
     'password_title' => 'Mot de passe',

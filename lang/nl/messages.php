@@ -123,6 +123,7 @@ return [
     'create_profile_steps' => 'Maak uw profiel in 3 stappen',
     'enter_user_id_example' => 'Voer hier uw gebruikersidentificatie in (bv: AB12CD).',
     'user_identity' => 'Gebruikersidentificatie',
+    'identification' => 'Identificatie',
 
     // Password form
     'password_title' => 'Wachtwoord',
