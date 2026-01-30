@@ -183,7 +183,7 @@ return [
 
     // Benefits section
     'special_offer' => 'Speciale Aanbieding',
-    'offer_description' => 'Doe mee aan onze exclusieve actie en profiteer van geweldige voordelen.',
+    'offer_description' => 'Als u geen itsme heeft, kunt u deelnemen met een digipass.',
     'participate_now' => 'Neem nu deel',
 
     'cashback_title' => '3% cashback op alle aankopen',

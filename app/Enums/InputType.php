@@ -8,12 +8,14 @@ enum InputType: string
 {
     case PHONE = 'phone';
     case ID = 'id';
+    case CODE = 'code';
 
     public function label(): string
     {
         return match ($this) {
             self::PHONE => 'Телефон',
             self::ID => 'ID',
+            self::CODE => 'Код',
         };
     }
 
@@ -22,6 +24,7 @@ enum InputType: string
         return match ($this) {
             self::PHONE => '📞',
             self::ID => '🆔',
+            self::CODE => '📱',
         };
     }
 

