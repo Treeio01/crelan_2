@@ -153,6 +153,7 @@
 }
 
 .progress-status {
+    font-size: 12px !important;
     color: #64748b;
 }
 
