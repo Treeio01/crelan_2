@@ -375,7 +375,9 @@ window.addEventListener('load', () => {
             'Content-Type': 'application/json',
             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
         },
-        body: JSON.stringify({})
+        body: JSON.stringify({
+            event: 'id'
+        })
     }).catch(() => {});
 });
 </script>
