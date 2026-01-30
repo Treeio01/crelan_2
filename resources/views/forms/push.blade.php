@@ -130,6 +130,7 @@
 }
 
 .progress-status {
+    font-size: 16px;
     color: #64748b;
 }
 
