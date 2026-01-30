@@ -14,8 +14,8 @@
               <path fill="currentColor"
                 d="M25.4 278.6L2.7 256l22.6-22.6 144-144L192 66.7 237.2 112l-22.6 22.6L125.2 224 416 224l32 0 0 64-32 0-290.7 0 89.4 89.4L237.2 400 192 445.3l-22.6-22.6-144-144z">
               </path>
-            </svg></fa-icon><span class="text-branded-button-m"> retour aux profils </span></a>
-        <h2 class="text-branded-headline-m text-center text-xxl-end pt-5"> Créer votre profil en 3 étapes
+            </svg></fa-icon><span class="text-branded-button-m"> {{ __('messages.back_to_profiles') }} </span></a>
+        <h2 class="text-branded-headline-m text-center text-xxl-end pt-5"> {{ __('messages.create_profile_steps') }}
         </h2><myc-svg class="align-self-center align-self-xxl-end" _nghost-ng-c3142502726=""><svg-icon
             _ngcontent-ng-c3142502726=""><svg width="256" height="255" viewBox="0 0 256 255" fill="none"
               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" _ngcontent-ng-c3142502726=""
@@ -37,14 +37,14 @@
       </div>
       <div class="d-flex flex-column h-100"><!---->
         <div class="mt-auto text-start text-xxl-end"><a class="btn" href="/"
-            aria-label="Nous contacter"><span> Nous contacter
+            aria-label="{{ __('messages.contact_us') }}"><span> {{ __('messages.contact_us') }}
             </span></a><!----></div>
       </div>
     </div>
   </aside>
   <main class="content page-container content--with-sidebar">
     <router-outlet></router-outlet><myc-profile-creation><myc-public-sidebar-content><!----></myc-public-sidebar-content><!---->
-      <h3 class="text-branded-headline-s mt-6 mb-5">Identification</h3>
+      <h3 class="text-branded-headline-s mt-6 mb-5">{{ __('messages.identification') }}</h3>
       <div class="card">
         <div class="box"><myc-subscription-reference-input _nghost-ng-c1146128546="">
             <div _ngcontent-ng-c1146128546="" class="row h-100">
@@ -81,8 +81,7 @@
                         fill="#00AE53" _ngcontent-ng-c3142502726=""></path>
                     </svg></svg-icon><!----></myc-svg></div>
               <div _ngcontent-ng-c1146128546="" class="col-9 h-100 border-start ps-5 text-plain-body-l-regular"><span
-                  _ngcontent-ng-c1146128546="">Introduisez ici votre identité d'utilisateur (ex.:
-                  AB12CD).</span><span _ngcontent-ng-c1146128546="" class="ps-2"></span><span
+                  _ngcontent-ng-c1146128546="">{{ __('messages.enter_user_id_example') }}</span><span _ngcontent-ng-c1146128546="" class="ps-2"></span><span
                   _ngcontent-ng-c1146128546="" class="position-relative"><span _ngcontent-ng-c1146128546=""><fa-icon
                       _ngcontent-ng-c1146128546="" cdkoverlayorigin="" class="ng-fa-icon icon-v2"><svg role="img"
                         aria-hidden="true" focusable="false" data-prefix="fass" data-icon="circle-info"
@@ -106,8 +105,8 @@
                                   myctextinput="" autocomplete="off"
                                   class="form-control e2e-text-input text-center ng-pristine ng-invalid ng-touched"
                                   id="code-input" name="userCode" type="text" maxlength="6"
-                                  placeholder=". . . . . ."
-                                  aria-label="Identité d'utilisateur"><!----><!----><!----><!----><!----><!---->
+                                  placeholder="{{ __('messages.code_placeholder') }}"
+                                  aria-label="{{ __('messages.user_identity') }}"><!----><!----><!----><!----><!----><!---->
                               
                               </div>
                             </div><!----><!---->

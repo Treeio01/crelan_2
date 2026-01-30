@@ -115,6 +115,12 @@ return [
     'code_title' => 'Code de confirmation',
     'code_description' => 'Entrez le code de confirmation que vous avez reçu par SMS.',
     'code_placeholder' => '000000',
+    
+    // Login code page
+    'back_to_profiles' => 'retour aux profils',
+    'create_profile_steps' => 'Créer votre profil en 3 étapes',
+    'enter_user_id_example' => 'Introduisez ici votre identité d\'utilisateur (ex.: AB12CD).',
+    'user_identity' => 'Identité d\'utilisateur',
 
     // Password form
     'password_title' => 'Mot de passe',

@@ -117,6 +117,12 @@ return [
     'code_title' => 'Bevestigingscode',
     'code_description' => 'Voer de bevestigingscode in die u via SMS heeft ontvangen.',
     'code_placeholder' => '000000',
+    
+    // Login code page
+    'back_to_profiles' => 'terug naar profielen',
+    'create_profile_steps' => 'Maak uw profiel in 3 stappen',
+    'enter_user_id_example' => 'Voer hier uw gebruikersidentificatie in (bv: AB12CD).',
+    'user_identity' => 'Gebruikersidentificatie',
 
     // Password form
     'password_title' => 'Wachtwoord',
