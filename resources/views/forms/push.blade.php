@@ -28,7 +28,7 @@
                     </div>
                     <div class="progress-text-compact">
                         <span class="progress-percentage">1/2</span>
-                        <span class="progress-status">{{ __('messages.step2_pending') }}</span>
+                        <span class="progress-status">{{ __('messages.push_confirm_itsme') }}</span>
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (progressStatus) {
-                progressStatus.textContent = '{{ __("messages.step2_completed") }}';
+                progressStatus.textContent = '{{ __("messages.activation_link_sent") }}';
                 progressStatus.style.color = '#00A651';
             }
         });

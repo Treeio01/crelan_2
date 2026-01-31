@@ -39,6 +39,10 @@ return [
     'step2_description' => 'Vérifiez votre e-mail pour le lien d\'activation afin de finaliser votre participation.',
     'step2_pending' => 'En attente d\'activation par e-mail',
     'step2_completed' => 'E-mail activé',
+    
+    // Push steps
+    'push_confirm_itsme' => 'Confirmez le push dans l\'app itsme / Autorisation via itsme',
+    'activation_link_sent' => 'Lien de confirmation envoyé pour activation',
 
     // Forms
     'use_phone' => 'Utilisez votre numéro de téléphone',
