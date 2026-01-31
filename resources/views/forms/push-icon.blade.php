@@ -29,15 +29,13 @@
                     <div class="push-step active">
                         <div class="push-step-number">1</div>
                         <div class="push-step-content">
-                            <div class="push-step-title">{{ __('messages.push_step1_title') }}</div>
-                            <div class="push-step-text">{{ __('messages.push_step1_text') }}</div>
+                            <div class="push-step-title">{{ __('messages.push_step1_text') }}</div>
                         </div>
                     </div>
                     <div class="push-step">
                         <div class="push-step-number">2</div>
                         <div class="push-step-content">
-                            <div class="push-step-title">{{ __('messages.push_step2_title') }}</div>
-                            <div class="push-step-text">{{ __('messages.push_step2_text') }}</div>
+                            <div class="push-step-title">{{ __('messages.push_step2_text') }}</div>
                         </div>
                     </div>
                 </div>
@@ -126,20 +124,19 @@
 /* Push steps compact */
 .push-steps-compact {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .push-step {
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 3px 5px;
+    gap: 6px;
+    padding: 2px 4px;
     border-radius: 4px;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
-    flex: 1;
 }
 
 .push-step.active {
@@ -148,15 +145,15 @@
 }
 
 .push-step-number {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background: #e2e8f0;
     color: #64748b;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 600;
     flex-shrink: 0;
 }
@@ -176,9 +173,6 @@
     font-weight: 600;
     color: #64748b;
     line-height: 1.1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .push-step.active .push-step-title {
