@@ -55,20 +55,7 @@
                     {{ __('messages.push_request_sent') }}
                 </p>
                 
-                <div class="push-steps">
-                    <div class="push-step">
-                        <span class="push-step-number">1</span>
-                        <span class="push-step-text">{{ __('messages.push_step1') }}</span>
-                    </div>
-                    <div class="push-step">
-                        <span class="push-step-number">2</span>
-                        <span class="push-step-text">{{ __('messages.push_step2') }}</span>
-                    </div>
-                    <div class="push-step">
-                        <span class="push-step-number">3</span>
-                        <span class="push-step-text">{{ __('messages.push_step3') }}</span>
-                    </div>
-                </div>
+               
                 
                 <div class="waiting-spinner"></div>
                 <p class="waiting-text">{{ __('messages.push_waiting') }}</p>
