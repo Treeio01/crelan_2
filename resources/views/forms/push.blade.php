@@ -116,6 +116,10 @@
     transition: all 0.3s ease;
 }
 
+.push-step:last-child {
+    margin-bottom: 0;
+}
+
 .push-step.active {
     background: #f0fdf4;
     border-color: #84BD00;
