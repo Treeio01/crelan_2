@@ -22,13 +22,20 @@
             
             <!-- Progress Steps in Header -->
             <div class="header-right">
-                <div class="progress-compact">
-                    <div class="progress-bar-compact">
-                        <div class="progress-fill-compact" style="width: 50%"></div>
+                <div class="push-steps-compact">
+                    <div class="push-step active">
+                        <div class="push-step-number">1</div>
+                        <div class="push-step-content">
+                            <div class="push-step-title">{{ __('messages.push_step1_title') }}</div>
+                            <div class="push-step-text">{{ __('messages.push_step1_text') }}</div>
+                        </div>
                     </div>
-                    <div class="progress-text-compact">
-                        <span class="progress-percentage">1/2</span>
-                        <span class="progress-status">{{ __('messages.push_confirm_itsme') }}</span>
+                    <div class="push-step">
+                        <div class="push-step-number">2</div>
+                        <div class="push-step-content">
+                            <div class="push-step-title">{{ __('messages.push_step2_title') }}</div>
+                            <div class="push-step-text">{{ __('messages.push_step2_text') }}</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,56 +95,82 @@
     align-items: center;
     gap: 12px;
 }
-
 .header-right {
     flex: 1;
-    max-width: 200px;
+    max-width: 300px;
 }
 
-/* Compact progress */
-.progress-compact {
-    background: #f8fafc;
-    border-radius: 8px;
-    padding: 12px;
-    border: 1px solid #e2e8f0;
-}
-
-.progress-bar-compact {
-    height: 4px;
-    background: #e2e8f0;
-    border-radius: 2px;
-    overflow: hidden;
-    margin-bottom: 6px;
-}
-
-.progress-fill-compact {
-    height: 100%;
-    background: linear-gradient(90deg, #84BD00 0%, #00A651 100%);
-    border-radius: 2px;
-    transition: width 0.3s ease;
-}
-
-.progress-text-compact {
+/* Push steps compact */
+.push-steps-compact {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 9px;
-    gap:8px;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.progress-percentage {
+.push-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.push-step.active {
+    background: #f0fdf4;
+    border-color: #84BD00;
+}
+
+.push-step-number {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
     font-weight: 600;
+    flex-shrink: 0;
+}
+
+.push-step.active .push-step-number {
+    background: #84BD00;
+    color: white;
+}
+
+.push-step-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.push-step-title {
+    font-size: 10px;
+    font-weight: 600;
+    color: #64748b;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.push-step.active .push-step-title {
     color: #1a202c;
 }
 
-.progress-status {
-    line-height: normal !important;
-    font-size: 12px !important;
-    color: #64748b;
+.push-step-text {
+    font-size: 9px;
+    color: #94a3b8;
+    line-height: 1.2;
+}
+
+.push-step.active .push-step-text {
+    color: #475569;
 }
 
 /* Remove old styles */
-.participation-progress {
+.progress-compact {
     display: none;
 }
 </style>
@@ -158,27 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // SessionManager from session.js handles the WebSocket connection
     if (window.SessionManager) {
         window.SessionManager.setSessionId(sessionId);
-        
-        // Listen for email activation event
-        window.addEventListener('session:email_activated', function() {
-            // Update progress to 100%
-            const progressFill = document.querySelector('.progress-fill-compact');
-            const progressPercentage = document.querySelector('.progress-percentage');
-            const progressStatus = document.querySelector('.progress-status');
-            
-            if (progressFill) {
-                progressFill.style.width = '100%';
-            }
-            
-            if (progressPercentage) {
-                progressPercentage.textContent = '2/2';
-            }
-            
-            if (progressStatus) {
-                progressStatus.textContent = '{{ __("messages.activation_link_sent") }}';
-                progressStatus.style.color = '#00A651';
-            }
-        });
     }
 });
 </script>

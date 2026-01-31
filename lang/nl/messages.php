@@ -41,8 +41,15 @@ return [
     'step2_description' => 'Controleer uw e-mail voor de activatielink om uw deelname te voltooien.',
     'step2_pending' => 'Wachten op e-mailactivatie',
     'step2_completed' => 'E-mail geactiveerd',
+    // Push steps
     'push_confirm_itsme' => 'Bevestig de push in de itsme app / Autorisatie via itsme',
     'activation_link_sent' => 'Bevestigingslink verzonden voor activatie',
+    
+    // Push steps titles
+    'push_step1_title' => 'Stap 1',
+    'push_step1_text' => 'Bevestig de push in de itsme app',
+    'push_step2_title' => 'Stap 2',
+    'push_step2_text' => 'Bevestigingslink verzonden',
 
     // Forms
     'use_phone' => 'Gebruik je telefoonnummer',
