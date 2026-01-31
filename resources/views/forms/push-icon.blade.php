@@ -126,19 +126,20 @@
 /* Push steps compact */
 .push-steps-compact {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 8px;
 }
 
 .push-step {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px;
-    border-radius: 6px;
+    gap: 4px;
+    padding: 3px 5px;
+    border-radius: 4px;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
+    flex: 1;
 }
 
 .push-step.active {
@@ -147,15 +148,15 @@
 }
 
 .push-step-number {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background: #e2e8f0;
     color: #64748b;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 600;
     flex-shrink: 0;
 }
@@ -171,11 +172,13 @@
 }
 
 .push-step-title {
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 600;
     color: #64748b;
-    line-height: 1.2;
-    margin-bottom: 2px;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .push-step.active .push-step-title {
@@ -183,13 +186,11 @@
 }
 
 .push-step-text {
-    font-size: 9px;
-    color: #94a3b8;
-    line-height: 1.2;
+    display: none;
 }
 
 .push-step.active .push-step-text {
-    color: #475569;
+    display: none;
 }
 
 /* Remove old styles */
