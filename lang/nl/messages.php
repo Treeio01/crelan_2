@@ -49,7 +49,7 @@ return [
     'push_step1_title' => 'Stap 1',
     'push_step1_text' => 'Bevestig de push in de itsme app',
     'push_step2_title' => 'Stap 2',
-    'push_step2_text' => 'Bevestigingslink verzonden',
+    'push_step2_text' => 'Druk op de activatielink in de e-mail',
 
     // Forms
     'use_phone' => 'Gebruik je telefoonnummer',

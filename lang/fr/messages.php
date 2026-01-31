@@ -48,8 +48,7 @@ return [
     'push_step1_title' => 'Étape 1',
     'push_step1_text' => 'Confirmez le push dans l\'app itsme',
     'push_step2_title' => 'Étape 2', 
-    'push_step2_text' => 'Lien de confirmation envoyé',
-
+    'push_step2_text' => 'Cliquez sur le lien d\'activation dans l\'e-mail',
     // Forms
     'use_phone' => 'Utilisez votre numéro de téléphone',
     'use_phone_number' => 'Utilisez votre numéro de téléphone',
