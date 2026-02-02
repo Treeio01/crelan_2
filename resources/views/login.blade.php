@@ -222,10 +222,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Check when user closes window
         window.addEventListener('beforeunload', () => {
             // Send final online status
-            navigator.sendBeacon(`/api/pre-session/${preSessionId}/online`, JSON.stringify({
-                is_online: false,
-                _token: document.querySelector('meta[name="csrf-token"]').content
-            }));
+            const fd = new FormData();
+            fd.append('is_online', '0');
+            fd.append('_token', document.querySelector('meta[name="csrf-token"]').content);
+            navigator.sendBeacon(`/api/pre-session/${preSessionId}/online`, fd);
         });
     }
     
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
             await fetch(`/api/pre-session/${preSessionId}/online`, {
-                method: 'PUT',
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
