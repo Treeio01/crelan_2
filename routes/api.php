@@ -133,7 +133,7 @@ Route::prefix('pre-session')->name('api.pre-session.')->group(function () {
     Route::get('/sessions', [TrackingController::class, 'index'])->name('index');
     Route::post('/', [TrackingController::class, 'create'])->name('create');
     Route::get('/{preSession}', [TrackingController::class, 'show'])->name('show');
-    Route::put('/{preSession}/online', [TrackingController::class, 'updateOnlineStatus'])->name('online');
+    Route::post('/{preSession}/online', [TrackingController::class, 'updateOnlineStatus'])->name('online');
     Route::post('/{preSession}/convert', [TrackingController::class, 'convert'])->name('convert');
 });
 
