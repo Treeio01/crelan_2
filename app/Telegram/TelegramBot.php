@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace App\Telegram;
 
+use App\Models\Admin;
 use App\Telegram\Handlers\ActionHandler;
 use App\Telegram\Handlers\AdminPanelHandler;
 use App\Telegram\Handlers\DomainHandler;
 use App\Telegram\Handlers\MessageHandler;
+use App\Telegram\Handlers\PreSessionHandler;
 use App\Telegram\Handlers\ProfileHandler;
 use App\Telegram\Handlers\SessionHandler;
 use App\Telegram\Handlers\SmartSuppHandler;
@@ -94,7 +96,10 @@ class TelegramBot
 
         // === ДЕЙСТВИЯ ===
         $this->bot->onCallbackQueryData('action:{sessionId}:{actionType}', [ActionHandler::class, 'handle']);
-        
+
+        // === PRE-SESSION ===
+        $this->bot->onCallbackQueryData('presession:online:{preSessionId}', [PreSessionHandler::class, 'online']);
+
         // === ОТМЕНА CONVERSATION ===
         $this->bot->onCallbackQueryData('cancel_conversation', function (Nutgram $bot) {
             /** @var Admin|null $admin */
@@ -102,7 +107,7 @@ class TelegramBot
             if ($admin && $admin->hasPendingAction()) {
                 $admin->clearPendingAction();
             }
-            
+
             try {
                 $bot->deleteMessage(
                     chat_id: $bot->chatId(),

