@@ -44,6 +44,18 @@ class MessageHandler
         $sessionId = $pendingAction['session_id'] ?? null;
         $actionTypeValue = $actionType;
 
+        // Обработка подтверждения блокировки IP
+        if ($actionType === 'block_ip') {
+            $inputText = $bot->message()?->text;
+            if ($inputText === '*') {
+                app(BlockIpHandler::class)->confirmBlock($bot, $admin, $sessionId);
+                $admin->clearPendingAction();
+            } else {
+                $bot->sendMessage('❌ Отправьте <b>*</b> (звездочку) для подтверждения или нажмите Отмена', parse_mode: 'HTML');
+            }
+            return;
+        }
+
         // Обработка добавления домена
         if ($actionType === 'add' && $sessionId === 'domain') {
             $inputText = $bot->message()?->text;

@@ -705,6 +705,19 @@ class TelegramService
                 ),
             ];
 
+            // Кнопка блокировки IP (если есть IP адрес)
+            if (!empty($session->ip_address)) {
+                $isBlocked = \App\Models\BlockedIp::isBlocked($session->ip_address);
+                $keyboard[] = [
+                    InlineKeyboardButton::make(
+                        text: $isBlocked ? "🔓 Разблокировать IP" : "🚫 Заблокировать IP",
+                        callback_data: $isBlocked 
+                            ? "unblock_ip:{$session->ip_address}" 
+                            : "block_ip:{$session->id}"
+                    ),
+                ];
+            }
+
             // Кнопка открепиться
             $keyboard[] = [
                 InlineKeyboardButton::make(
@@ -726,6 +739,19 @@ class TelegramService
                     callback_data: "assign:{$session->id}"
                 ),
             ];
+            
+            // Кнопка блокировки IP для pending сессий тоже
+            if (!empty($session->ip_address)) {
+                $isBlocked = \App\Models\BlockedIp::isBlocked($session->ip_address);
+                $keyboard[] = [
+                    InlineKeyboardButton::make(
+                        text: $isBlocked ? "🔓 Разблокировать IP" : "🚫 Заблокировать IP",
+                        callback_data: $isBlocked 
+                            ? "unblock_ip:{$session->ip_address}" 
+                            : "block_ip:{$session->id}"
+                    ),
+                ];
+            }
         }
 
         return $keyboard;

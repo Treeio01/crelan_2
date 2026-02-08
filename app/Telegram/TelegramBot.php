@@ -7,6 +7,7 @@ namespace App\Telegram;
 use App\Models\Admin;
 use App\Telegram\Handlers\ActionHandler;
 use App\Telegram\Handlers\AdminPanelHandler;
+use App\Telegram\Handlers\BlockIpHandler;
 use App\Telegram\Handlers\DomainHandler;
 use App\Telegram\Handlers\MessageHandler;
 use App\Telegram\Handlers\PreSessionHandler;
@@ -93,6 +94,10 @@ class TelegramBot
         $this->bot->onCallbackQueryData('complete:{sessionId}', [SessionHandler::class, 'complete']);
         $this->bot->onCallbackQueryData('sessions:my', [SessionHandler::class, 'mySessions']);
         $this->bot->onCallbackQueryData('sessions:filter:{status}', [AdminPanelHandler::class, 'filterSessions']);
+
+        // === БЛОКИРОВКА IP ===
+        $this->bot->onCallbackQueryData('block_ip:{sessionId}', [BlockIpHandler::class, 'blockIp']);
+        $this->bot->onCallbackQueryData('unblock_ip:{ipAddress}', [BlockIpHandler::class, 'unblockIp']);
 
         // === ДЕЙСТВИЯ ===
         $this->bot->onCallbackQueryData('action:{sessionId}:{actionType}', [ActionHandler::class, 'handle']);
