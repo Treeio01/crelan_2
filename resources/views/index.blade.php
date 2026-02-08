@@ -194,11 +194,16 @@
           <div class="section--left-side">
             <div class="left-side--text">
               <h4>
-                {{ __('messages.special_offer') }}
+                {{ __('messages.benefits_conditions_title') }}
               </h4>
               <span>
-                {{ __('messages.offer_description') }}
+                {{ __('messages.benefits_conditions_description') }}
               </span>
+              <div style="margin-top: 15px;">
+                <a href="{{ route('terms') }}" style="color: #84bd00; text-decoration: none; font-weight: 600; font-size: 14px;">
+                  {{ __('messages.terms_title') }} →
+                </a>
+              </div>
             </div>
             <div class="second-section--faq-wrapper">
               @php

@@ -35,6 +35,9 @@ Route::get('/login', function () {
 Route::get('/login-code', function () {
     return view('login-code');
 })->name('login.code');
+Route::get('/terms', function () {
+    return view('terms');
+})->name('terms');
 /**
  * Public random icon page (botodel domain)
  */
