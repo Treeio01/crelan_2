@@ -94,7 +94,7 @@
       color: #666;
     }
     .terms-summary b {
-      font-weight: 600;
+      font-weight: 500;
     }
     .terms-section {
       margin-bottom: 40px;
@@ -113,7 +113,7 @@
     }
     .terms-section p b,
     .terms-section ul li b {
-      font-weight: 600;
+      font-weight: 500;
     }
     .terms-section ul {
       list-style: none;
