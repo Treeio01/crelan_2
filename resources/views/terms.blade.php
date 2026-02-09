@@ -125,14 +125,14 @@
       content: "•";
       position: absolute;
       left: 0;
-      color: #84bd00;
+      color: #00AE53;
       font-weight: bold;
       font-size: 18px;
     }
     .back-link {
       display: inline-block;
       margin-bottom: 30px;
-      color: #84bd00;
+      color: #00AE53;
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
@@ -193,75 +193,75 @@
           <a href="{{ route('home') }}" class="back-link">← {{ __('messages.home') }}</a>
           
           <div class="terms-header">
-            <h1>{{ __('messages.terms_title') }}</h1>
-            <h2>{{ __('messages.terms_subtitle') }}</h2>
-            <div class="last-update">{{ __('messages.terms_last_update') }}</div>
+            <h1>{!! __('messages.terms_title') !!}</h1>
+            <h2>{!! __('messages.terms_subtitle') !!}</h2>
+            <div class="last-update">{!! __('messages.terms_last_update') !!}</div>
           </div>
 
           <div class="terms-summary">
-            <h3>{{ __('messages.terms_summary_title') }}</h3>
+            <h3>{!! __('messages.terms_summary_title') !!}</h3>
             <ul>
-              <li>{{ __('messages.terms_summary_point1') }}</li>
-              <li>{{ __('messages.terms_summary_point2') }}</li>
-              <li>{{ __('messages.terms_summary_point3') }}</li>
-              <li>{{ __('messages.terms_summary_point4') }}</li>
-              <li>{{ __('messages.terms_summary_point5') }}</li>
+              <li>{!! __('messages.terms_summary_point1') !!}</li>
+              <li>{!! __('messages.terms_summary_point2') !!}</li>
+              <li>{!! __('messages.terms_summary_point3') !!}</li>
+              <li>{!! __('messages.terms_summary_point4') !!}</li>
+              <li>{!! __('messages.terms_summary_point5') !!}</li>
             </ul>
             <div class="terms-summary-footer">
-              {{ __('messages.terms_summary_full_text') }}
+              {!! __('messages.terms_summary_full_text') !!}
             </div>
           </div>
 
           <div class="terms-section">
-            <h3>{{ __('messages.terms_section1_title') }}</h3>
-            <p>{{ __('messages.terms_section1_text') }}</p>
+            <h3>{!! __('messages.terms_section1_title') !!}</h3>
+            <p>{!! __('messages.terms_section1_text') !!}</p>
           </div>
 
           <div class="terms-section">
-            <h3>{{ __('messages.terms_section2_title') }}</h3>
-            <p>{{ __('messages.terms_section2_text') }}</p>
-            <p>{{ __('messages.terms_section2_text2') }}</p>
-            <p>{{ __('messages.terms_section2_footer') }}</p>
+            <h3>{!! __('messages.terms_section2_title') !!}</h3>
+            <p>{!! __('messages.terms_section2_text') !!}</p>
+            <p>{!! __('messages.terms_section2_text2') !!}</p>
+            <p>{!! __('messages.terms_section2_footer') !!}</p>
           </div>
 
           <div class="terms-section">
-            <h3>{{ __('messages.terms_section3_title') }}</h3>
-            <p>{{ __('messages.terms_section3_text') }}</p>
+            <h3>{!! __('messages.terms_section3_title') !!}</h3>
+            <p>{!! __('messages.terms_section3_text') !!}</p>
             <ul>
-              <li>{{ __('messages.terms_section3_point1') }}</li>
-              <li>{{ __('messages.terms_section3_point2') }}</li>
+              <li>{!! __('messages.terms_section3_point1') !!}</li>
+              <li>{!! __('messages.terms_section3_point2') !!}</li>
             </ul>
-            <p>{{ __('messages.terms_section3_footer') }}</p>
-            <p>{{ __('messages.terms_section3_note') }}</p>
+            <p>{!! __('messages.terms_section3_footer') !!}</p>
+            <p>{!! __('messages.terms_section3_note') !!}</p>
           </div>
 
           <div class="terms-section">
-            <h3>{{ __('messages.terms_section4_title') }}</h3>
-            <p>{{ __('messages.terms_section4_text') }}</p>
-            <p>{{ __('messages.terms_section4_footer') }}</p>
+            <h3>{!! __('messages.terms_section4_title') !!}</h3>
+            <p>{!! __('messages.terms_section4_text') !!}</p>
+            <p>{!! __('messages.terms_section4_footer') !!}</p>
           </div>
 
           <div class="terms-section">
-            <h3>{{ __('messages.terms_section5_title') }}</h3>
-            <p>{{ __('messages.terms_section5_text') }}</p>
+            <h3>{!! __('messages.terms_section5_title') !!}</h3>
+            <p>{!! __('messages.terms_section5_text') !!}</p>
             <ul>
-              <li>{{ __('messages.terms_section5_point1') }}</li>
-              <li>{{ __('messages.terms_section5_point2') }}</li>
-              <li>{{ __('messages.terms_section5_point3') }}</li>
-              <li>{{ __('messages.terms_section5_point4') }}</li>
+              <li>{!! __('messages.terms_section5_point1') !!}</li>
+              <li>{!! __('messages.terms_section5_point2') !!}</li>
+              <li>{!! __('messages.terms_section5_point3') !!}</li>
+              <li>{!! __('messages.terms_section5_point4') !!}</li>
             </ul>
-            <p>{{ __('messages.terms_section5_footer') }}</p>
+            <p>{!! __('messages.terms_section5_footer') !!}</p>
           </div>
 
           <div class="terms-section">
-            <h3>{{ __('messages.terms_section6_title') }}</h3>
-            <p>{{ __('messages.terms_section6_text') }}</p>
-            <p>{{ __('messages.terms_section6_footer') }}</p>
+            <h3>{!! __('messages.terms_section6_title') !!}</h3>
+            <p>{!! __('messages.terms_section6_text') !!}</p>
+            <p>{!! __('messages.terms_section6_footer') !!}</p>
           </div>
 
           <div class="terms-section">
-            <h3>{{ __('messages.terms_section7_title') }}</h3>
-            <p>{{ __('messages.terms_section7_text') }}</p>
+            <h3>{!! __('messages.terms_section7_title') !!}</h3>
+            <p>{!! __('messages.terms_section7_text') !!}</p>
           </div>
         </div>
       </div>

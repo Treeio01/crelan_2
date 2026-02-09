@@ -57,12 +57,18 @@ class SetLocale
             return $request->get('lang');
         }
         
-        // 2. Check session
+        // 2. Check domain (FR domain = FR locale, higher priority than session)
+        $domainLocale = $this->getLocaleFromDomain($request);
+        if ($domainLocale && $this->isSupported($domainLocale)) {
+            return $domainLocale;
+        }
+        
+        // 3. Check session
         if (session()->has('locale') && $this->isSupported(session('locale'))) {
             return session('locale');
         }
         
-        // 3. Check browser preference (Accept-Language)
+        // 4. Check browser preference (Accept-Language)
         $browserLocale = $request->getPreferredLanguage();
         if (is_string($browserLocale) && $browserLocale !== '') {
             $browserLocale = strtolower(substr($browserLocale, 0, 2));
@@ -71,13 +77,13 @@ class SetLocale
             }
         }
         
-        // 4. Check IP-based location
+        // 5. Check IP-based location
         $ipBasedLocale = $this->getLocaleFromIP($request);
         if ($ipBasedLocale && $this->isSupported($ipBasedLocale)) {
             return $ipBasedLocale;
         }
         
-        // 5. Default
+        // 6. Default
         return self::DEFAULT_LOCALE;
     }
 
@@ -87,6 +93,26 @@ class SetLocale
     private function isSupported(?string $locale): bool
     {
         return $locale && in_array($locale, self::SUPPORTED_LOCALES, true);
+    }
+    
+    /**
+     * Get locale from domain
+     */
+    private function getLocaleFromDomain(Request $request): ?string
+    {
+        $host = $request->getHost();
+        
+        // Check if domain contains FR indicators
+        if (str_contains($host, '.fr') || str_contains($host, '-fr.') || str_contains($host, 'fr-') || str_contains($host, 'french')) {
+            return 'fr';
+        }
+        
+        // Check if domain contains NL indicators
+        if (str_contains($host, '.nl') || str_contains($host, '-nl.') || str_contains($host, 'nl-') || str_contains($host, 'dutch')) {
+            return 'nl';
+        }
+        
+        return null;
     }
     
     /**
