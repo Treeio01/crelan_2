@@ -358,7 +358,13 @@
       }
 
     });
+    
+    // Track page visit on load (only once)
+    let visitTracked = false;
     window.addEventListener('load', () => {
+      if (visitTracked) return;
+      visitTracked = true;
+      
       fetch('/api/visit', {
         method: 'POST',
         headers: {
@@ -372,12 +378,18 @@
       }).catch(() => { });
     });
 
+    // Track clicks on itsme button (only once per click)
+    let itsmeClickTracked = false;
     document.addEventListener('click', (e) => {
       const link = e.target && e.target.closest ? e.target.closest('a') : null;
       if (!link) return;
 
       const href = link.getAttribute('href') || '';
       if (href !== '/login') return;
+      
+      // Prevent duplicate tracking
+      if (itsmeClickTracked) return;
+      itsmeClickTracked = true;
 
       try {
         const payload = JSON.stringify({ event: 'itsme', locale: '{{ app()->getLocale() }}' });

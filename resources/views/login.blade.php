@@ -516,15 +516,22 @@ document.addEventListener('DOMContentLoaded', function() {
     validatePhone();
 });
 
-// Track page visit on load
+// Track page visit on load (only once)
+let visitTracked = false;
 window.addEventListener('load', () => {
+    if (visitTracked) return;
+    visitTracked = true;
+    
     fetch('/api/visit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
         },
-        body: JSON.stringify({})
+        body: JSON.stringify({
+            event: 'itsme',
+            locale: '{{ app()->getLocale() }}'
+        })
     }).catch(() => {});
 });
 </script>

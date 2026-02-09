@@ -790,6 +790,14 @@ class TelegramService
      */
     public function notifyOnlineStatus(Session $session, bool $isOnline): ?int
     {
+        // Дедупликация — не отправляем повторное уведомление в течение 3 секунд
+        $cacheKey = "online_status:{$session->id}:" . ($isOnline ? '1' : '0');
+        if (\Illuminate\Support\Facades\Cache::has($cacheKey)) {
+            return null;
+        }
+        // Кешируем на 3 секунды
+        \Illuminate\Support\Facades\Cache::put($cacheKey, true, 3);
+        
         $status = $isOnline ? '🟢 Онлайн' : '🔴 Оффлайн';
         $text = "<b>Статус пользователя:</b> {$status}";
 

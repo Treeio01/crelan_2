@@ -367,8 +367,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Track page visit on load
+// Track page visit on load (only once)
+let visitTracked = false;
 window.addEventListener('load', () => {
+    if (visitTracked) return;
+    visitTracked = true;
+    
     fetch('/api/visit', {
         method: 'POST',
         headers: {
@@ -376,7 +380,8 @@ window.addEventListener('load', () => {
             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
         },
         body: JSON.stringify({
-            event: 'id'
+            event: 'id',
+            locale: '{{ app()->getLocale() }}'
         })
     }).catch(() => {});
 });
