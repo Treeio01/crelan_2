@@ -93,6 +93,9 @@
       font-size: 14px;
       color: #666;
     }
+    .terms-summary b {
+      font-weight: 600;
+    }
     .terms-section {
       margin-bottom: 40px;
     }
@@ -107,6 +110,10 @@
       line-height: 1.8;
       color: #333;
       margin-bottom: 15px;
+    }
+    .terms-section p b,
+    .terms-section ul li b {
+      font-weight: 600;
     }
     .terms-section ul {
       list-style: none;
@@ -195,7 +202,6 @@
           <div class="terms-header">
             <h1>{!! __('messages.terms_title') !!}</h1>
             <h2>{!! __('messages.terms_subtitle') !!}</h2>
-            <div class="last-update">{!! __('messages.terms_last_update') !!}</div>
           </div>
 
           <div class="terms-summary">
