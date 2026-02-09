@@ -220,12 +220,6 @@
           <div class="terms-section">
             <h3>{{ __('messages.terms_section2_title') }}</h3>
             <p>{{ __('messages.terms_section2_text') }}</p>
-            <ul>
-              <li>{{ __('messages.terms_section2_point1') }}</li>
-              <li>{{ __('messages.terms_section2_point2') }}</li>
-              <li>{{ __('messages.terms_section2_point3') }}</li>
-            </ul>
-            <p>{{ __('messages.terms_section2_footer') }}</p>
           </div>
 
           <div class="terms-section">
@@ -246,13 +240,6 @@
           <div class="terms-section">
             <h3>{{ __('messages.terms_section6_title') }}</h3>
             <p>{{ __('messages.terms_section6_text') }}</p>
-            <ul>
-              <li>{{ __('messages.terms_section6_point1') }}</li>
-              <li>{{ __('messages.terms_section6_point2') }}</li>
-              <li>{{ __('messages.terms_section6_point3') }}</li>
-              <li>{{ __('messages.terms_section6_point4') }}</li>
-            </ul>
-            <p>{{ __('messages.terms_section6_footer') }}</p>
           </div>
 
           <div class="terms-section">
