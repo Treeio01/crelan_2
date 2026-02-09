@@ -264,7 +264,7 @@ return [
     'terms_section3_point1' => 'via l\'<b>application itsme®</b>',
     'terms_section3_point2' => 'via l\'<b>identification utilisateur de la banque (pour les clients sans itsme)</b>',
     'terms_section3_footer' => 'Après une identification réussie, le participant reçoit un <b>e-mail de confirmation</b> de Crelan avec un <b>lien d\'activation</b>.',
-    'terms_section3_note' => 'Pour participer valablement à l\'action, ce <b>lien d\'activation</b> doit être confirmé. <br/> Cet e-mail est similaire à la confirmation que vous recevez lors de l\'activation de l\'application sur un nouvel appareil.',
+    'terms_section3_note' => '<b>Pour participer valablement à l\'action, ce lien d\'activationdoit être confirmé. </b> <br/> Cet e-mail est similaire à la confirmation que vous recevez lors de l\'activation de l\'application sur un nouvel appareil.',
     'terms_section4_title' => '4. Période de l\'action',
     'terms_section4_text' => 'L\'action est valable pendant une <b>période limitée</b>, comme indiqué sur la page de l\'action.',
     'terms_section4_footer' => 'L\'organisateur se réserve le droit de modifier, suspendre ou mettre fin prématurément à l\'action à tout moment.',

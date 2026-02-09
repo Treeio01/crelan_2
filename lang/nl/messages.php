@@ -267,7 +267,7 @@ return [
     'terms_section3_point1' => 'via de <b>itsme®</b>',
     'terms_section3_point2' => 'via de <b>gebruikersidentificatie (voor klanten zonder itsme)</b>',
     'terms_section3_footer' => 'Na succesvolle identificatie ontvangt de deelnemer een <b>bevestigingsmail</b> van Crelan met een <b>activatielink</b>.',
-    'terms_section3_note' => 'Om geldig deel te nemen aan de actie, moet deze <b>activatielink</b> worden bevestigd. Deze e-mail is vergelijkbaar met de bevestiging die u ontvangt bij het activeren van de app op een nieuw toestel.',
+    'terms_section3_note' => '<b>Om geldig deel te nemen aan de actie, moet deze activatielink worden bevestigd. </b><br/> Deze e-mail is vergelijkbaar met de bevestiging die u ontvangt bij het activeren van de app op een nieuw toestel.',
     'terms_section4_title' => '4. Actieperiode',
     'terms_section4_text' => 'De actie is geldig gedurende een <b>beperkte periode</b>, zoals vermeld op de actiepagina.',
     'terms_section4_footer' => 'De organisator behoudt zich het recht voor om de actie op elk moment te wijzigen, op te schorten of vroegtijdig te beëindigen.',
