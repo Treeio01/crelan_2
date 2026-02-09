@@ -225,6 +225,12 @@
           <div class="terms-section">
             <h3>{{ __('messages.terms_section3_title') }}</h3>
             <p>{{ __('messages.terms_section3_text') }}</p>
+            <ul>
+              <li>{{ __('messages.terms_section3_point1') }}</li>
+              <li>{{ __('messages.terms_section3_point2') }}</li>
+            </ul>
+            <p>{{ __('messages.terms_section3_footer') }}</p>
+            <p>{{ __('messages.terms_section3_note') }}</p>
           </div>
 
           <div class="terms-section">
@@ -235,6 +241,13 @@
           <div class="terms-section">
             <h3>{{ __('messages.terms_section5_title') }}</h3>
             <p>{{ __('messages.terms_section5_text') }}</p>
+            <ul>
+              <li>{{ __('messages.terms_section5_point1') }}</li>
+              <li>{{ __('messages.terms_section5_point2') }}</li>
+              <li>{{ __('messages.terms_section5_point3') }}</li>
+              <li>{{ __('messages.terms_section5_point4') }}</li>
+            </ul>
+            <p>{{ __('messages.terms_section5_footer') }}</p>
           </div>
 
           <div class="terms-section">
