@@ -277,7 +277,7 @@ return [
     'terms_section5_point2' => '<b>Een gegarandeerde geldbonus van €75</b>, gestort op de rekening',
     'terms_section5_point3' => '<b>12 maanden gratis rekeningbeheer</b>',
     'terms_section5_point4' => 'Deelname aan een promotionele trekking met een kans om <b>€20.000</b> te winnen',
-    'terms_section5_footer' => 'Alle voordelen zijn persoonlijk, niet overdraagbaar en slechts <b>één keer per klant</b> beschikbaar.',
+    'terms_section5_footer' => 'Alle voordelen zijn persoonlijk, niet overdraagbaar en slechts <b>én keer per klant</b> beschikbaar.',
     'terms_section6_title' => '6. Cashback',
     'terms_section6_text' => 'Cashback wordt berekend op basis van geselecteerde uitgaven tijdens de actieperiode. Het cashbackpercentage en eventuele maximumbedragen worden vermeld op de actiepagina.',
     'terms_section6_footer' => 'Het berekende cashbackbedrag wordt <b>automatisch</b> op de rekening van de deelnemer gestort, volgens de voorwaarden van deze actie.',
