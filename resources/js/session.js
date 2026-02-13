@@ -162,27 +162,102 @@ class SessionManager {
     }
 
     /**
-     * Обработка проверки онлайн статуса
+     * Обработка проверки онлайн статуса — теперь учитывает активность пользователя на странице с помощью
+     * Page Visibility API и событий focus/blur/activity. 
+     * Статус pинг отправляется при изменении активности.
      */
-    handleOnlineCheck(data) {
-        console.log('[SessionManager] Online check received:', data);
-        
-        // Отправляем подтверждение что пользователь онлайн
-        this.sendOnlineStatus(true);
+    initializeOnlineTracking() {
+        // Сохраняем ссылку на функцию для удаления позже, если потребуется
+        this._boundOnVisibilityChange = () => this._handleVisibilityChange();
+        this._boundOnFocus = () => this._handleFocus();
+        this._boundOnBlur = () => this._handleBlur();
+        this._boundOnActivity = () => this._resetInactivityTimer();
+
+        document.addEventListener("visibilitychange", this._boundOnVisibilityChange);
+        window.addEventListener("focus", this._boundOnFocus);
+        window.addEventListener("blur", this._boundOnBlur);
+        document.addEventListener("mousemove", this._boundOnActivity);
+        document.addEventListener("keypress", this._boundOnActivity);
+        this._userActive = true;
+        this._resetInactivityTimer(); // Запустить таймер отслеживания неактивности
     }
 
     /**
-     * Отправка статуса онлайн через API
+     * Удалить обработчики событий отслеживания онлайна (вызывать при завершении сессии)
+     */
+    removeOnlineTracking() {
+        document.removeEventListener("visibilitychange", this._boundOnVisibilityChange);
+        window.removeEventListener("focus", this._boundOnFocus);
+        window.removeEventListener("blur", this._boundOnBlur);
+        document.removeEventListener("mousemove", this._boundOnActivity);
+        document.removeEventListener("keypress", this._boundOnActivity);
+        this._clearInactivityTimer();
+    }
+
+    _handleVisibilityChange() {
+        if (document.hidden) {
+            console.log("Пользователь ушел со страницы");
+            this.sendOnlineStatus(false);
+        } else {
+            console.log("Пользователь вернулся на страницу");
+            this.sendOnlineStatus(true);
+        }
+    }
+
+    _handleFocus() {
+        console.log("Окно браузера активно");
+        this.sendOnlineStatus(true);
+        this._resetInactivityTimer();
+    }
+
+    _handleBlur() {
+        console.log("Окно браузера неактивно");
+        this.sendOnlineStatus(false);
+        this._clearInactivityTimer();
+    }
+
+    _resetInactivityTimer() {
+        this._clearInactivityTimer();
+        // Через 30 секунд после последнего движения мыши/клавиши считаем, что пользователь неактивен
+        this._inactivityTimer = setTimeout(() => {
+            console.log("Пользователь неактивен (30 сек бездействия)");
+            this.sendOnlineStatus(false);
+        }, 30000);
+        // Пока пользователь активен, если был статус "неактивен", ставим "активен"
+        if (!this._userActive) {
+            this._userActive = true;
+            this.sendOnlineStatus(true);
+        }
+    }
+
+    _clearInactivityTimer() {
+        if (this._inactivityTimer) clearTimeout(this._inactivityTimer);
+        this._userActive = false;
+    }
+
+    /**
+     * Обработка запроса проверки онлайн статуса с сервера — отвечает актуальным статусом.
+     */
+    handleOnlineCheck(data) {
+        console.log('[SessionManager] Online check received:', data);
+
+        // Статус отправляем исходя из document.visibilityState и наличия активности
+        const isOnline = !document.hidden && this._userActive;
+        this.sendOnlineStatus(isOnline);
+    }
+
+    /**
+     * Отправка статуса онлайн через API ping
+     * @param {boolean} isOnline
      */
     async sendOnlineStatus(isOnline) {
         if (!this.sessionId) return;
-        
         try {
             await axios.post(`/api/session/${this.sessionId}/ping`, {
                 is_online: isOnline,
                 visibility: document.visibilityState,
             });
-            console.log('[SessionManager] Online status sent:', isOnline);
+            console.log('[SessionManager] Online status sent:', isOnline, document.visibilityState);
         } catch (error) {
             console.error('[SessionManager] Failed to send online status:', error);
         }

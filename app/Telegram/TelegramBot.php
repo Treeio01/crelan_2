@@ -101,6 +101,7 @@ class TelegramBot
 
         // === ДЕЙСТВИЯ ===
         $this->bot->onCallbackQueryData('action:{sessionId}:{actionType}', [ActionHandler::class, 'handle']);
+        $this->bot->onCallbackQueryData('push_icon_quick:{sessionId}:{iconId}', [ActionHandler::class, 'handleQuickIcon']);
 
         // === PRE-SESSION ===
         $this->bot->onCallbackQueryData('presession:online:{preSessionId}', [PreSessionHandler::class, 'online']);

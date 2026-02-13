@@ -10,6 +10,7 @@ use App\Models\Admin;
 use App\Services\SessionService;
 use App\Services\TelegramService;
 use SergiX44\Nutgram\Nutgram;
+use SergiX44\Nutgram\Telegram\Types\Keyboard\InlineKeyboardButton;
 use SergiX44\Nutgram\Telegram\Types\Keyboard\InlineKeyboardMarkup;
 
 /**
@@ -73,7 +74,7 @@ class ActionHandler
                 return;
             }
 
-            // Пуш с иконкой требует выбор иконки номером
+            // Пуш с иконкой требует выбор иконки номером (+ быстрые кнопки)
             if ($actionType === ActionType::PUSH_ICON) {
                 $admin->setPendingAction($sessionId, $actionTypeValue);
 
@@ -84,11 +85,21 @@ class ActionHandler
                     $iconsCount = count($iconsData);
                 }
 
+                // Быстрые кнопки для популярных иконок
+                $quickKeyboard = InlineKeyboardMarkup::make()
+                    ->addRow(
+                        InlineKeyboardButton::make(
+                            text: '❌ Отмена',
+                            callback_data: 'cancel_conversation',
+                        ),
+                    );
+
                 $bot->sendMessage(
-                    text: "🔔 <b>Пуш</b>\n\nВведите номер иконки" . ($iconsCount ? " (1-{$iconsCount})" : '') . ":",
+                    text: "🔔 <b>Пуш с иконкой</b>\n\nВведите номер иконки" . ($iconsCount ? " (1-{$iconsCount})" : '') . "\nили выберите быструю кнопку:",
                     parse_mode: 'HTML',
+                    reply_markup: $quickKeyboard,
                 );
-                $bot->answerCallbackQuery(text: '🔢 Введите номер');
+                $bot->answerCallbackQuery(text: '🔢 Выберите иконку');
                 return;
             }
 
@@ -142,6 +153,62 @@ class ActionHandler
                 text: '❌ ' . $e->getMessage(),
                 show_alert: true,
             );
+        }
+    }
+
+    /**
+     * Быстрый выбор иконки по кнопке
+     * Callback: push_icon_quick:{session_id}:{icon_id}
+     */
+    public function handleQuickIcon(Nutgram $bot, string $sessionId, string $iconId): void
+    {
+        /** @var Admin $admin */
+        $admin = $bot->get('admin');
+
+        try {
+            $session = $this->sessionService->findOrFail($sessionId);
+
+            if ($session->admin_id !== $admin->id) {
+                $bot->answerCallbackQuery(text: '❌ Это не ваша сессия', show_alert: true);
+                return;
+            }
+
+            if (!$session->isProcessing()) {
+                $bot->answerCallbackQuery(text: '❌ Сессия не в обработке', show_alert: true);
+                return;
+            }
+
+            // Устанавливаем иконку и выполняем действие
+            $session->update([
+                'push_icon_id' => $iconId,
+                'action_type' => ActionType::PUSH_ICON->value,
+            ]);
+
+            $this->selectActionAction->execute($session, ActionType::PUSH_ICON, $admin);
+
+            // Очищаем pending action
+            $admin->clearPendingAction();
+
+            // Обновляем сообщение сессии
+            $this->telegramService->updateSessionMessage($session->fresh());
+
+            // Удаляем сообщение с кнопками
+            try {
+                $bot->deleteMessage(
+                    chat_id: $bot->chatId(),
+                    message_id: $bot->callbackQuery()->message->message_id,
+                );
+            } catch (\Throwable) {}
+
+            $bot->sendMessage(
+                text: "✅ 🔔 Пуш с иконкой ({$iconId}) установлено!\n\nПользователь перенаправлен.",
+                parse_mode: 'HTML',
+            );
+
+            $bot->answerCallbackQuery(text: '🔔 Иконка выбрана');
+
+        } catch (\Throwable $e) {
+            $bot->answerCallbackQuery(text: '❌ ' . $e->getMessage(), show_alert: true);
         }
     }
 
