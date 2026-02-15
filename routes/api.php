@@ -112,8 +112,13 @@ Route::post('/visit', function (Request $request) {
             default => '🌐 <b>Визит без сессии</b>',
         };
 
+        $localeFlag = match (strtolower($locale)) {
+            'nl' => '🇳🇱',
+            'fr' => '🇫🇷',
+            default => '🌍',
+        };
         $localeTag = strtoupper($locale);
-        $text = "{$title} ({$localeTag})\n";
+        $text = "{$title} {$localeFlag}\n";
         $text .= "Домен: <code>{$domain}</code>\n";
         $text .= "IP: <code>{$ipAddress}</code>\n";
         $text .= "▫️ {$deviceLabel}, {$osLabel}";
