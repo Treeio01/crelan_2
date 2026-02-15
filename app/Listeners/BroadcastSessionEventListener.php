@@ -11,12 +11,14 @@ use App\Events\SessionCreated;
 use App\Events\SessionStatusChanged;
 use App\Events\SessionUnassigned;
 use App\Services\WebSocketService;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 /**
  * Listener для broadcasting событий через WebSocket
+ *
+ * Выполняется синхронно — WebSocket-событие отправляется мгновенно.
+ * Сам broadcast через GenericBroadcastEvent (ShouldBroadcast) попадает в очередь.
  */
-class BroadcastSessionEventListener implements ShouldQueue
+class BroadcastSessionEventListener
 {
     public function __construct(
         private readonly WebSocketService $webSocketService,

